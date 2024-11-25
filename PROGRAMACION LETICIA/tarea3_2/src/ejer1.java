@@ -75,7 +75,7 @@ public class ejer1 {
             System.out.println("claro que es capicuo si es de un solo digito");
         }
         if (specialcase0) {
-            System.out.println("as introducido 0 obviamente es capicuo");
+            System.out.println("has introducido 0 obviamente es capicuo");
         }
 
     }
