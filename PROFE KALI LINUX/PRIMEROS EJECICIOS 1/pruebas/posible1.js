@@ -200,7 +200,40 @@ function triangulo4(){
     console.log(piramide)
 }
 //dibuja Rombo con interior
-function rombo1(){}
+function rombo1(){
+    let altura = Number(prompt("Dime altura de el triangulo\n"))
+    //altura += altura/2
+    let contespacios1 = altura
+    let contateriscos = 1
+    let rombo = "";
+    let altura2 = altura--;
+    for (let i = 0; i < altura2; i++) {
+        for (let j = 0; j <contespacios1;j++){
+            rombo+= " ";
+        }
+        for(let h=0; h<contateriscos;h++){
+            rombo += "*"
+        }
+        contateriscos+=2
+        contespacios1--
+        rombo+="\n"
+    }
+    let base = altura*2-1
+    let contEspacios2 = 0;
+    for (let i = 0; i < altura; i++) {
+        rombo += "  "
+        for (let h = 0; h < contEspacios2; h++){
+            rombo += " "
+        }
+        for (let j = 0; j < base; j++){
+            rombo += "*";
+        }
+        base-=2
+        contEspacios2++
+        rombo+= "\n";
+    }
+    console.log(rombo)
+}
 //dibuja Rombo sin interior
 function rombo2(){}
 //dibuja piramideMalla
