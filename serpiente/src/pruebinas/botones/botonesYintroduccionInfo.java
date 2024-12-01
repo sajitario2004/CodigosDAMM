@@ -25,6 +25,8 @@ public class botonesYintroduccionInfo extends JFrame implements ActionListener {
     JFileChooser fileChooserVentana2;
     JFrame ventana2 = new JFrame();
 
+    //arraya
+    int[] array1 = new int[5];
 
     public botonesYintroduccionInfo() {
 
@@ -36,7 +38,7 @@ public class botonesYintroduccionInfo extends JFrame implements ActionListener {
         ventana1.setLayout(null);
 
 
-        ventana2.setSize(600, 300);
+        ventana2.setSize(600, 400);
         ventana2.setLayout(null);
 
         //Ventana principal
@@ -98,7 +100,7 @@ public class botonesYintroduccionInfo extends JFrame implements ActionListener {
         ventana2.add(textVentana2);
 
         fileChooserVentana2 = new JFileChooser();
-        fileChooserVentana2.setBounds(200,250,200,50);
+        fileChooserVentana2.setBounds(0,250,600,50);
         ventana2.add(fileChooserVentana2);
 
 

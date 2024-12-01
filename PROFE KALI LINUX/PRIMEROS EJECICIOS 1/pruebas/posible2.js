@@ -1,4 +1,7 @@
 const prompt = require('prompt-sync')();
+/*
+Como hacer una striper en js
+ */
 
 function suma(numero1, numero2){
 let resultado = numero1 + numero2;

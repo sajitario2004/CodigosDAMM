@@ -1,13 +1,10 @@
 const prompt = require('prompt-sync')();
 //-----------funcion 1: comprobacion de si el numero introducido esta en el rango---------
 function leer(mensaje, inicio_rango, fin_rango) {
-
     let n;
     do {
-
         n = prompt(mensaje)
         n = Number(n)
-
     }while (n < inicio_rango || n > fin_rango)
 
     return n;
@@ -26,14 +23,10 @@ function comprobarValor(numUsu, numOk) {
     }
 }
 
-
 let aleatorio = Math.floor(Math.random()*100+1)
 console.log(aleatorio)
-
 let num = leer('Introduzca un valor entre 1 y 100 ', 1, 100)
-
 while (comprobarValor(num,aleatorio)!==0){
     num = leer("Introduzca valor entre 1 y 100 ", 1, 100)
 }
-
 console.log(num)
