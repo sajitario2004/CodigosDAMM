@@ -74,8 +74,10 @@ public class ejer4 {
                         lugarActual = mapa[5][0];
                     }
                 }
+                //muestro mapa
             } else if (opcion == 2) {
                 mostrarMapa(mapa);
+                //finalizo el programa
             }else if (opcion == 3) {
                 break;
             }
@@ -83,12 +85,14 @@ public class ejer4 {
         System.out.println("El juego ha acabado");
     }
 
+    //imprimo todas las filas con i y le voy sumando uno a esta para que muestre liene por lienea como los juegos antiguos
     private static void mostrarMapa(String[][] mapa) {
         for (int i = 0; i < mapa.length; i++) {
             System.out.println(Arrays.toString(mapa[i]));
         }
     }
 
+    //dibujo los caminos por el mapa entre los lugares del mapa
     private static String[][] dibujarMapa(String[][] mapa) {
 
         for (int i = 1; i < 4; i++) {
@@ -103,6 +107,7 @@ public class ejer4 {
         return mapa;
     }
 
+    //Caso de eleccion de ir a casa dependiendo de tu posicion actual
     private static int casaMapa(String lugarActual) {
         if (lugarActual.equals(" CASA ")) {
             return 1;
@@ -113,6 +118,7 @@ public class ejer4 {
         }
         return 0;
     }
+    //Caso de eleccion de ir a lugar1 dependiendo de tu posicion actual
     private static int lugar1Mapa(String lugarActual) {
         if (lugarActual.equals(" CASA ")||lugarActual.equals("Lugar2")) {
             return 1;
@@ -121,6 +127,8 @@ public class ejer4 {
         }
         return 1;
     }
+
+    //Caso de eleccion de ir a lugar 2 dependiendo de tu posicion actual
     private static int lugar2Mapa(String lugarActual) {
         if (lugarActual.equals("Lugar2")) {
             return 1;

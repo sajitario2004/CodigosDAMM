@@ -10,6 +10,7 @@ public class ejer5 {
                 t.length
                 +"\nIntroduzca el numero ";
         int num=0;
+        //hago un bucle infinito asta que el usuario introduzca un numero negativo entonces hago un break
         for (int i=0;num==num;i++) {
             System.out.print(pregunta);
             num = sc.nextInt();
