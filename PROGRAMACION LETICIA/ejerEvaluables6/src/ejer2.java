@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class ejer2 {
     public static void main(String[] args) {
         String pregunta = "Cuanto cobra el trabajador numero ";
-        int trabajadores[] = new int[1];
+        int trabajadores[] = new int[2];
         int finArray = 0;
         int contador = 0;
 
@@ -11,7 +11,7 @@ public class ejer2 {
             boolean comprob = trabajadores[trabajadores.length - 1] != - 1;
             if (comprob) {
                 contador++;
-                trabajadores = biblioFun.arrayInfinito(pregunta, trabajadores, contador);
+                trabajadores = biblioFun.arrayInfinitoConpregunta(pregunta, trabajadores, contador);
             } else {
                 finArray = -1;
             }
