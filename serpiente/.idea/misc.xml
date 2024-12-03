@@ -3,4 +3,29 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="org.codebrewer.idea.toolwindowmanager">
+    <toolwindow id="AIAssistant" preference="UNAFFECTED" />
+    <toolwindow id="Bookmarks" preference="UNAFFECTED" />
+    <toolwindow id="Commit" preference="UNAFFECTED" />
+    <toolwindow id="Coverage" preference="UNAFFECTED" />
+    <toolwindow id="Database" preference="UNAFFECTED" />
+    <toolwindow id="Database Changes" preference="UNAFFECTED" />
+    <toolwindow id="Endpoints" preference="UNAFFECTED" />
+    <toolwindow id="File Transfer" preference="UNAFFECTED" />
+    <toolwindow id="Gradle" preference="UNAFFECTED" />
+    <toolwindow id="Learn" preference="UNAFFECTED" />
+    <toolwindow id="Merge Requests" preference="UNAFFECTED" />
+    <toolwindow id="Notifications" preference="UNAFFECTED" />
+    <toolwindow id="Problems View" preference="UNAFFECTED" />
+    <toolwindow id="Profiler" preference="UNAFFECTED" />
+    <toolwindow id="Project" preference="UNAFFECTED" />
+    <toolwindow id="Pull Requests" preference="UNAFFECTED" />
+    <toolwindow id="Services" preference="UNAFFECTED" />
+    <toolwindow id="Structure" preference="UNAFFECTED" />
+    <toolwindow id="TODO" preference="UNAFFECTED" />
+    <toolwindow id="Tabnine Chat" preference="UNAFFECTED" />
+    <toolwindow id="Terminal" preference="UNAFFECTED" />
+    <toolwindow id="TypeScript" preference="UNAFFECTED" />
+    <toolwindow id="Version Control" preference="UNAFFECTED" />
+  </component>
 </project>
