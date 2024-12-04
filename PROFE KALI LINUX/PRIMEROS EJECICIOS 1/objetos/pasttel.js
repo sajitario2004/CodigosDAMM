@@ -12,9 +12,10 @@ let pastel = {
     cortar: function(numTrozos) {
         console.log(`Cortando la caña en ${numTrozos} trozos`);
     },
-    comer: {persona, pagaDinero) => {
+    comer: (persona, pagaDinero) => {
         console.log('${persona} paga ${pagaDinero} por pastel ')
     }
+
 
 
 }
