@@ -48,8 +48,8 @@ public class calculoArrayMinas {
         //hacemos un booleano complejo para las posiciones de las minas
 
 
-        //creamos una nueva variable que va a tener 3 posibilidades distintas
-        int [15][15][3]
+      /*  //creamos una nueva variable que va a tener 3 posibilidades distintas
+        int [15][15][3]*/
 
     }
 

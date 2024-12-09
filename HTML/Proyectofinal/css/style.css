@@ -1,247 +1,433 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+/* Estilo del body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+}
+/*Estilo general para secciones*/
+section h2 {
+  margin-bottom: 10px;
+  color: #333;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+section p {
+  margin-bottom: 20px;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+/* Header y navegación *//*----------------------------------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*esto lo tengo que cambiar a futuro para que sea transparente APUNTADO*/
+  background-color: #1a1a1a; /* Fondo oscuro */
+  padding: 2vh 50px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
 
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
+/* Logo */
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header.logo img:hover {
+  background-color: #043c43;
+  color: #fff;
+}
+
+header .logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+
+/* Navegación */
+header nav ul {
+  display: flex;
+  list-style: none;
   padding: 0;
+  margin-left: 100vh;
+
+}
+
+
+header nav ul li {
+  margin: 0 15px;
+  border-left: 1px solid white;
+  padding: 25px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  transition: color 0.3s;
+}
+header nav ul li a:hover {
+  /* Color destacado al pasar el ratón */
+  color: #043c43;
+}
+
+/* Menú de usuario */
+header .user-menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .user-menu i {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+
+/* Secciones */
+section .seccionInicio {
+  padding: 20px;
+  text-align: center;
+
+}
+
+
+
+
+
+/*Section de inicio *//*--------------------------------------------------------------*/
+/* Estilo general de la sección */
+.seccion-inicio {
+  position: relative;
+  /* Ocupa toda la altura de la ventana */
+  height: 100vh;
+
+  /* Cambia esto por el enlace de tu imagen */
+  background-image: url('../img/imgSectionPrincipal.png');
+  /* Asegura que la imagen cubra toda la sección */
+  background-size: cover;
+  /* Centra la imagen */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Superposición oscura */
+.seccion-inicio .overlay {
   position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Superposición semitransparente que encontre en una web por ahi*/
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  /*direccionado en columnnas*/
+  flex-direction: column;
+  /*justificadoo el contenido en el centro*/
+  justify-content: center;
+  /*items alineados en el centro*/
+  align-items: center;
+  /*texto tambien alineado en el centro y de color blanco*/
+  text-align: center;
+  color: white;
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
+/* Títulos principales */
+.seccion-inicio h1 {
+  font-size: 3.5em;
+  font-weight: bold;
   margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  line-height: 1.2;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+/* Subtítulo */
+.seccion-inicio p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
+/* Botón */
+.seccion-inicio .menu-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.clearfix::after {
-  clear: both;
+.seccion-inicio .menu-button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* seccion de inspiracion y sabores*//*--------------------------------------------------------------*/
+.inspiracion-sabores {
+  background-color: #002e2e;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+.inspiracion-sabores .contenedor-texto {
+  margin-bottom: 30px;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+.inspiracion-sabores h2 {
+  font-size: 48px;
+  font-weight: 400;
+  color: white;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
+.inspiracion-sabores .btn-reservar {
+  /**/
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.inspiracion-sabores .btn-reservar:hover {
+  background-color: white;
+  color: #002e2e;
+}
+
+.galeria-imagenes {
+  display: grid;
+  /*con esto divido lo divido en dos columnas*/
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  /*bordes redondeados de las imagense*/
+  border-radius: 20px;
+}
+
+/*secion menu con foto*//*--------------------------------------------------------------*/
+
+.seccion-menu .overlay {
+  width: 100%;
+  height: 100%;
+  /* Superposición semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.seccion-menu {
+  background-image: url("../img/imgSection2Fondo.png")
+}
+.img-fotomenu{
+  margin-top:10px;
+  margin-bottom:10px;
+  width: 1800px;
+  height: 700px;
+}
+
+/*seccion Destino Perfecto(modificable a futuro)*//*------------------------------------------------------*/
+
+.seccion-destinoPerfecto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #002e2e;
+  color: white;
+  padding: 40px 20px;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.contenedor-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/*modificar a futuro para que habra un pdf con el menu entero APUNTADO*/
+.imagen-menu {
+  flex: 1;
+  max-width: 25%;
+  padding: 10px;
+
+  margin-right: 10vh;
+  margin-left: 30vh;
+}
+
+.imagen-menu img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+
+}
+
+.contenido-menu {
+  flex: 1;
+  max-width: 50%;
+  padding: 10px;
+  border-left: 5px solid white;
+  padding-left: 150px;
+  margin-left: 15px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.contenido-menu h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contenido-menu p {
+  font-size: 25px;
+  line-height: 1.6;
+  margin-bottom: 1px;
+}
+
+.informacion {
+  padding-top: 250px;
+}
+
+.informacion ul {
+  list-style: none;
+  padding: 0;
+  border-left: 50px;
+}
+
+.informacion ul li {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+
+/* Footer *//*----------------------------------------------------------------------------*/
+/*imagen fute*/
+.img-fute {
+  width: 300px;
+  height: 300px;
+}
+
+footer {
+  background-color: #043c43;
+  color: #fff;
+  padding: 20px 50px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+footer section {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+footer .suscripcion h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+footer .suscripcion form {
+  margin-bottom: 10px;
+}
+
+footer .suscripcion input[type="email"] {
+  padding: 8px;
+  width: 70%;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  margin-right: 10px;
+}
+
+/*quise probar el placeholder*/
+footer .suscripcion input[type="email"]::placeholder {
+  color: #ccc;
+}
+
+footer .suscripcion button {
+  padding: 8px 15px;
+  background-color: #fff;
+  color: #043c43;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+footer .suscripcion button:hover {
+  background-color: #043c43;
+  color: #fff;
+}
+
+footer .localizacion, footer .politicas {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  text-align: left;
+  /*borde derecho*/
+  margin-right: 20px;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+  /*borde izquierdo*/
+  margin-left: 20px;
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+footer .localizacion p, footer .politicas p {
+  margin: 5px 0;
+}
+
+footer .politicas a {
+  color: #fff;
+  /*quitar la decoracion que tenga el texto para darle la mia como el subrayado*/
+  text-decoration: none;
+}
+
+footer .politicas a:hover {
+  /*cuando este encima que se vea el subrrallado*/
+  text-decoration: underline;
+}
+
+footer .copyright {
+  /*Bordes de arriba para la linea que queda chula */
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+
+  /*Cosas de la funete del copyright*/
+  font-size: 0.9em;
+  color: #ccc;
+}

@@ -2,6 +2,7 @@
 <html class="no-js" lang="es">
 
 <head>
+  <!--Esto lo hace  automatico el intelli cuando hago un nuevo archivo html, he visto unas pocas cosas como funciona-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
@@ -14,8 +15,9 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <!-- Esta es la parte que hace que se vea la imagen en el navegador en lugar de un texto-->
+  <link rel="icon" href="img/logo.png" sizes="any">
+  <link rel="icon" href="img/logo.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="manifest" href="site.webmanifest">
@@ -23,10 +25,138 @@
 </head>
 
 <body>
+<!-- header con navegación ---------------------------------------------------->
+<header>
+  <!--logo con el nombre y la imagen-->
+  <div class="logo">
+    <a href="index.html" target="">
+    <img src="img/logo.png" alt="Logo Nacho Sushi">
+    </a>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+  </div>
+  <!--NAV con listado de ubicacion reservas y menu estos sin enlace por el momento-->
+  <nav>
+    <ul class="nav-right">
+      <!--Esto es una prueba para ver como cambia la url a lo que ponga en el boton-->
+      <li><a href="#ubicacion">UBICACIÓN</a></li>
+      <li><a href="#reservas">RESERVAS</a></li>
+      <li><a href="#menu">MENÚ</a></li>
+    </ul>
+  </nav>
+  <div class="logo-usuario">
+    <img src="" alt="" />
+  </div>
+
+</header>
+<!-- main de la pagina -->
+<main>
+<!-- Sección de Inicio ------------------------------------------------------------>
+<section class="seccion-inicio">
+  <div class="overlay">
+    <!--lo de los saltos de linea de esta forma lo aprendi tarde-->
+    <h1>Bienvenidos <br> a <br> Nacho Sushi</h1>
+    <p>Cocina Japonesa Contemporánea</p>
+    <a href="#menu" class="menu-button">MENÚ</a>
+  </div>
+</section>
+
+<!-- seccion de isnpiracion y sabores  ---------------------------------------------->
+<section class="inspiracion-sabores">
+  <div class="contenedor-texto">
+    <h2>Inspirado en sabores tradicionales,</h2>
+    <h2>Nacho Sushi ofrece una interpretación</h2>
+      <h2>fresca y creativa de la</h2>
+      <h2>cocina japonesa.</h2>
+    <a href="#" class="btn-reservar">Reservar Mesa</a>
+  </div>
+  <div class="galeria-imagenes">
+    <img src="img/imagen1comida.png" alt="Imagen 1" class="imagen">
+    <img src="img/imagen2comida.png" alt="Imagen 2" class="imagen">
+    <img src="img/imagen3comida.png" alt="Imagen 3" class="imagen">
+    <img src="img/imagen4comida.png" alt="Imagen 4" class="imagen">
+  </div>
+</section>
+<!-- seccion foto menu ------------------------------------------------------------------------->
+<section class="seccion-menu">
+  <div class="overlay">
+    <a href="">
+    <img src="img/imgSection2Menu.png" alt="Imagen Fondo Menu" class="img-fotomenu">
+    </a>
+  </div>
+</section>
+<!-- seccion que tiene solo una foto Modificable a futuro -------------------------------------->
+<section class="seccion-destinoPerfecto">
+  <div class="contenedor-menu">
+    <!-- Contenedor de imagen -->
+    <div class="imagen-menu">
+      <img src="img/fotoSection3DestinoPerfecto.png" alt="Mesa con comida japonesa">
+    </div>
+
+    <!-- Contenedor de texto -->
+    <div class="contenido-menu">
+      <h2>El destino perfecto para cualquier ocasión</h2>
+      <p>
+        Cuidamos hasta el más mínimo
+        <br>
+        detalle con nuestros clientes,
+        <br>
+        no dude en pedir cualquier
+        <br>
+        plato que se le ocurra de
+        <br>
+        nuestro menú.
+      </p>
+
+      <div class="informacion">
+        <p><strong>Dirección:</strong> Avenida de Mijas N°2</p>
+        <p><strong>Horarios de apertura:</strong></p>
+        <ul>
+          <li>Lun - Vie: 14:00 - 22:00</li>
+          <li>Sábado: 14:00 - 20:00</li>
+          <li>Domingo: 14:00 - 20:00</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <!-- Primera sección: Suscripción -->
+  <section class="suscripcion">
+    <img src="img/logo.png" class="img-fute">
+    <h3>Suscríbete a nuestro boletín para recibir novedades y ofertas especiales.</h3>
+    <form action="#" method="post">
+      <label for="email">Email *</label><br>
+      <!--Esto es algo que tengo que hacer mas tarde cuando haga una base de datos
+      para almacenar datos del correo electronico-->
+      <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">ENVIAR</button>
+    </form>
+    <p>¡Gracias por suscribirte!</p>
+  </section>
+
+  <!-- Segunda sección: Localización -->
+  <section class="localizacion">
+    <p>Avenida de Mijas N2</p>
+    <p>+34 675-544-458</p>
+    <p>itolcan2711@g.educaand.es</p>
+  </section>
+
+  <!-- Tercera sección: Políticas -->
+  <section class="politicas">
+    <p><a href="">Términos y Condiciones</a></p>
+    <p><a href="">Política de Privacidad</a></p>
+    <p><a href="">Política de Cookies</a></p>
+  </section>
+
+  <!-- Pie de página final -->
+  <div class="copyright">
+    <!-- lo del anprescant copy es para escribir el simbolor ce C de copyrright-->
+    <p>&copy; 2035 por NachoSushi. Desarrollado y protegido por <strong>IGNACIO</strong></p>
+  </div>
+</footer>
 
 </body>
 
