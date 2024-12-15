@@ -9,6 +9,10 @@ public class Main {
         String bd = "pruebaNachoSQL";
 
         Connection baseDatos = ConectarBD(bd);
+
+        //una vez finalicemos nuestras consultas a bases de datos haremos lo siguiente, llamaremos a desconexion
+        // y le pasaremos nuestra variable connection llamada baseDatos para cerrar todos los procesos y que el pc no exlote
+        Deconexion(baseDatos);
     }
 
     //creamos un nuevo metodo para crear nuestra conexion con el servidor mysql
@@ -46,5 +50,16 @@ public class Main {
         return conexion;
     }
 
+
+    //esto lo que hara es cerrar todas las conexiones para que basicamente el sistema no implosione
+    public static void Deconexion (Connection cb) {
+        try {
+            cb.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+    }
 
 }
