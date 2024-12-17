@@ -1,0 +1,39 @@
+Paso 1: 
+crear un array de 3 dimensiones;
+primera dimension 15 sera 15 de altura;
+segunda dimension 15 sera 15 de anchura;
+tercera dimension con las 10 posibles opciones entre el 
+0 - bomba
+1 - "-" (No hay bombas cerca
+2 - 1 (una bomba cerca)
+3 - 2 (una bombas cerca)
+4 - 3 (una bombas cerca)
+5 - 4 (una bombas cerca)
+6 - 5 (una bombas cerca)
+7 - 6 (una bombas cerca)
+8 - 7 (una bombas cerca)
+9 - 8 (una bombas cerca)
+10 - " " (No se ve si hay bomba asta que lo pulses y cambie a uno de los estados anteriores )
+
+Paso 2;
+Hacer una variable string con posiciones random de entre los 15 de altura y 15 de anchura del array anterior, 
+este tendra un tamaño de variable[2][6], seran 6 minas las que habra en el tablero
+este nos dara posiciones random como variable[][] = {{random1,2,3,4,5,6}{random7,8,9,10,11,12}}
+
+Paso 3
+
+Paso 4:
+Para saber la cantidad de bombas que tiene una celda alrededor es muy sencillo 
+cogemos por ejemplo la celda [4][4] y miramos sus celdas adyacentes
+...[3][3],[3][4],[3][5]...
+...[4][3],[4][4],[4][5]...
+...[5][3],[5][4],[5][5]...
+y hago un contador que comprueba cuantas minas tiene alrededor 
+for i=posi-1 (lo hace 3 veces){
+	for j=posi-1 (lo hace 3 veces){
+		if ([4][4] = [i][j]){no hace nada}
+		else if (cualquiera de las celdas anteriores es = bomba) {contadorBomba++}
+	}
+}
+Con el bucle anterior lo colocamos dentro de otro bucle que sea de 15*15 y en funcion de contador bomba se colocara un numero u otro
+

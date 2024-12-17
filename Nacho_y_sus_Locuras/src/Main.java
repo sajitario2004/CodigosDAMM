@@ -23,12 +23,12 @@ public class Main {
         String host = "jdbc:mysql://localhost:3306/";
 
         //declaramos el usuario de nuestra base de datos tambien en un String
-        String user = "root";
-        String pass = "root";
+        String user = "nacho";
+        String pass = "administrador";
 
 
 
-        System.out.println("cargando");
+        System.out.println("cargando...");
 
 
         //Las conexiones a base de datos son muy exquisitas, hay que hacer un try catch por si no se conecta o no la encuentra

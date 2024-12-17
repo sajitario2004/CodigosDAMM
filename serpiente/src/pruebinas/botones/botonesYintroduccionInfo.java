@@ -103,21 +103,19 @@ public class botonesYintroduccionInfo extends JFrame implements ActionListener {
         fileChooserVentana2.setBounds(0,250,600,50);
         ventana2.add(fileChooserVentana2);
 
-
+        ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == abrirVentana1){
             ventanaPrinci = false;
-            ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             //ventana1.
             ventana1.setVisible(true);
         }
 
         if (e.getSource() == abrirVentana2){
             ventanaPrinci = false;
-            ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             ventana2.setVisible(true);
         }
     }

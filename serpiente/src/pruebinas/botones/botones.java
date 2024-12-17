@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 public class botones extends JFrame implements ActionListener {
 
-
-
        JButton boton1;
        JButton boton2;
        JButton boton3;
@@ -19,6 +17,7 @@ public class botones extends JFrame implements ActionListener {
            Scanner teclado = new Scanner(System.in);
            System.out.println("quieres imprimir la ventana");
            String pregunta = teclado.nextLine();
+
            if (pregunta.equals("1")) {
                preguntaBoolean = true;
            }else {
@@ -42,6 +41,7 @@ public class botones extends JFrame implements ActionListener {
 
            ventana.add(boton1);
            boton1.addActionListener(this);
+
            ventana.add(boton2);
            boton2.addActionListener(this);
            ventana.add(boton3);
@@ -53,6 +53,7 @@ public class botones extends JFrame implements ActionListener {
            ventana.setLayout(null);
            ventana.setVisible(preguntaBoolean);
 
+           ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        }
 
 
