@@ -62,13 +62,30 @@ public class calculoArrayMinas {
     }
 
     public static String[][][] contenidoCeldaMinas(int[][] posRandom, String[][][] arrayMinas){
-        String[][][] mapeadoMinas = new String[15][15][3];
-        /*for (int i = 0; i < arrayMinas.length; i++) {
-            for (int j = 0; j < arrayMinas[0].length; j++) {
+        String[][][] mapeadoMinas = new String[10][10][2];
+
+        //colocador de espacios (deja el boton vacio)
+        for (int i = 0; i < mapeadoMinas.length; i++){
+            for (int j = 0; j < mapeadoMinas[0].length; j++) {
                 mapeadoMinas[i][j][0] = arrayMinas[i][j][0];
             }
-        }*/
+        }
 
+        //colocar minas
+        for (int i = 0; i < posRandom[0].length; i++) {
+            mapeadoMinas[posRandom[0][i]][posRandom[1][i]][1] = "*";
+        }
+
+        //rellenar numero de minas de al rededor
+        for (int i = 0; i < mapeadoMinas.length; i++) {
+            for (int j = 0; j < mapeadoMinas[0].length; j++) {
+                if ( mapeadoMinas[i][j][1] == null ) {
+                    mapeadoMinas[i][j][1] = "0";
+                }
+            }
+        }
+
+        System.out.println(Arrays.deepToString(mapeadoMinas));
 
 
         return mapeadoMinas;

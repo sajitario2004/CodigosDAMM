@@ -20,7 +20,12 @@ public class Main {
                     case 1:
                         System.out.println("Escribe el numero");
                         int num = scanner.nextInt();
-                        boolean respuesta = biblioFunNacho.esCapicua(num);
+                        boolean respuesta = false;
+                        try {
+                            respuesta = biblioFunNacho.esCapicua(num);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         if (respuesta) {
                             System.out.println("El numero es capicuo");
                         } else {
@@ -31,7 +36,12 @@ public class Main {
                     case 2:
                         System.out.println("Escribe el numero");
                         int num1 = scanner.nextInt();
-                        boolean respuesta2 = biblioFunNacho.esPrimo(num1);
+                        boolean respuesta2 = false;
+                        try {
+                            respuesta2 = biblioFunNacho.esPrimo(num1);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         if (respuesta2) {
                             System.out.println("El numero es primo");
                         } else {
@@ -42,7 +52,12 @@ public class Main {
                     case 3:
                         System.out.println("Escribe el numero");
                         int num2 = scanner.nextInt();
-                        int respuesta3 = biblioFunNacho.siguientePrimo(num2);
+                        int respuesta3;
+                        try {
+                            respuesta3 = biblioFunNacho.siguientePrimo(num2);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         System.out.println("El siguiente primo es: " + respuesta3);
                         break;
 
@@ -65,7 +80,11 @@ public class Main {
                         int num51 = scanner.nextInt();
                         System.out.println("Escribe digito que estas buscando");
                         int num52 = scanner.nextInt();
-                        respuesta5 = biblioFunNacho.digitoN(num51, num52);
+                        try {
+                            respuesta5 = biblioFunNacho.digitoN(num51, num52);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         System.out.println("El digito que estas buscando esta en la posicion"+respuesta5);
                         break;
 

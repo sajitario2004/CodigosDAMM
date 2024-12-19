@@ -8,52 +8,152 @@ class testNachoBiblioFun {
     @Test
     public void testEsCapicua() {
         //caso normal es capicua
-        assertTrue(biblioFunNacho.esCapicua(121));
+        try {
+            assertTrue(biblioFunNacho.esCapicua(121));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
         //caso normal cuando falla
-        assertFalse(biblioFunNacho.esCapicua(123));
-
+        try {
+            assertFalse(biblioFunNacho.esCapicua(123));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
         //caso normal con digitos pares y es capicua
-        assertTrue(biblioFunNacho.esCapicua(1221));
+        try {
+            assertTrue(biblioFunNacho.esCapicua(1221));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
         //caso número negativo pero capicua
-        assertFalse(biblioFunNacho.esCapicua(-121));
+        try {
+            biblioFunNacho.esCapicua(-121);
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //caso número 0
+        try {
+            assertTrue(biblioFunNacho.esCapicua(0));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
     }
 
     @Test
     public void testEsPrimo() {
         //caso normal
-        assertTrue(biblioFunNacho.esPrimo(7));
-        assertFalse(biblioFunNacho.esPrimo(4)); // Caso normal
-        assertFalse(biblioFunNacho.esPrimo(1)); // Caso borde
-        assertFalse(biblioFunNacho.esPrimo(-5)); // Caso número negativo
-        assertTrue(biblioFunNacho.esPrimo(2)); // Caso mínimo primo
+        try {
+            assertTrue(biblioFunNacho.esPrimo(7));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //caso normal cuando falla
+        try {
+            assertFalse(biblioFunNacho.esPrimo(4));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //caso número 1
+        try {
+            biblioFunNacho.esPrimo(1);
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //caso número negativo
+        try {
+            biblioFunNacho.esPrimo(-5);
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //caso número 2, que es el primer primo
+        try {
+            assertTrue(biblioFunNacho.esPrimo(2));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
     }
 
     @Test
     public void testSiguientePrimo() {
-        assertEquals(7, biblioFunNacho.siguientePrimo(5)); // Caso normal
-        assertEquals(2, biblioFunNacho.siguientePrimo(-1)); // Caso número negativo
-        assertEquals(3, biblioFunNacho.siguientePrimo(2)); // Caso borde
+        //caso normal
+        try {
+            assertEquals(7, biblioFunNacho.siguientePrimo(5));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //cass de numero negativo
+        try {
+            biblioFunNacho.siguientePrimo(-1);
+        } catch(Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //caso de primo mas cercano
+        try {
+            assertEquals(3, biblioFunNacho.siguientePrimo(2));
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
+        //caso salto de error
+        try {
+            biblioFunNacho.siguientePrimo(15/2);
+        } catch (Exception e) {
+            System.err.println("error: " + e.getMessage());
+        }
     }
 
     @Test
     public void testDigitos() {
-        assertEquals(3, biblioFunNacho.digitos(123)); // Caso normal
-        assertEquals(1, biblioFunNacho.digitos(0)); // Caso borde
-        assertEquals(4, biblioFunNacho.digitos(-1234)); // Caso número negativo
+        //caso normal
+        assertEquals(3, biblioFunNacho.digitos(123));
+        //caso comprobar si 0 lo cuenta como digito
+        assertEquals(1, biblioFunNacho.digitos(0));
+        //caso número negativo
+        assertEquals(4, biblioFunNacho.digitos(-1234));
+
     }
 
     @Test
     public void testVoltea() {
-        assertEquals(321, biblioFunNacho.voltea(123)); // Caso normal
-        assertEquals(1, biblioFunNacho.voltea(100)); // Caso con ceros al final
-        assertEquals(-321, biblioFunNacho.voltea(-123)); // Caso número negativo
+        //caso normal impar
+        assertEquals(321, biblioFunNacho.voltea(123));
+        //caso normal par
+        assertEquals(21, biblioFunNacho.voltea(12));
+        //caso número con uno
+        assertEquals(1, biblioFunNacho.voltea(1));
+        //caso número con solo un 0
+        assertEquals(0, biblioFunNacho.voltea(0));
+        //caso número con ceros
+        assertEquals(1, biblioFunNacho.voltea(100));
+        //caso numero negativo
+        assertEquals(-321, biblioFunNacho.voltea(-123));
     }
 
     @Test
     public void testDigitoN() {
-        assertEquals(2, biblioFunNacho.digitoN(1234, 2)); // Caso normal
-        assertEquals(-1, biblioFunNacho.digitoN(1234, 5)); // Caso posición fuera de rango
-        assertEquals(-1, biblioFunNacho.digitoN(-1234, 0)); // Caso número negativo
+        //caso normal
+        try {
+            assertEquals(2, biblioFunNacho.digitoN(1234, 2));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        //caso de numero negativo
+        try {
+            assertEquals(-1, biblioFunNacho.digitoN(1234, 5));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        //caso de numero negativo y posicion
+        try {
+            assertEquals(-1, biblioFunNacho.digitoN(-1234, 0));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        //caso error inesperado
+        try {
+            assertEquals(-1, biblioFunNacho.digitoN(1234, 25));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test
@@ -63,7 +163,11 @@ class testNachoBiblioFun {
         //caso de borrar todos los numeros
         assertEquals(0, biblioFunNacho.quitaPorDetras(123, 3));
         //caso de numero
-        assertEquals(-12, biblioFunNacho.quitaPorDetras(-123, 1)); // Caso número negativo
+        assertEquals(-12, biblioFunNacho.quitaPorDetras(-123, 1));
+        //caso de numero negativo en digito
+        assertEquals(0, biblioFunNacho.quitaPorDetras(-123, -5));
+        //caso error inesperado
+        assertEquals(0, biblioFunNacho.quitaPorDetras(12345, 25));
     }
 
     @Test
@@ -74,6 +178,10 @@ class testNachoBiblioFun {
         assertEquals(0, biblioFunNacho.quitaPorDelante(123, 3));
         //caso de numero negativo
         assertEquals(-3, biblioFunNacho.quitaPorDelante(-123, 2));
+        //caso de numero negativo en digito
+        assertEquals(0, biblioFunNacho.quitaPorDetras(123, -15));
+        //caso error 2
+        assertEquals(0, biblioFunNacho.quitaPorDetras(12, 15));
     }
 
     @Test

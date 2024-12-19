@@ -4,8 +4,12 @@ public class biblioFunNacho {
 
      */
     // 1. esCapicua: Devuelve verdadero si el número es capicúa y falso si no lo es
-    public static boolean esCapicua(int num) {
-        try {
+    public static boolean esCapicua(int num) throws Exception {
+
+            if (num < 0){
+                throw  new Exception("no se puede comprobar por que el numero es negativo");
+            }
+
             int original = num;
             int inverso = 0;
 
@@ -15,17 +19,13 @@ public class biblioFunNacho {
                 num = num / 10;
             }
             return original == inverso;
-        } catch (Exception e) {
-            System.err.println("Error en esCapicua: " + e.getMessage());
-            return false;
-        }
+
     }
 
     // 2. esPrimo: Devuelve verdadero si el número es primo y falso si no lo es
-    public static boolean esPrimo(int num) {
-        try {
+    public static boolean esPrimo(int num) throws Exception {
             if (num <= 1) {
-                return false;
+                throw new Exception("el numero primo no puede ser negativo, ni 0, ni 1");
             }
 
             for (int i = 2; i < num; i++) {
@@ -34,24 +34,23 @@ public class biblioFunNacho {
                 }
             }
             return true;
-        } catch (Exception e) {
-            System.err.println("Error en esPrimo: " + e.getMessage());
-            return false;
-        }
+
     }
 
     // 3. siguientePrimo: Devuelve el siguiente primo mayor que el número dado
-    public static int siguientePrimo(int num) {
-        try {
-            int siguiente = num + 1;
-            while (!esPrimo(siguiente)) {
-                siguiente++;
-            }
-            return siguiente;
-        } catch (Exception e) {
-            System.err.println("Error en siguientePrimo: " + e.getMessage());
-            return -1;
+    public static int siguientePrimo(int num) throws Exception {
+        if (num <= 1) {
+            throw new Exception("el numero primo no puede ser negativo, ni 0, ni 1");
         }
+        int siguiente = num + 1;
+            try {
+                while (!esPrimo(siguiente)) {
+                    siguiente++;
+                }
+                return siguiente;
+            } catch (Exception e) {
+                throw new Exception("error ha introducido algo mal");
+            }
     }
 
     // 4. digitos: Cuenta el número de dígitos de un número entero
@@ -91,25 +90,20 @@ public class biblioFunNacho {
     }
 
     // 6. digitoN: Devuelve el dígito en la posición n (de izquierda a derecha empezando en 0)
-    public static int digitoN(int num, int n) {
-        try {
+    public static int digitoN(int num, int n) throws Exception {
+
             n-=1;
             if (num < 0) {
                 num = -num;
             }
             int numDigitos = digitos(num);
             if (n < 0 || n >= numDigitos) {
-                throw new IllegalArgumentException("Posición inválida");
+                throw new Exception("Posición inválida");
             }
             num /= (int) Math.pow(10, numDigitos - n - 1);
+
             return num % 10;
-        } catch (IllegalArgumentException e) {
-            System.err.println("Error en digitoN: " + e.getMessage());
-            return -1;
-        } catch (Exception e) {
-            System.err.println("Error inesperado en digitoN: " + e.getMessage());
-            return -1;
-        }
+
     }
 
     // 7. quitaPorDetras: Quita n dígitos por detrás (derecha) del número
@@ -122,10 +116,13 @@ public class biblioFunNacho {
         } catch (IllegalArgumentException e) {
             System.err.println("Error en quitaPorDetras: " + e.getMessage());
             return 0;
+
         } catch (Exception e) {
             System.err.println("Error inesperado en quitaPorDetras: " + e.getMessage());
             return 0;
+
         }
+
     }
 
     // 8. quitaPorDelante: Quita n dígitos por delante (izquierda) del número
@@ -140,9 +137,11 @@ public class biblioFunNacho {
         } catch (IllegalArgumentException e) {
             System.err.println("Error en quitaPorDelante: " + e.getMessage());
             return 0;
+
         } catch (Exception e) {
             System.err.println("Error inesperado en quitaPorDelante: " + e.getMessage());
             return 0;
+
         }
     }
 
@@ -194,9 +193,11 @@ public class biblioFunNacho {
         } catch (IllegalArgumentException e) {
             System.err.println("Error en pegaPorDelante: " + e.getMessage());
             return num;
+
         } catch (Exception e) {
             System.err.println("Error inesperado en pegaPorDelante: " + e.getMessage());
             return num;
+
         }
     }
 }
