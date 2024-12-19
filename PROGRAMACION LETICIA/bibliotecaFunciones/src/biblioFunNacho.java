@@ -1,207 +1,202 @@
 public class biblioFunNacho {
+    /*
+    Seño he aprendido que System.err te imprime las letras pero en rojo como si fuera un error y creo que queda mas profesional
+
+     */
     // 1. esCapicua: Devuelve verdadero si el número es capicúa y falso si no lo es
     public static boolean esCapicua(int num) {
-        /*
-        Guardamos el valor original del número
-         */
-        int original = num;
-        /*
-        Variable para almacenar el número invertido
-        */
-        int inverso = 0;
+        try {
+            int original = num;
+            int inverso = 0;
 
-        while (num > 0) {
-            /*
-            Extraemos el último dígito de num
-             */
-            int digito = num % 10;
-
-            /*
-            Lo agregamos al número inverso
-             */
-            inverso = inverso * 10 + digito;
-
-            /*
-            Quitamos el último dígito de num
-             */
-            num = num / 10;
-        }
-
-        /*
-        Comparamos el número original con el número invertido
-         */
-        return original == inverso;
-    }
-
-    // 2. esPrimo: Devuelve verdadero si el número es primo y falso si el numero no es primo
-    public static boolean esPrimo(int num) {
-        /*
-        Aremos una comprobacion de is el numero  es igual o menor que uno para descartar casos del usuario
-         */
-        if (num <= 1) {
+            while (num > 0) {
+                int digito = num % 10;
+                inverso = inverso * 10 + digito;
+                num = num / 10;
+            }
+            return original == inverso;
+        } catch (Exception e) {
+            System.err.println("Error en esCapicua: " + e.getMessage());
             return false;
         }
+    }
 
-        /*
-        Si el número es divisible por cualquier otro número no es primo
-         */
-        for (int i = 2; i < num; i++) {
-            if (num % i == 0) {
+    // 2. esPrimo: Devuelve verdadero si el número es primo y falso si no lo es
+    public static boolean esPrimo(int num) {
+        try {
+            if (num <= 1) {
                 return false;
             }
+
+            for (int i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (Exception e) {
+            System.err.println("Error en esPrimo: " + e.getMessage());
+            return false;
         }
-        /*
-        Si no se encontró ningún divisor es primo
-         */
-        return true;
     }
 
     // 3. siguientePrimo: Devuelve el siguiente primo mayor que el número dado
     public static int siguientePrimo(int num) {
-        int siguiente = num + 1;
-        /*
-        Utilizando la funcion 2 comprobaremos cual es el siguiente primo mas cercano sumando de 1 en 1 al numero
-        introducido por el usuario en un bucle y mientras no sea primo el bucle continua.
-         */
-        while (!esPrimo(siguiente)) {
-            siguiente++;
+        try {
+            int siguiente = num + 1;
+            while (!esPrimo(siguiente)) {
+                siguiente++;
+            }
+            return siguiente;
+        } catch (Exception e) {
+            System.err.println("Error en siguientePrimo: " + e.getMessage());
+            return -1;
         }
-        return siguiente;
     }
 
     // 4. digitos: Cuenta el número de dígitos de un número entero
     public static int digitos(int num) {
-        /*
-        Variable para contar los dígitos
-         */
-        int contador = 0;
-
-        /*
-        Si el número es negativo lo convertimos a positivo manualmente
-         */
-        if (num < 0) {
-            num *= -1;
+        try {
+            int contador = 0;
+            if (num < 0) {
+                num *= -1;
+            }
+            if (num == 0) {
+                return 1;
+            }
+            while (num > 0) {
+                num = num / 10;
+                contador++;
+            }
+            return contador;
+        } catch (Exception e) {
+            System.err.println("Error en digitos: " + e.getMessage());
+            return -1;
         }
-
-        /*
-        Si el número es 0 tiene 1 dígito
-         */
-        if (num == 0) {
-            return 1;
-        }
-
-        /*
-        Mientras el número sea mayor que 0 seguimos dividiéndolo por 10
-         */
-        while (num > 0) {
-            num = num / 10;
-            contador++;
-        }
-
-        /*
-        Devolvemos los digitos que tenga el numero introducido por el usuario
-         */
-        return contador;
     }
 
     // 5. voltea: Devuelve el número invertido
     public static int voltea(int num) {
-        int resultado = 0;
-        /*
-        Aremos un bucle que valla multiplicando por 10 el ultimo digito del numero del numero dado y se lo va a
-        añadir a la variable resultado
-         */
-        while (num != 0) {
-            resultado = resultado * 10 + (num % 10);
-            num /= 10;
+        try {
+            int resultado = 0;
+            while (num != 0) {
+                resultado = resultado * 10 + (num % 10);
+                num /= 10;
+            }
+            return resultado;
+        } catch (Exception e) {
+            System.err.println("Error en voltea: " + e.getMessage());
+            return 0;
         }
-        /*
-        Devolbemos el numero dado la vuelta
-         */
-        return resultado;
     }
 
     // 6. digitoN: Devuelve el dígito en la posición n (de izquierda a derecha empezando en 0)
     public static int digitoN(int num, int n) {
-        /*
-        Convertir el número a positivo si es negativo
-         */
-        if (num < 0) {
-            num = -num;
-        }
-
-        /*
-        Contar la cantidad de dígitos en el número
-         */
-        int numDigitos = digitos(num);
-
-        /*
-        Validar si la posición es válida
-         */
-        if (n < 0 || n >= numDigitos) {
+        try {
+            n-=1;
+            if (num < 0) {
+                num = -num;
+            }
+            int numDigitos = digitos(num);
+            if (n < 0 || n >= numDigitos) {
+                throw new IllegalArgumentException("Posición inválida");
+            }
+            num /= (int) Math.pow(10, numDigitos - n - 1);
+            return num % 10;
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error en digitoN: " + e.getMessage());
+            return -1;
+        } catch (Exception e) {
+            System.err.println("Error inesperado en digitoN: " + e.getMessage());
             return -1;
         }
-
-        /*
-        Eliminar los primeros "n" dígitos desde la izquierda
-         */
-        num /= (int) Math.pow(10, numDigitos - n - 1);
-
-        /*
-        Devolvemos el último dígito
-         */
-        return num % 10;
     }
-
-
 
     // 7. quitaPorDetras: Quita n dígitos por detrás (derecha) del número
     public static int quitaPorDetras(int num, int n) {
-        /*
-        Hacemos una simple division del numero entre 10 elevado al numero de posiciones de la
-        derecha que queramos quitar
-         */
-        int resultado = num / (int) Math.pow(10, n);
-        return resultado;
+        try {
+            if (n < 0) {
+                throw new IllegalArgumentException("Número de dígitos a quitar no puede ser negativo");
+            }
+            return num / (int) Math.pow(10, n);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error en quitaPorDetras: " + e.getMessage());
+            return 0;
+        } catch (Exception e) {
+            System.err.println("Error inesperado en quitaPorDetras: " + e.getMessage());
+            return 0;
+        }
     }
 
     // 8. quitaPorDelante: Quita n dígitos por delante (izquierda) del número
     public static int quitaPorDelante(int num, int n) {
-        /*
-        Utilizando recursividad entre funciones aprobecho la funcion de arriba de digitos para sacar el numero de
-        digitos que tiene el numero
-         */
-        int digitos = digitos(num);
-        /*
-        Restamos a digitos la cantidad de digitos que queremos quitar por la derecha, porejemplo
-        que el numero tiene 7 cifras y queremos quitarle 3. le restamos 3 a 7.
-         */
-        digitos -= n;
-        /*
-        Ahora nos quedaremos con los digitos que nos de el modulo del numero dividido 10 elevado al numero de digitos
-        con los que nos vamos a quedar
-         */
-        int resultado = num % (int) Math.pow(10, digitos);
-        return resultado;
+        try {
+            int digitos = digitos(num);
+            if (n < 0 || n > digitos) {
+                throw new IllegalArgumentException("Número de dígitos a quitar no válido");
+            }
+            digitos -= n;
+            return num % (int) Math.pow(10, digitos);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error en quitaPorDelante: " + e.getMessage());
+            return 0;
+        } catch (Exception e) {
+            System.err.println("Error inesperado en quitaPorDelante: " + e.getMessage());
+            return 0;
+        }
     }
 
     // 9. pegaPorDetras: Añade un dígito a un número por detrás
     public static int pegaPorDetras(int num, int digito) {
-        /*
-        Multiplicamos el numero por 10 y le sumamos el digito que quiere añadir el usuario
-         */
-        return num * 10 + digito;
+        try {
+            if (digito > 0 && digito < 10) {
+                if (num < 0) {
+                    return num * 10 - digito;
+                }
+                return num * 10 + digito;
+
+            } else {
+                throw new IllegalArgumentException("El dígito debe estar entre 0 y 9");
+            }
+
+
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error en pegaPorDetras: " + e.getMessage());
+            return num;
+
+        } catch (Exception e) {
+            System.err.println("Error inesperado en pegaPorDetras: " + e.getMessage());
+            return num;
+
+        }
     }
 
     // 10. pegaPorDelante: Añade un dígito a un número por delante
     public static int pegaPorDelante(int num, int digito) {
-        int digitos = digitos(num);
-        digitos = (int) Math.pow(10, digitos);
-        digito *= digitos;
-        num += digito;
-        return  num;
+        try {
+            if (digito < 0 || digito > 9) {
+                throw new IllegalArgumentException("El dígito debe estar entre 0 y 9");
+            }
+            if (num < 0) {
+                num = -num;
+                int digitos = digitos(num);
+                digitos = (int) Math.pow(10, digitos);
+                digito *= digitos;
+                num += digito;
+                return -num;
 
+            }else {
+                int digitos = digitos(num);
+                digitos = (int) Math.pow(10, digitos);
+                digito *= digitos;
+                return num + digito;
+            }
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error en pegaPorDelante: " + e.getMessage());
+            return num;
+        } catch (Exception e) {
+            System.err.println("Error inesperado en pegaPorDelante: " + e.getMessage());
+            return num;
+        }
     }
-
-
 }
