@@ -64,18 +64,27 @@ public class Main {
                     case 4:
                         System.out.println("Escribe el numero");
                         int num3 = scanner.nextInt();
+                        try {
                         int respuesta4 = biblioFunNacho.digitos(num3);
                         System.out.println("El numero tiene un total de " + respuesta4 + " digitos");
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         break;
 
                     case 5:
                         System.out.println("Escribe el numero");
                         int num4 = scanner.nextInt();
+                        try {
                         int respuesta5 = biblioFunNacho.voltea(num4);
                         System.out.println("El numero volteaado es: " + respuesta5);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         break;
 
                     case 6:
+                        int respuesta5;
                         System.out.println("Escribe el numero");
                         int num51 = scanner.nextInt();
                         System.out.println("Escribe digito que estas buscando");
@@ -93,8 +102,12 @@ public class Main {
                         int num61 = scanner.nextInt();
                         System.out.println("Escribe el numero de digitos que quitas por delante");
                         int num62 = scanner.nextInt();
+                        try {
                         int respuesta6 = biblioFunNacho.quitaPorDetras(num61, num62);
                         System.out.println("El numero quitadon " + num62 + " cifras es: " + respuesta6);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         break;
 
                     case 8:
@@ -102,8 +115,12 @@ public class Main {
                         int num71 = scanner.nextInt();
                         System.out.println("Escribe el numero de digitos que quitas por detras");
                         int num72 = scanner.nextInt();
-                        int respuesta7 = biblioFunNacho.quitaPorDetras(num71, num72);
-                        System.out.println("El numero quitando " + num72 + " cifras es por detras es: " + respuesta7);
+                        try {
+                            int respuesta7 = biblioFunNacho.quitaPorDetras(num71, num72);
+                            System.out.println("El numero quitando " + num72 + " cifras es por detras es: " + respuesta7);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         break;
 
                     case 9:
@@ -111,16 +128,25 @@ public class Main {
                         int num81 = scanner.nextInt();
                         System.out.println("Cuantos numeros quieres pegar por detra");
                         int num82 = scanner.nextInt();
+                        try {
                         int respuesta9 = biblioFunNacho.pegaPorDetras(num81, num82);
                         System.out.println("El numero ahora es " + respuesta9);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         break;
 
                     case 10:
+                        int respuesta10;
                         System.out.println("Escribe el numero");
                         int num91 = scanner.nextInt();
                         System.out.println("Cuantos numeros quieres pegar por delante");
                         int num92 = scanner.nextInt();
-                        int respuesta10 = biblioFunNacho.pegaPorDelante(num91, num92);
+                        try {
+                        respuesta10 = biblioFunNacho.pegaPorDelante(num91, num92);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         System.out.println("El numero ahora es " + respuesta10);
                         break;
                     default:

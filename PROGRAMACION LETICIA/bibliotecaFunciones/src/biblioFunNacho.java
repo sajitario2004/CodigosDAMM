@@ -55,7 +55,6 @@ public class biblioFunNacho {
 
     // 4. digitos: Cuenta el número de dígitos de un número entero
     public static int digitos(int num) {
-        try {
             int contador = 0;
             if (num < 0) {
                 num *= -1;
@@ -68,25 +67,18 @@ public class biblioFunNacho {
                 contador++;
             }
             return contador;
-        } catch (Exception e) {
-            System.err.println("Error en digitos: " + e.getMessage());
-            return -1;
-        }
     }
 
     // 5. voltea: Devuelve el número invertido
     public static int voltea(int num) {
-        try {
+
             int resultado = 0;
             while (num != 0) {
                 resultado = resultado * 10 + (num % 10);
                 num /= 10;
             }
             return resultado;
-        } catch (Exception e) {
-            System.err.println("Error en voltea: " + e.getMessage());
-            return 0;
-        }
+
     }
 
     // 6. digitoN: Devuelve el dígito en la posición n (de izquierda a derecha empezando en 0)
@@ -108,46 +100,30 @@ public class biblioFunNacho {
 
     // 7. quitaPorDetras: Quita n dígitos por detrás (derecha) del número
     public static int quitaPorDetras(int num, int n) {
-        try {
+
             if (n < 0) {
                 throw new IllegalArgumentException("Número de dígitos a quitar no puede ser negativo");
             }
             return num / (int) Math.pow(10, n);
-        } catch (IllegalArgumentException e) {
-            System.err.println("Error en quitaPorDetras: " + e.getMessage());
-            return 0;
 
-        } catch (Exception e) {
-            System.err.println("Error inesperado en quitaPorDetras: " + e.getMessage());
-            return 0;
-
-        }
 
     }
 
     // 8. quitaPorDelante: Quita n dígitos por delante (izquierda) del número
     public static int quitaPorDelante(int num, int n) {
-        try {
+
             int digitos = digitos(num);
             if (n < 0 || n > digitos) {
                 throw new IllegalArgumentException("Número de dígitos a quitar no válido");
             }
             digitos -= n;
             return num % (int) Math.pow(10, digitos);
-        } catch (IllegalArgumentException e) {
-            System.err.println("Error en quitaPorDelante: " + e.getMessage());
-            return 0;
 
-        } catch (Exception e) {
-            System.err.println("Error inesperado en quitaPorDelante: " + e.getMessage());
-            return 0;
-
-        }
     }
 
     // 9. pegaPorDetras: Añade un dígito a un número por detrás
     public static int pegaPorDetras(int num, int digito) {
-        try {
+
             if (digito > 0 && digito < 10) {
                 if (num < 0) {
                     return num * 10 - digito;
@@ -159,20 +135,11 @@ public class biblioFunNacho {
             }
 
 
-        } catch (IllegalArgumentException e) {
-            System.err.println("Error en pegaPorDetras: " + e.getMessage());
-            return num;
-
-        } catch (Exception e) {
-            System.err.println("Error inesperado en pegaPorDetras: " + e.getMessage());
-            return num;
-
-        }
     }
 
     // 10. pegaPorDelante: Añade un dígito a un número por delante
     public static int pegaPorDelante(int num, int digito) {
-        try {
+
             if (digito < 0 || digito > 9) {
                 throw new IllegalArgumentException("El dígito debe estar entre 0 y 9");
             }
@@ -190,14 +157,6 @@ public class biblioFunNacho {
                 digito *= digitos;
                 return num + digito;
             }
-        } catch (IllegalArgumentException e) {
-            System.err.println("Error en pegaPorDelante: " + e.getMessage());
-            return num;
 
-        } catch (Exception e) {
-            System.err.println("Error inesperado en pegaPorDelante: " + e.getMessage());
-            return num;
-
-        }
     }
 }
