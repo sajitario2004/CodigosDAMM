@@ -17,6 +17,8 @@ public class ventanaConMinas extends JFrame implements ActionListener {
     int anchura = getWidth();
 
 
+    //array minas
+    String [][][] arrayminas = ArraysInfoMinas();
 
 
     //botones
@@ -513,62 +515,62 @@ public class ventanaConMinas extends JFrame implements ActionListener {
         ventana.add(cas68);
         cas68.addActionListener(this);
 
-        cas69 = new JButton("0");
+        cas69 = new JButton("");
         cas69.setBounds(800, 600, 100, 100);
         ventana.add(cas69);
         cas69.addActionListener(this);
 
-        cas70 = new JButton("0");
+        cas70 = new JButton("");
         cas70.setBounds(900, 600, 100, 100);
         ventana.add(cas70);
         cas70.addActionListener(this);
 
-        cas71 = new JButton("0");
+        cas71 = new JButton("");
         cas71.setBounds(0, 700, 100, 100);
         ventana.add(cas71);
         cas71.addActionListener(this);
 
-        cas72 = new JButton("0");
+        cas72 = new JButton("");
         cas72.setBounds(100, 700, 100, 100);
         ventana.add(cas72);
         cas72.addActionListener(this);
 
-        cas73 = new JButton("0");
+        cas73 = new JButton("");
         cas73.setBounds(200, 700, 100, 100);
         ventana.add(cas73);
         cas73.addActionListener(this);
 
-        cas74 = new JButton("0");
+        cas74 = new JButton("");
         cas74.setBounds(300, 700, 100, 100);
         ventana.add(cas74);
         cas74.addActionListener(this);
 
-        cas75 = new JButton("0");
+        cas75 = new JButton("");
         cas75.setBounds(400, 700, 100, 100);
         ventana.add(cas75);
         cas75.addActionListener(this);
 
-        cas76 = new JButton("0");
+        cas76 = new JButton("");
         cas76.setBounds(500, 700, 100, 100);
         ventana.add(cas76);
         cas76.addActionListener(this);
 
-        cas77 = new JButton("0");
+        cas77 = new JButton("");
         cas77.setBounds(600, 700, 100, 100);
         ventana.add(cas77);
         cas77.addActionListener(this);
 
-        cas78 = new JButton("0");
+        cas78 = new JButton("");
         cas78.setBounds(700, 700, 100, 100);
         ventana.add(cas78);
         cas78.addActionListener(this);
 
-        cas79 = new JButton("0");
+        cas79 = new JButton("");
         cas79.setBounds(800, 700, 100, 100);
         ventana.add(cas79);
         cas79.addActionListener(this);
 
-        cas80 = new JButton("0");
+        cas80 = new JButton("");
         cas80.setBounds(900, 700, 100, 100);
         ventana.add(cas80);
         cas80.addActionListener(this);
@@ -581,52 +583,52 @@ public class ventanaConMinas extends JFrame implements ActionListener {
         }
 
 
-        cas81 = new JButton("0");
+        cas81 = new JButton("");
         cas81.setBounds(0, 800, 100, 100);
         ventana.add(cas81);
         cas81.addActionListener(this);
 
-        cas82 = new JButton("0");
+        cas82 = new JButton("");
         cas82.setBounds(100, 800, 100, 100);
         ventana.add(cas82);
         cas82.addActionListener(this);
 
-        cas83 = new JButton("0");
+        cas83 = new JButton("");
         cas83.setBounds(200, 800, 100, 100);
         ventana.add(cas83);
         cas83.addActionListener(this);
 
-        cas84 = new JButton("0");
+        cas84 = new JButton("");
         cas84.setBounds(300, 800, 100, 100);
         ventana.add(cas84);
         cas84.addActionListener(this);
 
-        cas85 = new JButton("0");
+        cas85 = new JButton("");
         cas85.setBounds(400, 800, 100, 100);
         ventana.add(cas85);
         cas85.addActionListener(this);
 
-        cas86 = new JButton("0");
+        cas86 = new JButton("");
         cas86.setBounds(500, 800, 100, 100);
         ventana.add(cas86);
         cas86.addActionListener(this);
 
-        cas87 = new JButton("0");
+        cas87 = new JButton("");
         cas87.setBounds(600, 800, 100, 100);
         ventana.add(cas87);
         cas87.addActionListener(this);
 
-        cas88 = new JButton("0");
+        cas88 = new JButton("");
         cas88.setBounds(700, 800, 100, 100);
         ventana.add(cas88);
         cas88.addActionListener(this);
 
-        cas89 = new JButton("0");
+        cas89 = new JButton("");
         cas89.setBounds(800, 800, 100, 100);
         ventana.add(cas89);
         cas89.addActionListener(this);
 
-        cas90 = new JButton("0");
+        cas90 = new JButton("");
         cas90.setBounds(900, 800, 100, 100);
         ventana.add(cas90);
         cas90.addActionListener(this);
@@ -639,52 +641,52 @@ public class ventanaConMinas extends JFrame implements ActionListener {
         }
 
 
-        cas91 = new JButton("0");
+        cas91 = new JButton("");
         cas91.setBounds(0, 900, 100, 100);
         ventana.add(cas91);
         cas91.addActionListener(this);
 
-        cas92 = new JButton("0");
+        cas92 = new JButton("");
         cas92.setBounds(100, 900, 100, 100);
         ventana.add(cas92);
         cas92.addActionListener(this);
 
-        cas93 = new JButton("0");
+        cas93 = new JButton("");
         cas93.setBounds(200, 900, 100, 100);
         ventana.add(cas93);
         cas93.addActionListener(this);
 
-        cas94 = new JButton("0");
+        cas94 = new JButton("");
         cas94.setBounds(300, 900, 100, 100);
         ventana.add(cas94);
         cas94.addActionListener(this);
 
-        cas95 = new JButton("0");
+        cas95 = new JButton("");
         cas95.setBounds(400, 900, 100, 100);
         ventana.add(cas95);
         cas95.addActionListener(this);
 
-        cas96 = new JButton("0");
+        cas96 = new JButton("");
         cas96.setBounds(500, 900, 100, 100);
         ventana.add(cas96);
         cas96.addActionListener(this);
 
-        cas97 = new JButton("0");
+        cas97 = new JButton("");
         cas97.setBounds(600, 900, 100, 100);
         ventana.add(cas97);
         cas97.addActionListener(this);
 
-        cas98 = new JButton("0");
+        cas98 = new JButton("");
         cas98.setBounds(700, 900, 100, 100);
         ventana.add(cas98);
         cas98.addActionListener(this);
 
-        cas99 = new JButton("0");
+        cas99 = new JButton("");
         cas99.setBounds(800, 900, 100, 100);
         ventana.add(cas99);
         cas99.addActionListener(this);
 
-        cas100 = new JButton("0");
+        cas100 = new JButton("");
         cas100.setBounds(900, 900, 100, 100);
         ventana.add(cas100);
         cas100.addActionListener(this);
@@ -695,7 +697,7 @@ public class ventanaConMinas extends JFrame implements ActionListener {
 
         //le damos ese tamaño a la pantalla y la imprimimos
         ventana.setResizable(true);
-        ventana.setSize(altura,anchura);
+        ventana.setSize(1000,1100);
         ventana.setLayout(null);
         ventana.setVisible(true);
 
@@ -703,9 +705,88 @@ public class ventanaConMinas extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
+
+
         if (e.getSource() == cas1) {
-            cas1.setText("valorArray");
+            cas1.setText(arrayminas[0][0][1]);
             ventana.repaint();
+        }
+        if (e.getSource() == cas2) {
+            cas2.setText(arrayminas[1][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas3) {
+            cas3.setText(arrayminas[2][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas4) {
+            cas4.setText(arrayminas[3][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas5) {
+            cas5.setText(arrayminas[4][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas6) {
+            cas6.setText(arrayminas[5][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas7) {
+            cas7.setText(arrayminas[6][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas8) {
+            cas8.setText(arrayminas[7][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas9) {
+            cas9.setText(arrayminas[8][0][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas10) {
+            cas10.setText(arrayminas[9][0][1]);
+            ventana.repaint();
+        }
+
+
+        if (e.getSource() == cas11) {
+            cas11.setText(arrayminas[0][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas12) {
+            cas12.setText(arrayminas[1][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas13) {
+            cas13.setText(arrayminas[2][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas14) {
+            cas14.setText(arrayminas[3][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas15) {
+            cas15.setText(arrayminas[4][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas16) {
+            cas16.setText(arrayminas[5][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas17) {
+            cas17.setText(arrayminas[6][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas18) {
+            cas18.setText(arrayminas[7][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas19) {
+            cas19.setText(arrayminas[8][1][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas20) {
+            cas20.setText(arrayminas[9][1][1]);
         }
     }
 
