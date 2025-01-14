@@ -788,6 +788,181 @@ public class ventanaConMinas extends JFrame implements ActionListener {
         if (e.getSource() == cas20) {
             cas20.setText(arrayminas[9][1][1]);
         }
+        if (e.getSource() == cas21) {
+            cas21.setText(arrayminas[0][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas22) {
+            cas22.setText(arrayminas[1][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas23) {
+            cas23.setText(arrayminas[2][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas24) {
+            cas24.setText(arrayminas[3][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas25) {
+            cas25.setText(arrayminas[4][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas26) {
+            cas26.setText(arrayminas[5][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas27) {
+            cas27.setText(arrayminas[6][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas28) {
+            cas28.setText(arrayminas[7][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas29) {
+            cas29.setText(arrayminas[8][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas30) {
+            cas30.setText(arrayminas[9][2][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas31) {
+            cas31.setText(arrayminas[0][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas32) {
+            cas32.setText(arrayminas[1][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas33) {
+            cas33.setText(arrayminas[2][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas34) {
+            cas34.setText(arrayminas[3][3][1]);
+        }
+        if (e.getSource() == cas35) {
+            cas35.setText(arrayminas[4][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas36) {
+            cas36.setText(arrayminas[5][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas37) {
+            cas37.setText(arrayminas[6][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas38) {
+            cas38.setText(arrayminas[7][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas39) {
+            cas39.setText(arrayminas[8][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas40) {
+            cas40.setText(arrayminas[9][3][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas41) {
+            cas41.setText(arrayminas[0][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas42) {
+            cas42.setText(arrayminas[1][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas43) {
+            cas43.setText(arrayminas[2][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas44) {
+            cas44.setText(arrayminas[3][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas45) {
+            cas45.setText(arrayminas[4][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas46) {
+            cas46.setText(arrayminas[5][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas47) {
+            cas47.setText(arrayminas[6][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas48) {
+            cas48.setText(arrayminas[7][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas49) {
+            cas49.setText(arrayminas[8][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas50) {
+            cas50.setText(arrayminas[9][4][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas51) {
+            cas51.setText(arrayminas[0][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas52) {
+            cas52.setText(arrayminas[1][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas53) {
+            cas53.setText(arrayminas[2][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas54) {
+            cas54.setText(arrayminas[3][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas55) {
+            cas55.setText(arrayminas[4][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas56) {
+            cas56.setText(arrayminas[5][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas57) {
+            cas57.setText(arrayminas[6][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas58) {
+            cas58.setText(arrayminas[7][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas59) {
+            cas59.setText(arrayminas[8][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas60) {
+            cas60.setText(arrayminas[9][5][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas61) {
+            cas61.setText(arrayminas[0][6][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas62) {
+            cas62.setText(arrayminas[1][6][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas63) {
+            cas63.setText(arrayminas[2][6][1]);
+            ventana.repaint();
+        }
+        if (e.getSource() == cas64) {
+            cas64.setText(arrayminas[3][6][1]);
+            ventana.repaint();
+        }
     }
 
     public static void main(String[] args) {
