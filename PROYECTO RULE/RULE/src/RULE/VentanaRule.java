@@ -28,7 +28,7 @@ public class VentanaRule extends JFrame implements ActionListener {
                 button.setLocation(600 + (i - 25) * 105, 900);  // Fila 3 (Botones 25 a 36)
             } else if (i > 12 && i <= 24) {
                 button.setLocation(600 + (i - 13) * 105, 800);  // Fila 2 (Botones 13 a 24)
-            } else if (i > 1 && i <= 12) {
+            } else if (i > 0 && i <= 12) {
                 button.setLocation(600 + (i - 1) * 105, 700);  // Fila 1 (Botones 1 a 12)
             }
 
