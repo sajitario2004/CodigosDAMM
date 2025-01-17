@@ -127,27 +127,17 @@ public class ventanaConMinas extends JFrame implements ActionListener {
 
     JFrame ventana = new JFrame();
 
-    public ventanaConMinas(String [][][] arrayminas){
+    public ventanaConMinas(String [][][] arrayminas) throws InterruptedException {
 
-// Crear un panel para los botones
-      /*  JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(10, 10)); // Una cuadrícula de 10x10
 
-        // Inicializar la lista de botones
-        botones = new ArrayList<>();
-        */
 
-        /*
-        Crear 100 botones y agregarlos al panel
-        for (int i = 1; i <= 100; i++) {
-            JButton boton = new JButton("Botón " + i);
-            botones.add(boton); // Guardar en la lista
-            panel.add(boton); // Agregar al panel
-        }
+        ventana.setTitle("Buscaminas Nacho");
+        ventana.setResizable(true);
+        ventana.setSize(1800,1000);
+        ventana.setLayout(null);
 
-        // Cambiar la fuente de todos los botones
-        ventanaConMinas(new Font("Arial", Font.BOLD, 14));
-        */
+
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         cas1 = new JButton("");
         cas1.setBounds(460, 0, 100, 100);
@@ -715,13 +705,15 @@ public class ventanaConMinas extends JFrame implements ActionListener {
         System.out.println("altura: " + altura);
 
         //le damos ese tamaño a la pantalla y la imprimimos
-        ventana.setTitle("Buscaminas Nacho");
-        ventana.setResizable(true);
-        ventana.setSize(1920,1080);
-        ventana.setLayout(null);
+
+
         ventana.setVisible(true);
 
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // temporizador
+        int contTempo= 0;
+        temporizador(contTempo);
+
+
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -1128,13 +1120,54 @@ public class ventanaConMinas extends JFrame implements ActionListener {
             ventana.repaint();
         }
 
+
     }
 
-    public static void main(String[] args) {
+    public void temporizador(int contTempo) throws InterruptedException {
+/*
+        Thread.sleep(1000);
 
-        String [][][] arrayminas = ArraysInfoMinas();
+        contTempo++;
+
+        JLabel tempo = new JLabel("llevas "+contTempo + " segundos");
+
+        tempo.setBounds(1460, 450, 100, 100);
+
+        ventana.add(tempo);
+
+        tempo.repaint();
+
+        temporizador(contTempo);*/
 
 
-        new ventanaConMinas(arrayminas);
+
+
+
+                ActionListener taskPerformer = new ActionListener() {
+                    public void actionPerformed(ActionEvent evt) {
+                        contTempo++;
+
+                        JLabel tempo = new JLabel("llevas "+contTempo + " segundos");
+
+                        tempo.setBounds(1460, 450, 100, 100);
+
+                        ventana.add(tempo);
+
+                        tempo.repaint();
+                        System.out.println("Reading SMTP Info.");
+                    }
+                };
+                Timer timer = new Timer(100 ,taskPerformer);
+                timer.setRepeats(false);
+                timer.start();
+
+                Thread.sleep(5000);
+
+
+
+
+
+
     }
+
 }
