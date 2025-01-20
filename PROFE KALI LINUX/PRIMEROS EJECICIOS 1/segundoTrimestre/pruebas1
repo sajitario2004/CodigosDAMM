@@ -51,7 +51,7 @@ let cdJs = new Equipo('CD JS',
 []
 );
 
-console.log(cdJs);
+console.log(cdJs);//-------------------------------------------
 
 
 let atJava = new Equipo('At Java',
@@ -69,7 +69,7 @@ let partido1 = new Partido('Profesor',
     atJava
 );
 
-console.log(partido1);
+console.log(partido1);//----------------------------------------
 partidos.push(partido1);
 
 let partido2 = new Partido('Profesor',
@@ -78,8 +78,8 @@ let partido2 = new Partido('Profesor',
     cdJs
 );
 
-console.log(partido2);
+console.log(partido2);//--------------------------------------
 
 partidos.push(partido2);
 
-console.log(partidos);
+console.log(partidos);//--------------------------------------
