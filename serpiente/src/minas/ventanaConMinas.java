@@ -710,8 +710,7 @@ public class ventanaConMinas extends JFrame implements ActionListener {
         ventana.setVisible(true);
 
         // temporizador
-        int contTempo= 0;
-        temporizador(contTempo);
+
 
 
     }
@@ -1123,50 +1122,20 @@ public class ventanaConMinas extends JFrame implements ActionListener {
 
     }
 
-    public void temporizador(int contTempo) throws InterruptedException {
-/*
-        Thread.sleep(1000);
 
-        contTempo++;
+    Timer tiempo;
 
-        JLabel tempo = new JLabel("llevas "+contTempo + " segundos");
+    JLabel tiempo1;
 
-        tempo.setBounds(1460, 450, 100, 100);
+    public void temporizador() {
 
-        ventana.add(tempo);
+        tiempo = new Timer(1000, null);
 
-        tempo.repaint();
+        tiempo.start();
 
-        temporizador(contTempo);*/
+        JLabel tiempo1 = new JLabel("Temporizador" + tiempo);
 
-
-
-
-
-                ActionListener taskPerformer = new ActionListener() {
-                    public void actionPerformed(ActionEvent evt) {
-                        contTempo++;
-
-                        JLabel tempo = new JLabel("llevas "+contTempo + " segundos");
-
-                        tempo.setBounds(1460, 450, 100, 100);
-
-                        ventana.add(tempo);
-
-                        tempo.repaint();
-                        System.out.println("Reading SMTP Info.");
-                    }
-                };
-                Timer timer = new Timer(100 ,taskPerformer);
-                timer.setRepeats(false);
-                timer.start();
-
-                Thread.sleep(5000);
-
-
-
-
-
+        System.out.println(tiempo1);
 
     }
 

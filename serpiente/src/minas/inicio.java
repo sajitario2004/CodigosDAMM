@@ -43,10 +43,12 @@ public class inicio extends JFrame implements ActionListener {
             } catch (InterruptedException ex) {
                 throw new RuntimeException(ex);
             }
+
         }
     }
 
     public static void main(String[] args) {
         new inicio();
+
     }
 }

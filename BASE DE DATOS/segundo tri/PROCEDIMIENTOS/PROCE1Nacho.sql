@@ -1,0 +1,30 @@
+DROP DATABASE DIA270125;
+CREATE DATABASE DIA270125;
+USE DIA270125;
+
+
+CREATE TABLE empleados (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(50),
+puesto VARCHAR(50),
+salario DECIMAL(10, 2)
+);
+
+
+DELIMITER $$
+CREATE PROCEDURE Insertar_Empleado (IN n1 VARCHAR(50), IN p1 VARCHAR(50), IN s1 DECIMAL(10, 2))
+BEGIN
+
+	INSERT INTO DIA270125.empleados (nombre, puesto, salario) VALUE (n1, p1, s1);
+END$$
+
+
+CALL Insertar_Empleado ('nacho' , 'informatico', 25); 
+
+DELIMITER $$
+CREATE PROCEDURE Actualizar_Salario (IN id1 INT, IN n1 VARCHAR(50), IN p1 VARCHAR(50), IN s1 DECIMAL(10, 2))
+BEGIN 
+	DELETE FROM empleados WHERE nombre(n1)
+END$$
+
+SELECT * FROM empleados
