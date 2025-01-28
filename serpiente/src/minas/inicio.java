@@ -13,6 +13,7 @@ public class inicio extends JFrame implements ActionListener {
 
 
     public inicio() {
+        ventanaInicio.setTitle("Inicio");
         ventanaInicio.setLayout(null);
         ventanaInicio.setSize(600, 600);
 
@@ -32,6 +33,8 @@ public class inicio extends JFrame implements ActionListener {
         ventanaInicio.add(lblFotoCayetano);
 
         ventanaInicio.setVisible(true);
+
+
     }
 
     @Override
@@ -44,8 +47,12 @@ public class inicio extends JFrame implements ActionListener {
                 throw new RuntimeException(ex);
             }
 
+            ventanaInicio.setVisible(false);
+
         }
     }
+
+
 
     public static void main(String[] args) {
         new inicio();

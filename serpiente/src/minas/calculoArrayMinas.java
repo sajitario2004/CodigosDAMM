@@ -81,7 +81,7 @@ public class calculoArrayMinas {
         for (int i = 0; i < mapeadoMinas.length; i++) {
             for (int j = 0; j < mapeadoMinas[0].length; j++) {
                 if ( mapeadoMinas[i][j][1] == null ) {
-                    mapeadoMinas[i][j][1] = "0";
+                    mapeadoMinas[i][j][1] = " ";
                 }
             }
         }

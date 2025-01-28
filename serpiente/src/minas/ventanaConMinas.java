@@ -124,20 +124,28 @@ public class ventanaConMinas extends JFrame implements ActionListener {
     JButton cas99;
     JButton cas100;
 
+    // variables para el tiempo
+    Timer tiempo;
 
+    int tiempoINT = 0;
+    JButton casTempRestart;
+    JLabel tiempo1;
+
+
+    //ventana
     JFrame ventana = new JFrame();
 
     public ventanaConMinas(String [][][] arrayminas) throws InterruptedException {
-
-
 
         ventana.setTitle("Buscaminas Nacho");
         ventana.setResizable(true);
         ventana.setSize(1800,1000);
         ventana.setLayout(null);
 
-
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+
 
         cas1 = new JButton("");
         cas1.setBounds(460, 0, 100, 100);
@@ -704,12 +712,33 @@ public class ventanaConMinas extends JFrame implements ActionListener {
 
         System.out.println("altura: " + altura);
 
-        //le damos ese tamaño a la pantalla y la imprimimos
 
-
-        ventana.setVisible(true);
 
         // temporizador
+        casTempRestart = new JButton("Resetear");
+        casTempRestart.setBounds(100, 450, 100, 100);
+        ventana.add(casTempRestart);
+        casTempRestart.addActionListener(this);
+
+
+
+            // Timer para el cronómetro
+        tiempo = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tiempoINT++;
+                tiempo1.setText("Tiempo: " + tiempoINT + " segundos");
+            }
+        });
+
+        tiempo1 = new JLabel();
+        tiempo1.setText("Tiempo: " + "0" + " segundos");
+        tiempo1.setBounds(1600, 450, 200, 100);
+        ventana.add(tiempo1);
+
+
+        //ventana visible
+        ventana.setVisible(true);
 
 
 
@@ -717,426 +746,618 @@ public class ventanaConMinas extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
+        //botones tiempo
+        if (e.getSource() == casTempRestart) {
+
+            tiempoINT = 0; // Iniciar el cronómetro
+            tiempo1.setText("Tiempo: " + tiempoINT + " segundos");
+            tiempo.stop();
+
+        }
+
+        //botones minas
 
         if (e.getSource() == cas1) {
             cas1.setText(arrayminas[0][0][1]);
             ventana.repaint();
+            cas1.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas2) {
             cas2.setText(arrayminas[1][0][1]);
             ventana.repaint();
+            cas2.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas3) {
             cas3.setText(arrayminas[2][0][1]);
             ventana.repaint();
+            cas3.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas4) {
             cas4.setText(arrayminas[3][0][1]);
             ventana.repaint();
+            cas4.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas5) {
             cas5.setText(arrayminas[4][0][1]);
             ventana.repaint();
+            cas5.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas6) {
             cas6.setText(arrayminas[5][0][1]);
             ventana.repaint();
+            cas6.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas7) {
             cas7.setText(arrayminas[6][0][1]);
             ventana.repaint();
+            cas7.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas8) {
             cas8.setText(arrayminas[7][0][1]);
             ventana.repaint();
+            cas8.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas9) {
             cas9.setText(arrayminas[8][0][1]);
             ventana.repaint();
+            cas9.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas10) {
             cas10.setText(arrayminas[9][0][1]);
             ventana.repaint();
+            cas10.setEnabled(false);
+            tiempo.start();
         }
 
 
         if (e.getSource() == cas11) {
             cas11.setText(arrayminas[0][1][1]);
             ventana.repaint();
+            cas11.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas12) {
             cas12.setText(arrayminas[1][1][1]);
             ventana.repaint();
+            cas12.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas13) {
             cas13.setText(arrayminas[2][1][1]);
             ventana.repaint();
+            cas13.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas14) {
             cas14.setText(arrayminas[3][1][1]);
             ventana.repaint();
+            cas14.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas15) {
             cas15.setText(arrayminas[4][1][1]);
             ventana.repaint();
+            cas15.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas16) {
             cas16.setText(arrayminas[5][1][1]);
             ventana.repaint();
+            cas16.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas17) {
             cas17.setText(arrayminas[6][1][1]);
             ventana.repaint();
+            cas17.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas18) {
             cas18.setText(arrayminas[7][1][1]);
             ventana.repaint();
+            cas18.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas19) {
             cas19.setText(arrayminas[8][1][1]);
             ventana.repaint();
+            cas19.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas20) {
             cas20.setText(arrayminas[9][1][1]);
+            ventana.repaint();
+            cas20.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas21) {
             cas21.setText(arrayminas[0][2][1]);
             ventana.repaint();
+            cas21.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas22) {
             cas22.setText(arrayminas[1][2][1]);
             ventana.repaint();
+            cas22.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas23) {
             cas23.setText(arrayminas[2][2][1]);
             ventana.repaint();
+            cas23.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas24) {
             cas24.setText(arrayminas[3][2][1]);
             ventana.repaint();
+            cas24.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas25) {
             cas25.setText(arrayminas[4][2][1]);
             ventana.repaint();
+            cas25.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas26) {
             cas26.setText(arrayminas[5][2][1]);
             ventana.repaint();
+            cas26.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas27) {
             cas27.setText(arrayminas[6][2][1]);
             ventana.repaint();
+            cas27.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas28) {
             cas28.setText(arrayminas[7][2][1]);
             ventana.repaint();
+            cas28.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas29) {
             cas29.setText(arrayminas[8][2][1]);
             ventana.repaint();
+            cas29.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas30) {
             cas30.setText(arrayminas[9][2][1]);
             ventana.repaint();
+            cas30.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas31) {
             cas31.setText(arrayminas[0][3][1]);
             ventana.repaint();
+            cas31.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas32) {
             cas32.setText(arrayminas[1][3][1]);
             ventana.repaint();
+            cas32.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas33) {
             cas33.setText(arrayminas[2][3][1]);
             ventana.repaint();
+            cas33.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas34) {
             cas34.setText(arrayminas[3][3][1]);
+            ventana.repaint();
+            cas34.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas35) {
             cas35.setText(arrayminas[4][3][1]);
             ventana.repaint();
+            cas35.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas36) {
             cas36.setText(arrayminas[5][3][1]);
             ventana.repaint();
+            cas36.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas37) {
             cas37.setText(arrayminas[6][3][1]);
             ventana.repaint();
+            cas37.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas38) {
             cas38.setText(arrayminas[7][3][1]);
             ventana.repaint();
+            cas38.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas39) {
             cas39.setText(arrayminas[8][3][1]);
             ventana.repaint();
+            cas39.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas40) {
             cas40.setText(arrayminas[9][3][1]);
             ventana.repaint();
+            cas40.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas41) {
             cas41.setText(arrayminas[0][4][1]);
             ventana.repaint();
+            cas41.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas42) {
             cas42.setText(arrayminas[1][4][1]);
             ventana.repaint();
+            cas42.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas43) {
             cas43.setText(arrayminas[2][4][1]);
             ventana.repaint();
+            cas43.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas44) {
             cas44.setText(arrayminas[3][4][1]);
             ventana.repaint();
+            cas44.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas45) {
             cas45.setText(arrayminas[4][4][1]);
             ventana.repaint();
+            cas45.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas46) {
             cas46.setText(arrayminas[5][4][1]);
             ventana.repaint();
+            cas46.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas47) {
             cas47.setText(arrayminas[6][4][1]);
             ventana.repaint();
+            cas47.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas48) {
             cas48.setText(arrayminas[7][4][1]);
             ventana.repaint();
+            cas48.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas49) {
             cas49.setText(arrayminas[8][4][1]);
             ventana.repaint();
+            cas49.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas50) {
             cas50.setText(arrayminas[9][4][1]);
             ventana.repaint();
+            cas50.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas51) {
             cas51.setText(arrayminas[0][5][1]);
             ventana.repaint();
+            cas51.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas52) {
             cas52.setText(arrayminas[1][5][1]);
             ventana.repaint();
+            cas52.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas53) {
             cas53.setText(arrayminas[2][5][1]);
             ventana.repaint();
+            cas53.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas54) {
             cas54.setText(arrayminas[3][5][1]);
             ventana.repaint();
+            cas54.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas55) {
             cas55.setText(arrayminas[4][5][1]);
             ventana.repaint();
+            cas55.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas56) {
             cas56.setText(arrayminas[5][5][1]);
             ventana.repaint();
+            cas56.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas57) {
             cas57.setText(arrayminas[6][5][1]);
             ventana.repaint();
+            cas57.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas58) {
             cas58.setText(arrayminas[7][5][1]);
             ventana.repaint();
+            cas58.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas59) {
             cas59.setText(arrayminas[8][5][1]);
             ventana.repaint();
+            cas59.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas60) {
             cas60.setText(arrayminas[9][5][1]);
             ventana.repaint();
+            cas60.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas61) {
             cas61.setText(arrayminas[0][6][1]);
             ventana.repaint();
+            cas61.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas62) {
             cas62.setText(arrayminas[1][6][1]);
             ventana.repaint();
+            cas62.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas63) {
             cas63.setText(arrayminas[2][6][1]);
             ventana.repaint();
+            cas63.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas64) {
             cas64.setText(arrayminas[3][6][1]);
             ventana.repaint();
+            cas64.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas65) {
             cas65.setText(arrayminas[4][6][1]);
             ventana.repaint();
+            cas65.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas66) {
             cas66.setText(arrayminas[5][6][1]);
             ventana.repaint();
+            cas66.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas67) {
             cas67.setText(arrayminas[6][6][1]);
             ventana.repaint();
+            cas67.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas68) {
             cas68.setText(arrayminas[7][6][1]);
             ventana.repaint();
+            cas68.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas69) {
             cas69.setText(arrayminas[8][6][1]);
             ventana.repaint();
+            cas69.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas70) {
             cas70.setText(arrayminas[9][6][1]);
             ventana.repaint();
+            cas70.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas71) {
             cas71.setText(arrayminas[0][7][1]);
             ventana.repaint();
+            cas71.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas72) {
             cas72.setText(arrayminas[1][7][1]);
             ventana.repaint();
+            cas72.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas73) {
             cas73.setText(arrayminas[2][7][1]);
             ventana.repaint();
+            cas73.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas74) {
             cas74.setText(arrayminas[3][7][1]);
             ventana.repaint();
+            cas74.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas75) {
             cas75.setText(arrayminas[4][7][1]);
             ventana.repaint();
+            cas75.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas76) {
             cas76.setText(arrayminas[5][7][1]);
             ventana.repaint();
+            cas76.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas77) {
             cas77.setText(arrayminas[6][7][1]);
             ventana.repaint();
+            cas77.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas78) {
             cas78.setText(arrayminas[7][7][1]);
             ventana.repaint();
+            cas78.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas79) {
             cas79.setText(arrayminas[8][7][1]);
             ventana.repaint();
+            cas79.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas80) {
             cas80.setText(arrayminas[9][7][1]);
             ventana.repaint();
+            cas80.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas81) {
             cas81.setText(arrayminas[0][8][1]);
             ventana.repaint();
+            cas81.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas82) {
             cas82.setText(arrayminas[1][8][1]);
             ventana.repaint();
+            cas82.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas83) {
             cas83.setText(arrayminas[2][8][1]);
             ventana.repaint();
+            cas83.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas84) {
             cas84.setText(arrayminas[3][8][1]);
             ventana.repaint();
+            cas84.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas85){
             cas85.setText(arrayminas[4][8][1]);
             ventana.repaint();
+            cas85.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas86) {
             cas86.setText(arrayminas[5][8][1]);
             ventana.repaint();
+            cas86.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas87) {
             cas87.setText(arrayminas[6][8][1]);
             ventana.repaint();
+            cas87.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas88) {
             cas88.setText(arrayminas[7][8][1]);
             ventana.repaint();
+            cas88.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas89) {
             cas89.setText(arrayminas[8][8][1]);
             ventana.repaint();
+            cas89.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas90) {
             cas90.setText(arrayminas[9][8][1]);
             ventana.repaint();
+            cas90.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas91) {
             cas91.setText(arrayminas[0][9][1]);
             ventana.repaint();
+            cas91.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas92) {
             cas92.setText(arrayminas[1][9][1]);
             ventana.repaint();
+            cas92.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas93) {
             cas93.setText(arrayminas[2][9][1]);
             ventana.repaint();
+            cas93.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas94) {
             cas94.setText(arrayminas[3][9][1]);
             ventana.repaint();
+            cas94.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas95) {
             cas95.setText(arrayminas[4][9][1]);
             ventana.repaint();
+            cas95.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas96) {
             cas96.setText(arrayminas[5][9][1]);
             ventana.repaint();
+            cas96.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas97) {
             cas97.setText(arrayminas[6][9][1]);
             ventana.repaint();
+            cas97.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas98) {
             cas98.setText(arrayminas[7][9][1]);
             ventana.repaint();
+            cas98.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas99) {
             cas99.setText(arrayminas[8][9][1]);
             ventana.repaint();
+            cas99.setEnabled(false);
+            tiempo.start();
         }
         if (e.getSource() == cas100){
             cas100.setText(arrayminas[9][9][1]);
             ventana.repaint();
+            cas100.setEnabled(false);
+            tiempo.start();
         }
-
-
     }
-
-
-    Timer tiempo;
-
-    JLabel tiempo1;
-
-    public void temporizador() {
-
-        tiempo = new Timer(1000, null);
-
-        tiempo.start();
-
-        JLabel tiempo1 = new JLabel("Temporizador" + tiempo);
-
-        System.out.println(tiempo1);
-
-    }
-
 }
