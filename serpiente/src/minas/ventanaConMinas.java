@@ -762,12 +762,24 @@ public class ventanaConMinas extends JFrame implements ActionListener {
             ventana.repaint();
             cas1.setEnabled(false);
             tiempo.start();
+            if (arrayminas[0][0][1].equals('0')) {
+                cas2.setEnabled(false);
+                cas11.setEnabled(false);
+                cas12.setEnabled(false);
+            }
         }
         if (e.getSource() == cas2) {
             cas2.setText(arrayminas[1][0][1]);
             ventana.repaint();
             cas2.setEnabled(false);
             tiempo.start();
+            if (arrayminas[0][0][2].equals('0')) {
+                cas1.setEnabled(false);
+                cas3.setEnabled(false);
+                cas11.setEnabled(false);
+                cas12.setEnabled(false);
+                cas13.setEnabled(false);
+            }
         }
         if (e.getSource() == cas3) {
             cas3.setText(arrayminas[2][0][1]);
