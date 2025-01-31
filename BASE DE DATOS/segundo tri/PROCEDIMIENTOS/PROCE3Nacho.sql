@@ -32,7 +32,7 @@ DELIMITER $$
 CREATE PROCEDURE AcStock (IN idTemp INT, IN n1 VARCHAR(50), IN st1 INT)
 BEGIN
 	UPDATE productos
-    SET stock = stock - st1
+    SET stock = Restar_Numeros(stock, st1)
 	WHERE nombre = n1;
     
     -- UPDATE productos
@@ -45,6 +45,16 @@ BEGIN
     SELECT * FROM productos;
 END$$
 DELIMITER ;
+
+-- FUNCION PARA RESTAR PRUEBA
+DELIMITER $$ 
+CREATE FUNCTION Restar_Numeros (num1 INT, num2 INT)
+RETURNS INT
+BEGIN
+RETURN num1 - num2;
+END $$
+DELIMITER $$
+-- FIN FUNCION PARA RESTAR
 
 CALL AcStock (1, 'Producto A', 12);
 
