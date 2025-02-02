@@ -88,8 +88,8 @@ cdJs.reemplazarJugador('Eduardo',1)
 
 atJava.jugadores.push(jugLeticia);
 
-console.log(cdJs);
+/*console.log(cdJs);
 console.log(atJava);
 console.log(partido);
-console.log(jugJoseM);
+console.log(jugJoseM);*/
 console.log(jugLeticia);

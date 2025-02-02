@@ -15,8 +15,21 @@ let equipoMadrid = {
     patrocinador: 'España',
     coloresCamisa:['blanca','negra'],
     categoria: 'senior',
-    jugadores:  []
+    jugadores:  [],
+    cambiarJugadores:function(numeroDelJugador, nombreDelJugador) {
+        this.jugadores[numeroDelJugador-1] = nombreDelJugador;
+    },
+    anadirJugadores: function(nombreJugadorNuevo){
+        this.jugadores.push(nombreJugadorNuevo)
+    }
 };
+
+equipoMadrid.anadirJugadores('pepito1')
+equipoMadrid.anadirJugadores('Manuel2')
+
+equipoMadrid.cambiarJugadores(1, 'pepito2')
+
+console.log(equipoMadrid)
 
 let equipoBacelona = {
 //ESTADO
@@ -35,5 +48,6 @@ let partido1 = {
     incidencias: []
 };
 
+/*
 console.log(equipoMadrid)
-console.log(equipoBacelona)
+console.log(equipoBacelona)*/
