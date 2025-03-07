@@ -14,7 +14,7 @@ public class botonJNATIVEHOOK implements NativeMouseListener {
     private JLabel bottomLabel;
 
     public static void main(String[] args) {
-        new CuadriculaBotones().createAndShowGUI();
+        new botonJNATIVEHOOK().createAndShowGUI();
     }
 
     private void createAndShowGUI() {
@@ -75,7 +75,7 @@ public class botonJNATIVEHOOK implements NativeMouseListener {
     @Override
     public void nativeMouseClicked(NativeMouseEvent e) {
         // Verificar si se hizo clic derecho
-        if (e.getButton() == NativeMouseEvent.BUTTON3) {
+        if (e.getButton() == NativeMouseEvent.BUTTON2) {
             // Obtener la posición del ratón
             Point mousePoint = MouseInfo.getPointerInfo().getLocation();
             for (int i = 0; i < buttons.length; i++) {
