@@ -17,8 +17,8 @@ CALL INSERTNUEVOPRODUCTO(
     1, -- id_categoria (COMPONENTES)
     1, -- id_vendedor (PcComponnetes)
     'Procesador Intel i7',-- nombre_producto
-    'Nuevo', -- estado
-    'Potente procesador para gaming',-- caracteristicas
+    'nuevo', -- estado
+    'potente procesador para gaming',-- caracteristicas
     300.00, -- precio
     'Procesador', -- tipo_especifico (para COMPONENTES)
     '8 nucleos, 16 hilos, frecuencia base 3.6GHz, caché 16MB' -- especificaciones_tecnicas
@@ -30,7 +30,7 @@ CALL INSERTNUEVOPRODUCTO(
     1,
     'Portatil HP ',
     'reacondicionado',
-    'Ideal para trabajo y estudio',
+    'para trabajo y estudio',
     600.00,
     'Portatil',
     'Pantalla 15.6 pulgadas, 16GB RAM, SSD 512GB, graficos integrados Intel Iris Xe'
