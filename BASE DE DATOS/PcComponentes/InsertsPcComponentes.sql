@@ -1,8 +1,6 @@
 
 USE PcComponentes;
 
-USE PcComponentes;
-
 INSERT INTO CATEGORIA (nombre_categoria) VALUES 
 ('Componentes'),
 ('Ordenadores'),
@@ -20,6 +18,7 @@ CALL INSERTNUEVOPRODUCTO(
     'nuevo', -- estado
     'potente procesador para gaming',-- caracteristicas
     300.00, -- precio
+    20.00, -- descuneto 
     'Procesador', -- tipo_especifico (para COMPONENTES)
     '8 nucleos, 16 hilos, frecuencia base 3.6GHz, caché 16MB' -- especificaciones_tecnicas
 );
@@ -32,6 +31,7 @@ CALL INSERTNUEVOPRODUCTO(
     'reacondicionado',
     'para trabajo y estudio',
     600.00,
+    20.00,
     'Portatil',
     'Pantalla 15.6 pulgadas, 16GB RAM, SSD 512GB, graficos integrados Intel Iris Xe'
 );
@@ -41,9 +41,10 @@ CALL INSERTNUEVOPRODUCTO(
     3, -- (PERIFERICOS)
     2, -- id_vendedor (Panchitos)
     'Teclado mecanico RGB',
-    'Nuevo',
+    'nuevo',
     'Teclado profesional para gamers',
     80.00,
+    35.00,
     'Teclado',
     'Switches Cherry MX Red, retroiluminacion RGB, teclas anti-gosting'
 );

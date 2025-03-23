@@ -27,6 +27,8 @@ CREATE TABLE PRODUCTO (
     estado VARCHAR (50),
     caracteristicas VARCHAR(1000),
     precio DECIMAL(10, 2),
+    descuento DECIMAL(10, 2),
+    precio_final DECIMAL(10,2),
     FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria),
     FOREIGN KEY (id_vendedor) REFERENCES VENDEDOR(id_vendedor)
     
@@ -63,7 +65,7 @@ CREATE TABLE PERIFERICOS (
 -- VIEW ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE VIEW VISTAUSUNOR AS
-SELECT p.id_producto, c.nombre_categoria, p.nombre_producto, p.estado, p.precio,
+SELECT p.id_producto, c.nombre_categoria, p.nombre_producto, p.estado, p.precio, p.descuento, p.precio_final,
     CASE
         WHEN comp.especificaciones_tecnicas THEN comp.especificaciones_tecnicas
         
@@ -87,7 +89,7 @@ WHERE p.estado = 'nuevo';
 CREATE INDEX IDXPRECIO ON PRODUCTO(precio);
 
 
--- NO UFUNCIONA POR ALGO DE LOS FOREIGN KEYS QUE NO SON SOPORTADOS
+-- NO FUNCIONA POR ALGO DE QUE LOS FOREIGN KEY NO SON SOPORTADOS POR PARTICIONES
 -- ALTER TABLE PRODUCTO
 -- PARTITION BY LIST COLUMNS(estado) (
   --  PARTITION p_nuevo VALUES IN ('nuevo'),
@@ -105,7 +107,8 @@ CREATE PROCEDURE INSERTNUEVOPRODUCTO(
     IN p_nombre_producto VARCHAR(100),
     IN p_estado VARCHAR(50),
     IN p_caracteristicas VARCHAR(1000),
-    IN p_precio DECIMAL(10, 2),
+    IN p_precio DECIMAL(10,2),
+    IN p_descuento DECIMAL(10,2),
     IN p_tipo_especifico VARCHAR(50),
     IN p_especificaciones_tecnicas VARCHAR(500)
 )
@@ -114,13 +117,13 @@ BEGIN
     DECLARE nuevo_id_producto INT;
     
     -- insertar en la tabla producto
-    INSERT INTO PRODUCTO (id_categoria, id_vendedor, nombre_producto, estado, caracteristicas, precio)
-    VALUES (p_id_categoria, p_id_vendedor, p_nombre_producto, p_estado, p_caracteristicas, p_precio);
+    INSERT INTO PRODUCTO (id_categoria, id_vendedor,nombre_producto, estado,caracteristicas, precio, descuento)
+    VALUES (p_id_categoria, p_id_vendedor,p_nombre_producto, p_estado, p_caracteristicas,p_precio,p_descuento);
     
     -- obtener el ID del producto que se acabs de insertar (Esto lo he buscado en https://www.w3schools.com/sql/sql_intro.asp)
     SET nuevo_id_producto = LAST_INSERT_ID();
    
-    -- insercion en la tabla especifica segun la categoria 
+    -- insercion en la tabla especifica segun la categoria atraves del id_categoria
     IF p_id_categoria = 1 THEN
         INSERT INTO COMPONENTES (id_producto, tipo_componente, especificaciones_tecnicas)
         VALUES (nuevo_id_producto, p_tipo_especifico, p_especificaciones_tecnicas);
@@ -148,17 +151,20 @@ DETERMINISTIC -- esto me ha comido la cabeca un rato aunque sigo sin saber porqu
 BEGIN
 	DECLARE precio_final DECIMAL(10, 2);
     SET precio_final = precio * (1 - porcentaje / 100);
-    RETURN precio_final;
+    RETURN precio_final ;
     
 END //
 DELIMITER ;
 
 -- trigger ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 DELIMITER //
-CREATE TRIGGER IVAPRODUCTO BEFORE INSERT ON PRODUCTO
+CREATE TRIGGER IVAYDESCUENTO BEFORE INSERT ON PRODUCTO
 FOR EACH ROW
 BEGIN
 	SET NEW.precio = NEW.precio * 1.21; 
+    
+    -- aqui ejecuto la funcion de arriba
+    SET NEW.precio_final = CALCDESCUENTO(NEW.precio, NEW.descuento);
 
 END //
 DELIMITER ;
