@@ -3,7 +3,7 @@ import java.util.*;
 
 public class principal {
     public static void main(String[] args) {
-        HashMap<String, String> usuarios = new HashMap<>();
+        HashMap<String, String> usuarios = new HashMap<String, String>();
         usuarios.put("usuario1", "clave1");
         usuarios.put("usuario2", "clave2");
         usuarios.put("admin", "admin123");

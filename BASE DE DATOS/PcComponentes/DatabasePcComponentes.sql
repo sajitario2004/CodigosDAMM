@@ -31,9 +31,14 @@ CREATE TABLE PRODUCTO (
     precio_final DECIMAL(10,2),
     FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria),
     FOREIGN KEY (id_vendedor) REFERENCES VENDEDOR(id_vendedor)
-    
-);
 
+-- particion de prueba ---------------------------------------
+)PARTITION BY LIST COLUMNS(estado) (
+		PARTITION p_nuevo VALUES IN ('nuevo'),
+		PARTITION p_reacondicionado VALUES IN ('reacondicionado')
+    
+ );
+-- ----------------------------------------------------------------
 CREATE TABLE COMPONENTES (
     id_componente INT AUTO_INCREMENT PRIMARY KEY,
     id_producto INT,
@@ -90,12 +95,12 @@ CREATE INDEX IDXPRECIO ON PRODUCTO(precio);
 
 
 -- NO FUNCIONA POR ALGO DE QUE LOS FOREIGN KEY NO SON SOPORTADOS POR PARTICIONES
--- ALTER TABLE PRODUCTO
--- PARTITION BY LIST COLUMNS(estado) (
-  --  PARTITION p_nuevo VALUES IN ('nuevo'),
-  -- PARTITION p_reacondicionado VALUES IN ('reacondicionado')
+	ALTER TABLE PRODUCTO
+	PARTITION BY LIST COLUMNS(estado) (
+		PARTITION p_nuevo VALUES IN ('nuevo'),
+		PARTITION p_reacondicionado VALUES IN ('reacondicionado')
     
--- );
+ );
 
 
 
