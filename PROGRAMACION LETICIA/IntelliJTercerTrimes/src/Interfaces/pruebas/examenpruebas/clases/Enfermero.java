@@ -43,6 +43,8 @@ public class Enfermero extends Personal {
 	public void setListaVisitas(Set<Visita> listaVisitas) {
 		this.listaVisitas = listaVisitas;
 	}
+
+
 	@Override
 	public int compareTo(Personal o) {
 		// TODO Auto-generated method stub

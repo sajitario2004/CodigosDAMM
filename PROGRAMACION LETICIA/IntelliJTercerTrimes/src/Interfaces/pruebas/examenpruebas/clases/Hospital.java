@@ -40,9 +40,9 @@ public class Hospital implements GestionHospital ,Comparable<Hospital> {
 	}
 
 	/**
-	 * @param id
+	 * <@param id
 	 * @param nombreHospital
-	 * @param listaPersonal
+	 * @param listaPersonal>
 	 */
 	public Hospital(String id, String nombreHospital, Set<Personal> listaPersonal) {
 		super();

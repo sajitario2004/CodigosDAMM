@@ -2,6 +2,7 @@ package Interfaces.pruebas.examenpruebas.clases;
 
 public abstract class Personal implements Comparable<Personal>{
 
+	private String identificador;
 	/**
 	 * @param identificador
 	 */
@@ -9,7 +10,6 @@ public abstract class Personal implements Comparable<Personal>{
 		super();
 		this.identificador = identificador;
 	}
-	private String identificador;
 
 	public String getIdentificador() {
 		return identificador;

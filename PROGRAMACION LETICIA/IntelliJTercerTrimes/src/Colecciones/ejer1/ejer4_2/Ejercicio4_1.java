@@ -30,7 +30,6 @@ public class Ejercicio4_1 {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Introduce tu nombre");
 		String nombre = sc.next();
-		int cont = 0;
 		// Compruebo que el nombre existe en el mapa
 		if (mapa.containsKey(nombre)) {
 
