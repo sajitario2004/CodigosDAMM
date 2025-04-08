@@ -25,7 +25,7 @@ BEGIN
 	UPDATE productos
     SET stock = stock - st1
     WHERE nombre = n1;
-    
+
     INSERT INTO ventas (id_producto, cantidad, fecha) VALUES (idp, st1, SYSDATE() );
 END$$
 DELIMITER ;
