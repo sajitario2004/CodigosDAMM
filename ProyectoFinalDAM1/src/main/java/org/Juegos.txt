@@ -1,0 +1,18 @@
+
+Juegos - Todos tendran puntuacion
+
+Marcianitos
+- Programar 5 Niveles
+- Programar 3 Tipos de naves
+- Programar un boss
+- Sistema de puntos que ira en funcion a las naves que mates
+
+Busca Minitas
+- Programar 5x5
+- Programar 10x10
+- Programar 15x15
+- Sistema de puntos que ira en funcion al tiempo que tardes
+y se multiplicara segun que dificultad elijas
+
+Solitario
+-
