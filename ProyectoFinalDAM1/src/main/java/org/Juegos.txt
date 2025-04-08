@@ -15,4 +15,133 @@ Busca Minitas
 y se multiplicara segun que dificultad elijas
 
 Solitario
--
+- Objeto carta que tendra:
+    - valor de entre 2 y 14
+    - 4 palos
+- Los puntos iran en funcion al tiempo que tardes
+- Tendra boton de reset
+
+
+
+Izquierda VS Derechas
+- Sera un juego por turnos de 1 contra 1
+- Cada bando tendra 10 posibles cartas
+- Cada bando empezara con 5 cartas
+- Cada bando empezara con 100 de capital
+
+- Cada bando tendra 15 turnos cada uno, en cada turno se podra decidir si
+    1. atacas para conseguir una comunidad
+        1.1 para atacar necesitas minimo 20 de capital
+        1.2 al atacar por cada 10 de capital que se use se ara 1 de daño
+    2. usas una carta
+
+- El que empieza se decidira con un cara o cruz
+- Cada turno un bando recibira una carta y 25 de capital
+
+- Estaran las 17 comunidades autonomas de españa
+- Cada comunidad contara con un nivel de poblacion de entre 4 y 12
+- Empezaremos en una comunidad autonoma aleatoria den entre 1 y 17
+    - solo se podra conseguir y atacar a otra si esta al lado
+    - Si es isla se podra ir a cualquier comunidad
+- Cada counidad tendra una barra de vida, una pasiva y una cantidad de puntos que dependera de lo poblada que este
+- Cuando se consiga una comunidad se obtendra la pasiva de esa comunidad
+
+Pasivas de las Comunidades
+    1.
+    2.
+    3.
+    4.
+    5.
+    6.
+    7.
+    8.
+    9.
+    10.
+    11.
+    12.
+    13.
+    14.
+    15.
+    16.
+    17.
+
+- Cartas de Derechas
+    1. Expulsion de los comejamon't
+        - Ventajas: Los trabajadores se sienten mas seguros.
+        Mas 25 extra de capital por ronda el resto de la partida
+        - Desventajas: Si tienes las siguientes comunidades;Andalucia, Cataluña, Canarias, Valencia perderas poblacion;
+        perderas 4 de poblacion por cada una Menos 1 en todas las demas
+
+    2. El Valle no se Toca
+        - Ventajas: Contentas a los ancianitos y no se dan cuenta de sus bajas pensiones.
+        Mas 25 de capital por ronda ahora.
+        - Desventajas: La gente joven se iran dando cuenta.
+        Ganaras 5 menos cada ronda que pase (puedes quedarte en negativo)
+
+    3. Subida de impuestos para los fokin pobres y chupabotes
+        - Ventajas si tienes mas de 200 de capital ganaras 25 extra de capital por ronda.
+        - Desventajas si tienes menos de 200 de capital perderas 5 de capital por ronda.
+
+    4.
+
+    5. Dia de la Hispanidad
+
+    6. Toro de lidia
+
+    7. Quitar aranceles al resto de paises
+
+    8. Barrera antipeloazules:
+        -Ventajas: Los policias y guardiaciviles estan mejor pagados y no permiten la destruccion de los vienes publicos.
+        El equipo de izquierda no podra atacar a tus comunidades por 2 turnos
+        -Desventajas: Los gastos en la subida de sueldo (y en cosas corruptas) son demasiados y hay que volver a bajarlo.
+       Al acabar la ventaja pierdes 30 de capital.
+    9. Dictadura:
+    10. Pedro Sanchez Putero Dimision
+        - Ventajas daño mas 2 el resto de la partida + 15 de Capital por turno
+
+- Cartas de Izquierdas
+    1. Huelga de Los trabajadores
+        - Ventajas: Los trabajadores ganan derechos y sueldos.
+        Poblacion +1 por comunidad y mas 50 de capital ahora
+        - Desventajas: Alguna que otra empresa se va de españa.
+        En 3 turnos perderas 20 de capital
+
+    2. Ocupacion por Dora la expopiadora
+        - Ventajas: Ahora todos tendran su vivienda digna y los llados no tendran varias viviendas
+        Mas 8 de poblacion ahora
+        - Desventajas: Desventajas la gente con varias viviendas(con dinero) se va del pais
+        Menos 1 por cada ronda que pase
+
+    3. Subida de impuestos para los Llados y multiviviendas
+        - Ventajas: Para aquellos que ganan mucho mas del sueldo digno se le subiran los impuestos
+        Si tienes menos de 200 de capital ganaras 25 extra de capital por ronda.
+        - Desventajas: Si tienes mas de
+        Si tienes mas de 200 de capital perderas 5 de capital por ronda.
+
+    4. Baja por cuentitis
+        - Ventjas ganaras 50 de capital ahora
+        - Desventajas ganaras 5  menos de capital por ronda
+
+    5. Dia del orgullo
+
+    6. 
+
+    7. Imponer aranceles al resto de paises
+
+    8. Barrera antinazi
+        - Ventajas: Se revelan gente de todos los generos y colores y sale a las calles.
+        El equipo de derechas no podra atacar a tus comunidades por 2 turnos
+        - Desventajas: Por los destrozos tienes que subir los impuestos y pierdes capital.
+        Al acabar la ventaja pierdes 30 de capital.
+
+    9. Comunismo:
+    10. Pedro Sanchez Putero Dimision
+        - Ventajas daño mas 2 el resto de la partida + 15 de Capital por turno
+
+- Ganara quien tenga mas puntos al final y los puntos seran en funcion a:
+    - Capital * 10
+    - Poblacion * 300
+    - Cantidad de comunidades apropiadas * 100
+    - Suma de puntos extra por las cartas
+    - Multiplicacion de puntos extra por las cartas
+    - Total es la suma de todo lo anterior.
