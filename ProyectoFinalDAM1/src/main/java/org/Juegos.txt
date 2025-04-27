@@ -42,7 +42,7 @@ Izquierda VS Derechas
 - Cada comunidad contara con un nivel de poblacion de entre 4 y 12
 - Empezaremos en una comunidad autonoma aleatoria den entre 1 y 17
     - solo se podra conseguir y atacar a otra si esta al lado
-    - Si es isla se podra ir a cualquier comunidad
+    - Si es isla se podra ir a cualquier comunidad si esta en la costa
 - Cada counidad tendra una barra de vida, una pasiva y una cantidad de puntos que dependera de lo poblada que este
 - Cuando se consiga una comunidad se obtendra la pasiva de esa comunidad
 
@@ -70,7 +70,7 @@ Pasivas de las Comunidades
         - Ventajas: Los trabajadores se sienten mas seguros.
         Mas 25 extra de capital por ronda el resto de la partida
         - Desventajas: Si tienes las siguientes comunidades;Andalucia, Cataluña, Canarias, Valencia perderas poblacion;
-        perderas 4 de poblacion por cada una Menos 1 en todas las demas
+        perderas 4 de poblacion por cada una y  menos 1 en todas las demas
 
     2. El Valle no se Toca
         - Ventajas: Contentas a los ancianitos y no se dan cuenta de sus bajas pensiones.
@@ -82,7 +82,7 @@ Pasivas de las Comunidades
         - Ventajas si tienes mas de 200 de capital ganaras 25 extra de capital por ronda.
         - Desventajas si tienes menos de 200 de capital perderas 5 de capital por ronda.
 
-    4.
+    4. antiocupas
 
     5. Dia de la Hispanidad
 
@@ -93,7 +93,7 @@ Pasivas de las Comunidades
     8. Barrera antipeloazules:
         -Ventajas: Los policias y guardiaciviles estan mejor pagados y no permiten la destruccion de los vienes publicos.
         El equipo de izquierda no podra atacar a tus comunidades por 2 turnos
-        -Desventajas: Los gastos en la subida de sueldo (y en cosas corruptas) son demasiados y hay que volver a bajarlo.
+        -Desventajas: Los gastos en la subida de sueldo (y en cosas corruptas) son demasiados.
        Al acabar la ventaja pierdes 30 de capital.
     9. Dictadura:
     10. Pedro Sanchez Putero Dimision
@@ -143,5 +143,4 @@ Pasivas de las Comunidades
     - Poblacion * 300
     - Cantidad de comunidades apropiadas * 100
     - Suma de puntos extra por las cartas
-    - Multiplicacion de puntos extra por las cartas
     - Total es la suma de todo lo anterior.
