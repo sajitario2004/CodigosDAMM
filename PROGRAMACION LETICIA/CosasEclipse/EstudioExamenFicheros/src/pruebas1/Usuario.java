@@ -14,6 +14,12 @@ public class Usuario implements Comparable<Usuario>{
 		this.cuota = cuota;
 	}
 	
+	public Usuario() {
+		super();
+	}
+
+
+
 	public String getDni() {
 		return dni;
 	}
