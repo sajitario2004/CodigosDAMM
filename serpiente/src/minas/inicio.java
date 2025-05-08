@@ -30,6 +30,7 @@ public class inicio extends JFrame implements ActionListener {
 
         lblFotoCayetano.setIcon(FotoCayetano);
 
+        //ventanaInicio.setContentPane(lblFotoCayetano);
         ventanaInicio.add(lblFotoCayetano);
 
         ventanaInicio.setVisible(true);
