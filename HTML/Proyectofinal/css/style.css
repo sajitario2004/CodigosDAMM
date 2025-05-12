@@ -48,25 +48,29 @@ header.logo img:hover {
 header .logo img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 30%;
   margin-right: 10px;
 }
 
 
 
 /* Navegación */
+
+header nav {
+  padding-right: 0;
+}
+
 header nav ul {
   display: flex;
   list-style: none;
-  padding: 0;
-  margin-left: 100vh;
+  gap: 20px;
+
 
 }
 
 
 header nav ul li {
   margin: 0 15px;
-  border-left: 1px solid white;
   padding: 25px;
 }
 
@@ -80,6 +84,33 @@ header nav ul li a {
 header nav ul li a:hover {
   /* Color destacado al pasar el ratón */
   color: #043c43;
+}
+
+header .login {
+  padding-right: 5px;
+
+}
+
+header .login img {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+header .login  img:hover{
+  background-color: #043c43;
+}
+
+/* Responsive para móviles */
+@media (max-width: 1000px) {
+  header nav ul {
+    display: none; /* Esconde el menú en móviles (puedes poner un menú hamburguesa aquí) */
+  }
+
+  header {
+    justify-content: space-between;
+  }
 }
 
 /* Menú de usuario */
@@ -101,6 +132,8 @@ section .seccionInicio {
   text-align: center;
 
 }
+
+
 
 
 
@@ -193,11 +226,16 @@ section .seccionInicio {
 }
 
 .inspiracion-sabores h2 {
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 300%;
   color: white;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  .inspiracion-sabores h2{
+    font-size: 200%;
+  }
 }
 
 .inspiracion-sabores .btn-reservar {
@@ -251,9 +289,11 @@ section .seccionInicio {
 .img-fotomenu{
   margin-top:10px;
   margin-bottom:10px;
-  width: 1800px;
-  height: 700px;
+  width: 80%;
+  height: 80%;
 }
+
+
 
 /*seccion Destino Perfecto(modificable a futuro)*//*------------------------------------------------------*/
 
@@ -281,36 +321,45 @@ section .seccionInicio {
   max-width: 25%;
   padding: 10px;
 
-  margin-right: 10vh;
-  margin-left: 30vh;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .imagen-menu img {
   width: 100%;
   height: auto;
   border-radius: 15px;
-
+  align-items: center;
 }
 
 .contenido-menu {
   flex: 1;
-  max-width: 50%;
-  padding: 10px;
+  max-width: 70%;
   border-left: 5px solid white;
-  padding-left: 150px;
-  margin-left: 15px;
-  margin-top: 50px;
-  margin-bottom: 15px;
+  padding: 10%;
+}
+
+@media (max-width: 1200px) {
+  .imagen-menu {
+    display: none;
+  }
+
+  .contenido-menu{
+    border-left: 5px;
+  }
 }
 
 .contenido-menu h2 {
-  font-size: 30px;
+  font-size: 150%;
   margin-bottom: 20px;
   color: white;
 }
 
 .contenido-menu p {
-  font-size: 25px;
+  font-size: 125%;
+  margin-right: 10%;
   line-height: 1.6;
   margin-bottom: 1px;
 }
