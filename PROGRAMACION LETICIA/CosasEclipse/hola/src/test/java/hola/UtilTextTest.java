@@ -25,4 +25,6 @@ public class UtilTextTest {
 		int[] respuesta4 = {1,5,6,9};
 		assertArrayEquals(respuesta4, UtilText.findSpaces("d hil  de "));
 	}
+	
+	
 }

@@ -34,6 +34,9 @@ public class UtilText {
 		
 	}
 	
+	//public static int 
+	
+	
 	public static int[] findSpaces(String str) {
 		int[] respuesta = new int[1];
 		int cont = 0;
