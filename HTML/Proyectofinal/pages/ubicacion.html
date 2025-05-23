@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagina Principal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <!-- Esta es la parte que hace que se vea la imagen en el navegador en lugar de un texto----->
+  <link rel="icon" href="../img/logo.png" sizes="any">
+  <link rel="icon" href="../img/logo.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../img/logo.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<header>
+  <!--logo con el nombre y la imagen-->
+  <div class="logo">
+    <a href="../index.html" target="">
+      <img src="../img/logo.png" alt="Logo Nacho Sushi">
+    </a>
+  </div>
+  <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+  <!--NAV con listado de ubicacion reservas y menu estos sin enlace por el momento-------->
+  <nav class="nav">
+
+    <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+    <ul class="nav-right"  id="nav">
+      <!--Esto es una prueba para ver como cambia la url a lo que ponga en el boton-------->
+      <li><a href="../pages/ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="#reservas">RESERVAS</a></li>
+      <li><a href="../pages/menu.html">MENÚ</a></li>
+    </ul>
+  </nav>
+  <div class="logo-usuario">
+    <img src="" alt="" />
+  </div>
+
+  <!--logo con el nombre y la imagen-->
+  <div class="login">
+    <a href="../pages/formRegistro.html" target="">
+      <img id="login-icon" src="../img/login.png" alt="Iniciar Sesion o Registrarse">
+    </a>
+
+  </div>
+
+</header>
+
+<!-- Contenedor del mapa -->
+<div class="contenedor-mapa" id="ubicacion">
+  <h2>Nuestra Ubicación</h2>
+  <p>Avenida de Mijas N.º 2, Málaga</p>
+  <div id="mapa"></div>
+</div>
+
+<!-- Footer -------------------------------------------------------------------------------------------->
+<footer>
+  <!-- Primera sección: Suscripción -->
+  <section class="suscripcion">
+    <img src="../img/logo.png" class="img-fute">
+    <h3>Suscríbete a nuestro boletín para recibir novedades y ofertas especiales.</h3>
+    <form action="#" method="post">
+      <label for="email">Email *</label><br>
+      <!--Esto es algo que tengo que hacer mas tarde cuando haga una base de datos
+      para almacenar datos del correo electronico-->
+      <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">ENVIAR</button>
+    </form>
+    <p>¡Gracias por suscribirte!</p>
+  </section>
+
+  <!-- Segunda sección: Localización -->
+  <section class="localizacion">
+    <p>Avenida de Mijas N2</p>
+    <p>+34 675-544-458</p>
+    <p>itolcan2711@g.educaand.es</p>
+  </section>
+
+  <!-- Tercera sección: Políticas -->
+  <section class="politicas">
+    <p><a href="">Términos y Condiciones</a></p>
+    <p><a href="">Política de Privacidad</a></p>
+    <p><a href="">Política de Cookies</a></p>
+  </section>
+
+  <!-- Pie de página final -->
+  <div class="copyright">
+    <!-- lo del anprescant copy es para escribir el simbolor ce C de copyrright-->
+    <p>&copy; 2035 por NachoSushi. Desarrollado y protegido por <strong>IGNACIO</strong></p>
+  </div>
+</footer>
+
+<!-- No va a funcionar por que no tengo api de google para porner un mapa pero el he puesto las cordenadas del instituto porlomenos  -->
+<script>
+  function initMap() {
+  const ubicacion = { lat:36.537479848284214, lng:-4.637679469318701 }; // Coordenadas de ejemplo
+  const mapa = new google.maps.Map(document.getElementById("mapa"), {
+    zoom: 16,
+    center: ubicacion,
+  });
+  new google.maps.Marker({
+    position: ubicacion,
+    map: mapa,
+    title: "Nacho Sushi",
+  });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+
+</body>
+</html>

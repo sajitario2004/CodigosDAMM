@@ -5,7 +5,7 @@
   <!--Esto lo hace  automatico el intelli cuando hago un nuevo archivo html, he visto unas pocas cosas como funciona-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Pagina Principal</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
 
@@ -18,7 +18,7 @@
   <!-- Esta es la parte que hace que se vea la imagen en el navegador en lugar de un texto----->
   <link rel="icon" href="img/logo.png" sizes="any">
   <link rel="icon" href="img/logo.png" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="img/logo.png">
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
@@ -32,17 +32,18 @@
     <a href="index.html" target="">
     <img src="img/logo.png" alt="Logo Nacho Sushi">
     </a>
-
   </div>
+  <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
   <!--NAV con listado de ubicacion reservas y menu estos sin enlace por el momento-------->
-  <nav>
-    <ul class="nav-right">
+  <nav class="nav">
+
+    <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+    <ul class="nav-right"  id="nav">
       <!--Esto es una prueba para ver como cambia la url a lo que ponga en el boton-------->
-      <li><a href="#ubicacion">UBICACIÓN</a></li>
+      <li><a href="pages/ubicacion.html">UBICACIÓN</a></li>
       <li><a href="#reservas">RESERVAS</a></li>
-      <li><a href="#menu">MENÚ</a></li>
+      <li><a href="pages/menu.html">MENÚ</a></li>
     </ul>
-    <button class="hamburger">&#9776;</button>
   </nav>
   <div class="logo-usuario">
     <img src="" alt="" />
@@ -50,8 +51,8 @@
 
   <!--logo con el nombre y la imagen-->
   <div class="login">
-    <a href="pages/form.html" target="">
-      <img src="img/login.png" alt="Iniciar Sesion o Registrarse">
+    <a href="pages/formRegistro.html" target="">
+      <img id="login-icon" src="img/login.png" alt="Iniciar Sesion o Registrarse">
     </a>
 
   </div>
@@ -65,7 +66,7 @@
     <!--lo de los saltos de linea de esta forma lo aprendi tarde-->
     <h1>Bienvenidos <br> a <br> Nacho Sushi</h1>
     <p>Cocina Japonesa Contemporánea</p>
-    <a href="#menu" class="menu-button">MENÚ</a>
+    <a href="pages/menu.html" class="menu-button">MENÚ</a>
   </div>
 </section>
 
@@ -163,7 +164,10 @@
     <p>&copy; 2035 por NachoSushi. Desarrollado y protegido por <strong>IGNACIO</strong></p>
   </div>
 </footer>
-
+<script src="js/cambiarImagen.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/swetalert.js"></script>
+<script src="js/scriptHamburger.js"></script>
 </body>
 
 </html>

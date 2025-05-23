@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar Sesion</title>
+  <link rel="stylesheet" href="../css/formStyle.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <!-- Esta es la parte que hace que se vea la imagen en el navegador en lugar de un texto----->
+  <link rel="icon" href="../img/logo.png" sizes="any">
+  <link rel="icon" href="../img/logo.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../img/logo.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+
+
+
+<div class="form-container">
+
+  <form id="loginForm" class="animated-form" novalidate>
+    <h2>Iniciar sesión</h2>
+
+    <div class="input-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required />
+      <small class="error" id="errorEmail"></small>
+    </div>
+
+    <div class="input-group">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required />
+      <small class="error" id="errorPassword"></small>
+    </div>
+
+    <button type="submit" class="btn">Entrar</button>
+    <p id="mensaje"></p>
+
+    <!-- Enlace a registro -->
+    <p class="login-link">¿No tienes cuenta? <a href="formRegistro.html">Regístrate aquí</a></p>
+    <p class="volver-link"><a href="../index.html" >← Volver a la página principal</a></p>
+  </form>
+</div>
+
+<script src="../js/scriptFromLogin.js"></script>
+</body>
+</html>

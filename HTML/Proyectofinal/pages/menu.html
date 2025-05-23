@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagina Principal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <!-- Esta es la parte que hace que se vea la imagen en el navegador en lugar de un texto----->
+  <link rel="icon" href="../img/logo.png" sizes="any">
+  <link rel="icon" href="../img/logo.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../img/logo.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<header>
+  <!--logo con el nombre y la imagen-->
+  <div class="logo">
+    <a href="../index.html" target="">
+      <img src="../img/logo.png" alt="Logo Nacho Sushi">
+    </a>
+  </div>
+  <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+  <!--NAV con listado de ubicacion reservas y menu estos sin enlace por el momento-------->
+  <nav class="nav">
+
+    <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+    <ul class="nav-right"  id="nav">
+      <!--Esto es una prueba para ver como cambia la url a lo que ponga en el boton-------->
+      <li><a href="../pages/ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="#reservas">RESERVAS</a></li>
+      <li><a href="../pages/menu.html">MENÚ</a></li>
+    </ul>
+  </nav>
+  <div class="logo-usuario">
+    <img src="" alt="" />
+  </div>
+
+  <!--logo con el nombre y la imagen-->
+  <div class="login">
+    <a href="../pages/formRegistro.html" target="">
+      <img id="login-icon" src="../img/login.png" alt="Iniciar Sesion o Registrarse">
+    </a>
+
+  </div>
+
+</header>
+<section id="menu" class="seccion-menu2">
+  <div class="overlay">
+    <h2>NUESTRO MENÚ</h2>
+    <p>Explora nuestras delicias japonesas</p>
+  </div>
+
+  <div class="contenedor-menu">
+    <!-- Imagen decorativa del menú -->
+    <!-- Contenido del menú -->
+    <div class="contenido-menu-oficial">
+      <h2>Entrantes</h2>
+      <ul class="informacion">
+        <li>🥢 Edamame al vapor - <strong>3,50€</strong></li>
+        <li>🥢 Gyozas de pollo (6 uds) - <strong>5,90€</strong></li>
+        <li>🥢 Ensalada wakame - <strong>4,20€</strong></li>
+      </ul>
+
+      <h2>Sushi Rolls</h2>
+      <ul class="informacion">
+        <li>🍣 California Roll (8 uds) - <strong>7,50€</strong></li>
+        <li>🍣 Salmón Roll (8 uds) - <strong>8,00€</strong></li>
+        <li>🍣 Tempura Roll (8 uds) - <strong>8,50€</strong></li>
+      </ul>
+
+      <h2>Nigiris</h2>
+      <ul class="informacion">
+        <li>🍤 Nigiri de salmón (2 uds) - <strong>3,20€</strong></li>
+        <li>🍤 Nigiri de atún (2 uds) - <strong>3,60€</strong></li>
+        <li>🍤 Nigiri de langostino (2 uds) - <strong>3,50€</strong></li>
+      </ul>
+
+      <h2>Postres</h2>
+      <ul class="informacion">
+        <li>🍰 Mochis de té verde - <strong>3,90€</strong></li>
+        <li>🍰 Helado de sésamo negro - <strong>3,50€</strong></li>
+      </ul>
+
+      <h2>Bebidas</h2>
+      <ul class="informacion">
+        <li>🥤 Refrescos variados - <strong>1,80€</strong></li>
+        <li>🥤 Cerveza japonesa - <strong>2,50€</strong></li>
+        <li>🥤 Sake caliente o frío - <strong>3,20€</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -------------------------------------------------------------------------------------------->
+<footer>
+  <!-- Primera sección: Suscripción -->
+  <section class="suscripcion">
+    <img src="../img/logo.png" class="img-fute">
+    <h3>Suscríbete a nuestro boletín para recibir novedades y ofertas especiales.</h3>
+    <form action="#" method="post">
+      <label for="email">Email *</label><br>
+      <!--Esto es algo que tengo que hacer mas tarde cuando haga una base de datos
+      para almacenar datos del correo electronico-->
+      <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">ENVIAR</button>
+    </form>
+    <p>¡Gracias por suscribirte!</p>
+  </section>
+
+  <!-- Segunda sección: Localización -->
+  <section class="localizacion">
+    <p>Avenida de Mijas N2</p>
+    <p>+34 675-544-458</p>
+    <p>itolcan2711@g.educaand.es</p>
+  </section>
+
+  <!-- Tercera sección: Políticas -->
+  <section class="politicas">
+    <p><a href="">Términos y Condiciones</a></p>
+    <p><a href="">Política de Privacidad</a></p>
+    <p><a href="">Política de Cookies</a></p>
+  </section>
+
+  <!-- Pie de página final -->
+  <div class="copyright">
+    <!-- lo del anprescant copy es para escribir el simbolor ce C de copyrright-->
+    <p>&copy; 2035 por NachoSushi. Desarrollado y protegido por <strong>IGNACIO</strong></p>
+  </div>
+</footer>
+
+
+</body>
+</html>

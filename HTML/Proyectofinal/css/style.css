@@ -102,14 +102,60 @@ header .login  img:hover{
   background-color: #043c43;
 }
 
+
+.abrir-menu, .cerrar-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* Responsive para móviles */
 @media (max-width: 1000px) {
-  header nav ul {
-    display: none; /* Esconde el menú en móviles (puedes poner un menú hamburguesa aquí) */
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
   }
 
-  header {
-    justify-content: space-between;
+  .abrir-menu {
+    color: #1c1c1c;
+  }
+
+  .cerrar-menu {
+    color: #ececec;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a {
+    color: #ecececec;
   }
 }
 
@@ -132,6 +178,7 @@ section .seccionInicio {
   text-align: center;
 
 }
+
 
 
 
@@ -364,6 +411,8 @@ section .seccionInicio {
   margin-bottom: 1px;
 }
 
+/* contenido pagina menu */
+
 .informacion {
   padding-top: 250px;
 }
@@ -425,6 +474,8 @@ footer .suscripcion input[type="email"]::placeholder {
   color: #ccc;
 }
 
+
+
 footer .suscripcion button {
   padding: 8px 15px;
   background-color: #fff;
@@ -479,4 +530,57 @@ footer .copyright {
   /*Cosas de la funete del copyright*/
   font-size: 0.9em;
   color: #ccc;
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*Ubicacion */
+#mapa {
+  width: 100%;
+  height: 80vh;
+}
+
+.contenedor-mapa {
+  padding: 20px;
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------------------*/
+.contenido-menu-oficial {
+  flex: 1;
+  max-width: 70%;
+  padding: 10%;
+  margin: 5%;
+  align-content: center;
+}
+
+.contenido-menu-oficial ul li{
+  flex: 1;
+  max-width: 70%;
+  padding: 10%;
+  margin: 5%;
+  align-content: center;
+  font-size: 200%;
+}
+
+.contenido-menu-oficial h2{
+  flex: 1;
+  max-width: 70%;
+  padding: 10%;
+  margin: 5%;
+  align-content: center;
+  font-size: 250%;
+}
+
+.seccion-menu2 .overlay {
+  width: 100%;
+  height: 100%;
+  /* Superposición semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
