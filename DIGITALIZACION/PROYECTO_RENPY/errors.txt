@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 18: expected 'image_name_component' not found.
-    scene "bg imagenpaisa.jpg"
-          ^
+File "game/script.rpy", line 252: The text statement is not a valid child of the text statement.
+    text item
+        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Mar 28 13:24:18 2025
+Fri Apr 11 14:09:29 2025
