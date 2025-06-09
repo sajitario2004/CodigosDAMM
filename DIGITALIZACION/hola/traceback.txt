@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 6, in script
+    define bs = character("BLACK SWAN")
+  File "game/script.rpy", line 6, in <module>
+    define bs = character("BLACK SWAN")
+NameError: name 'character' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 6, in script
+    define bs = character("BLACK SWAN")
+  File "/home/administrador/Descargas/renpy-8.3.7-sdk/renpy/ast.py", line 2248, in execute
+    self.set()
+  File "/home/administrador/Descargas/renpy-8.3.7-sdk/renpy/ast.py", line 2262, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "/home/administrador/Descargas/renpy-8.3.7-sdk/renpy/python.py", line 1211, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 6, in <module>
+    define bs = character("BLACK SWAN")
+NameError: name 'character' is not defined
+
+Linux-6.11.0-26-generic-x86_64-with-glibc2.39 x86_64
+Ren'Py 8.3.7.25031702
+PROYECTO_RENPY 1.0
+Fri May 23 13:49:46 2025
