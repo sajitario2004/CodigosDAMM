@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>350</y>
+      <w>330</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Alumno
+--
+dni:String
+nExxpediente:int
+nombre:string
+apellidos:string
+domicilio:string
+telefono:int
+email:string
+observaciones:Observaciones[]
+compaPracticas:Alumno
+notasAsignaturas:String[]
+--
+agregarObservacionPorProfe(observacion:Observacion):
+seleccionarCompaPracticas(compa)
+agregarNotaAsignatura(asigatura, nota)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>370</y>
+      <w>350</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>	Curso
+--
+_codigo:String_
+nombre:String
+aula:String
+horario:String
+asignaturas:Asignaturas[]
+alumnos:Alumnos[]
+profesores=profesores[]
+--
+agregarAlumno(alumno:Alumno):this
+agregarAsignatura(asignatura:Asignatura):this.asignatura.push
+agregarProfesor(porfe:Profesor)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>170</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Asignatura
+--
+nombre:String
+profesor:profesor
+nHorasSemanal:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1300</x>
+      <y>390</y>
+      <w>380</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Profesor
+--
+nombre:String
+apellidos:String
+domicilio:String
+email:String
+asignaturas:String[6]
+--
+try(asignaturas&lt;=6):boolean
+	   true(agregarAsignatura(asignatura):asignaturas.push(asignatura)
+	   false(Stirng:'error no se pueden añadir mas asignaturas')
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>740</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Observacion
+--
+alumno:Alumno
+profesor:Profesor
+observacion:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>530</y>
+      <w>520</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;240.0;490.0;240.0;490.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>560</y>
+      <w>460</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0;440.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>20</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>450</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;&lt;&lt;&lt;-
+bg=BLACK
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>890</x>
+      <y>230</y>
+      <w>30</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;&lt;&lt;&lt;-
+bg=BLACK
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>410</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>
+lt=&lt;&lt;&lt;&lt;-
+bg=BLACK
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>200</y>
+      <w>510</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+m2=1..*
+m1=1..6</panel_attributes>
+    <additional_attributes>10.0;10.0;470.0;10.0;470.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>530</y>
+      <w>990</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;180.0;950.0;180.0;950.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>620</y>
+      <w>240</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>poner la Nota de Asignatura</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>640</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
