@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>20</y>
+      <w>200</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Inmuebles
+--
+codigoNum:
+direccion:String
+poblacion: int
+codigopostal: int
+precioventa: int
+precioalquiler: int
+fechaUltimoIntento: date
+observaciones: String
+--
+getEstadoInmbuebles()
+getTipoInmuebles()
+getPrecioAprox()
+getMovimientos()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>30</y>
+      <w>170</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Agentes
+--
+dni:String
+nombre: String
+direccion:String
+poblacion:String
+telefono:int
+horario:date
+salario:int
+observaciones:String
+--
+getComision()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>370</y>
+      <w>170</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Clientes
+--
+dni:String
+Direccion: String
+poblaciobn : int
+telefono: int
+email : String
+--
+getperacionOficina()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>130</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1.*
+m2=1.*</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>250</y>
+      <w>60</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 0..*
+m2= 1..*
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+</diagram>

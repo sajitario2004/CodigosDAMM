@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>255</y>
+      <w>210</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes>Clientes
+--
+nombre:String
+apellidos=String[2]
+telefono= int 
+email= String
+fechaNac: date
+--
+getUsoEmpleados()
+getPrecioPagar()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1245</x>
+      <y>615</y>
+      <w>225</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Habitaciones
+--
+tipo:String
+precio=int 
+extension=int
+numeroCli:int
+--
+getFechayHora()
+getPrecioServicio()
+getPrecioHabitacion()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>690</y>
+      <w>240</w>
+      <h>195</h>
+    </coordinates>
+    <panel_attributes>Reserva
+--
+fecha:date
+--
+getFecha()
+getNumhabitaciones()
+getOferta()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>765</x>
+      <y>495</y>
+      <w>90</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1
+m2= 1..*</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>915</x>
+      <y>765</y>
+      <w>360</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=   *
+m2=   1</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1245</x>
+      <y>1035</y>
+      <w>225</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>Empleados
+--
+nombre:String
+apellidos:String[2]
+horario: String
+cargo: String
+--
+getHistorico()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1335</x>
+      <y>840</y>
+      <w>75</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
