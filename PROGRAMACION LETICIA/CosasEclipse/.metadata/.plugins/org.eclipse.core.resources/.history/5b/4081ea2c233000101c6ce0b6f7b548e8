@@ -1,0 +1,15 @@
+package hola;
+
+import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.Test;
+
+public class UtilTextTest {
+	
+	@Test
+	public void testEjer3() {
+		
+		int[] respuesta = {1,5,8};
+		assertArrayEquals(respuesta, UtilText.findSpaces("d hil de "));
+	}
+}

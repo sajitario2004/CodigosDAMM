@@ -1,0 +1,12 @@
+package org.vegamijas;
+
+import static org.junit.Assert.assertEquals; 
+import org.junit.Test;
+
+public class testMetodos {
+
+	@Test
+	public void test1() {
+		assertEquals(0, 0);
+	}
+}

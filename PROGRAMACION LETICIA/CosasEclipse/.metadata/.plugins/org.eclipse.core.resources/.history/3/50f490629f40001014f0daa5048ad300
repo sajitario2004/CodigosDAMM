@@ -1,0 +1,49 @@
+package org.vegamijas;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class testMetodos {
+
+	@Test
+	public void test1() {
+		
+		//test 1 prueba caso normal
+		int num1 = 654885982;
+		int dig1 = 8;
+		int[] res1 = {3, 4, 7};
+		assertEquals(Arrays.toString(res1) , Arrays.toString(Metodos.findDigit(num1, dig1)));
+	
+
+		//test 2 no hay ningun numero
+		// no tiene que devolver nada
+		int num2 = 666666;
+		int dig2 = 8;
+		int[] res2 = {};
+		assertEquals(Arrays.toString(res2), Arrays.toString(Metodos.findDigit(num2, dig2)));
+		
+		//test 3 2 numeros en el digito
+		//tiene que coger solo el primer digito
+		int num3 = 654885982;
+		int dig3 = 83;
+		int[] res3 = {3, 4, 7};
+		assertEquals(Arrays.toString(res3) , Arrays.toString(Metodos.findDigit(num3, dig3)));
+		
+		//test 4 envio -1 por numeros
+		//tiene que no devolver nada
+		int num4 = -1;
+		int dig4 = 8;
+		int[] res4 = {};
+		assertEquals(Arrays.toString(res4) , Arrays.toString(Metodos.findDigit(num4, dig4)));
+	
+		//test 5 envio un numero negativo
+		// tiene que contar como si el guion del negativo no estuviera
+		int num5 = -518258;
+		int dig5 = 8;
+		int[] res5 = {2, 5};
+		assertEquals(Arrays.toString(res5) , Arrays.toString(Metodos.findDigit(num5, dig5)));
+	}
+}

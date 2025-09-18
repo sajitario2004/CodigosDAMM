@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testEjercicioE" project="ies.vdm" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="ies.vdm.testEjercicioE" time="0.0">
+    <testcase name="initializationError" classname="ies.vdm.testEjercicioE" time="0.0">
+      <error>org.junit.runners.model.InvalidTestClassError: Invalid test class 'ies.vdm.testEjercicioE':
+  1. Method pruebaImpar() should not be static
+  2. Method pruebaPar() should not be static
+  3. Method numeroGigante() should not be static
+  4. Method numeroNoValido() should not be static&#13;
+	at org.junit.runners.ParentRunner.validate(ParentRunner.java:525)&#13;
+	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:102)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:84)&#13;
+	at org.junit.runners.JUnit4.&lt;init&gt;(JUnit4.java:23)&#13;
+	at org.junit.internal.builders.JUnit4Builder.runnerForClass(JUnit4Builder.java:10)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:37)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)&#13;
+	at org.junit.internal.requests.ClassRequest.createRunner(ClassRequest.java:28)&#13;
+	at org.junit.internal.requests.MemoizingRequest.getRunner(MemoizingRequest.java:19)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:90)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:76)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:49)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:504)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

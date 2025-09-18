@@ -1,0 +1,10 @@
+INDEX VERSION 1.134+D:\GITHUB\CodigosDAMM\PROGRAMACION LETICIA\CosasEclipse\.metadata\.plugins\org.eclipse.jdt.core
+1424033368.index
+2813349239.index
+3184348041.index
+3041006231.index
+1965421379.index
+2755876533.index
+2493128651.index
+1693211731.index
+1865797976.index

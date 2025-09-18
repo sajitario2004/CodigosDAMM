@@ -1,0 +1,37 @@
+package ies.vdm;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class testEjercicioE {
+	@Test
+	public void pruebaImpar() {
+		int num = 5;
+		String esperado = "    ******\n"
+				+ "   **    **\n"
+				+ "  **********\n"
+				+ " ****    ****\n"
+				+ "**************\n";
+		String resultado = EjercicioE.Main(num);
+		
+		assertEquals(esperado, resultado);
+	}
+	
+	@Test
+	public void pruebaPar() {
+		
+	}
+	
+	@Test
+	public void numeroGigante() {
+		
+	}
+	
+	@Test
+	public  void numeroNoValido() {
+		
+	}
+
+}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testEjercicioD" project="ies.vdm" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="ies.vdm.testEjercicioD" time="0.0">
+    <testcase name="testDigitoPresenteVariasVeces" classname="ies.vdm.testEjercicioD" time="0.0"/>
+    <testcase name="testTodoIgual" classname="ies.vdm.testEjercicioD" time="0.0"/>
+    <testcase name="testDigitoNoPresente" classname="ies.vdm.testEjercicioD" time="0.0"/>
+    <testcase name="testNumeroNegativo" classname="ies.vdm.testEjercicioD" time="0.0"/>
+    <testcase name="testDigitoPresenteUnaVez" classname="ies.vdm.testEjercicioD" time="0.0"/>
+  </testsuite>
+</testrun>

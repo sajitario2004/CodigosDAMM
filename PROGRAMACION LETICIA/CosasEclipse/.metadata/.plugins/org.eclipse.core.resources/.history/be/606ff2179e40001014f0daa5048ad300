@@ -1,0 +1,28 @@
+package org.vegamijas;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+public class testMetodos {
+
+	@Test
+	public void test1() {
+		
+		//test 1 prueba caso normal
+		int num1 = 654885982;
+		int dig1 = 8;
+		int[] res1 = {3, 4, 7};
+		assertEquals(Arrays.toString(res1) , Arrays.toString(Metodos.findDigit(num1, dig1)));
+	
+
+		//test 2 no hay ningun numero
+		int num2 = 666666;
+		int dig2 = 8;
+		int[] res2 = {};
+		assertEquals(Arrays.toString(res2) , Arrays.toString(Metodos.findDigit(num2, dig2)));
+		
+	}
+}

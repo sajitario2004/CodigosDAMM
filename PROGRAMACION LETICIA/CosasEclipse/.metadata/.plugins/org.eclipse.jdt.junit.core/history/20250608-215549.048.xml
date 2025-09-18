@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testEjercicioE" project="ies.vdm" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="ies.vdm.testEjercicioE" time="0.0">
+    <testcase name="pruebaImpar" classname="ies.vdm.testEjercicioE" time="0.0"/>
+    <testcase name="pruebaPar" classname="ies.vdm.testEjercicioE" time="0.0"/>
+    <testcase name="numeroGigante" classname="ies.vdm.testEjercicioE" time="0.0"/>
+    <testcase name="numeroNoValido" classname="ies.vdm.testEjercicioE" time="0.0"/>
+  </testsuite>
+</testrun>

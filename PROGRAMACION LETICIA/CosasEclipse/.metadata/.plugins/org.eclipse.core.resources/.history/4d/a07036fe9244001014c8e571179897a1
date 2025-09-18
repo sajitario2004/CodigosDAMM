@@ -1,0 +1,59 @@
+package ies.vdm;
+import java.text.DecimalFormat;
+public class EjercicioB {
+    public static String main(double baseImponible, String tipoIVA, String codPromo) {
+        tipoIVA = tipoIVA.toLowerCase();
+        codPromo = codPromo.toLowerCase();
+        double porcentajeIVA = 0;
+        switch (tipoIVA) {
+            case "general":
+                porcentajeIVA = 0.21;
+                break;
+            case "reducido":
+                porcentajeIVA = 0.10;
+                break;
+            case "superreducido":
+                porcentajeIVA = 0.04;
+                break;
+            default:
+                return "Tipo de IVA no válido.";
+        }
+        double iva = baseImponible * porcentajeIVA;
+        double precioConIVA = baseImponible + iva;
+        double descuento = 0;
+        switch (codPromo) {
+            case "nopro":
+                descuento = 0;
+                break;
+            case "mitad":
+                descuento = precioConIVA / 2;
+                break;
+            case "meno5":
+                descuento = 5;
+                break;
+            case "5porc":
+                descuento = precioConIVA * 0.05;
+                break;
+            default:
+                return "Código promocional no válido.";
+        }
+        double total = precioConIVA - descuento;
+        
+      
+        String resultado = "";
+        
+        resultado += "Base imponible        " + baseImponible + "\n";
+        resultado += "IVA (" + (int)(porcentajeIVA * 100) + "%)             " + iva + "\n";
+        resultado += "Precio con IVA        " + precioConIVA + "\n";
+        resultado += "Cód. promo. (" + codPromo + "): -" + descuento + "\n";
+        resultado += "TOTAL                 " + total + "\n";
+        return resultado;
+    }
+    public static void Main(String[] args) {
+    	double baseImponible = 100;
+    	String tipoIVA = "general";
+    	String codPromo = "meno5";
+		String respuesta = main(baseImponible, tipoIVA, codPromo);
+		System.out.println(respuesta);
+	}
+}

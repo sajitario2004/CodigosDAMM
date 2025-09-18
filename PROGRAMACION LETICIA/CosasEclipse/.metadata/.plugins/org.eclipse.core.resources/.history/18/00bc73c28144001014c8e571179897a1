@@ -1,0 +1,36 @@
+package ies.vdm;
+
+import java.util.Scanner;
+
+public class EjercicioA {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		// Solicitar las dos notas
+		System.out.print("Introduce la nota del primer control: ");
+		double nota1 = scanner.nextDouble();
+
+		System.out.print("Introduce la nota del segundo control: ");
+		double nota2 = scanner.nextDouble();
+
+		// Calcular la media
+		double media = (nota1 + nota2) / 2;
+
+		if (media >= 5) {
+			System.out.println("Estás aprobado con una media de: " + media);
+		} else {
+			// Preguntar por el resultado de la recuperación
+			scanner.nextLine(); // Limpiar el buffer
+			System.out.print("¿Cuál ha sido el resultado de la recuperación? (apto/no apto): ");
+			String resultado = scanner.nextLine().trim().toLowerCase();
+
+        	if (resultado.equals("apto")) {
+            System.out.println("Estás aprobado con un 5.");
+        	} else {
+            System.out.println("Estás suspendido con una media de: " + media);
+        	}
+		}
+
+		scanner.close();
+	}
+}

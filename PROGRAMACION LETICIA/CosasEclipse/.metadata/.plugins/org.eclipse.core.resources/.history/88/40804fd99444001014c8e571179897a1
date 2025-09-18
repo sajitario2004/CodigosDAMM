@@ -1,0 +1,9 @@
+package ies.vdm;
+
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class testEjercicioC {
+
+}

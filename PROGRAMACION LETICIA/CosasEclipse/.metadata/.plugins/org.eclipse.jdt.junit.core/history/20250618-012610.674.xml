@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testEjerExamen" project="ies.vdm.examen" tests="16" started="16" failures="0" errors="0" ignored="0">
+  <testsuite name="ies.vdm.examen.testEjerExamen" time="0.001">
+    <testcase name="pruebaNumerosRotarLista" classname="ies.vdm.examen.testEjerExamen" time="0.001"/>
+    <testcase name="numeroNegativosInterseccion" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="noCoincidenAnagrama" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaStrRotarLista" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaNormalAnagrama" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaUnaCadenaVaciaIntercalarCad" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="simbolosRarosAnagrama" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaNormalIntercalarCad" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaEspaciosYCaracteresEspecialesIntercalarCad" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaSinRotaciones" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaBooleansRotar" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaNormalInterseccionListas" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaSaltosDeLineaIntercalarCad" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="pruebaDuraInterseccion" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="numeroDesigualInterseccion" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+    <testcase name="noCoincidenPorUnEspacioAnagrama" classname="ies.vdm.examen.testEjerExamen" time="0.0"/>
+  </testsuite>
+</testrun>
