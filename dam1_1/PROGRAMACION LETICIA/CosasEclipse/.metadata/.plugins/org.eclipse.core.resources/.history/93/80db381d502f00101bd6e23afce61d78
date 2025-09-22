@@ -1,0 +1,20 @@
+package puto;
+
+public class camelCaseConverter {
+	//convertir una frase a camel case
+	// frase antes: tejero maricon
+	// frase despues: tejeroMaricon
+	public static void main(String[] args) {
+		String tuprima= "a";
+		
+		char b = tuprima.charAt(0);
+		
+		int a = b -32;
+		
+		
+		System.out.println(a);
+		
+		char c = (char) a;
+	}
+	
+}

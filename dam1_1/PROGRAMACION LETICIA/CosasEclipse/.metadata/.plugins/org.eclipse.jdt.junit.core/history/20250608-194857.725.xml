@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testEjercicioA" project="ies.vdm" tests="5" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="ies.vdm.testEjercicioA" incomplete="true">
+    <testcase name="testAprobadoPorMedia" classname="ies.vdm.testEjercicioA" time="0.004"/>
+    <testcase name="testSuspendidoYRecuperacionApta" classname="ies.vdm.testEjercicioA" incomplete="true"/>
+    <testcase name="testSuspendidoYRecuperacionNoApta" classname="ies.vdm.testEjercicioA" incomplete="true"/>
+    <testcase name="testJustoAprobadoPorMedia" classname="ies.vdm.testEjercicioA" incomplete="true"/>
+    <testcase name="testRecuperacionNullYMediaSuspensa" classname="ies.vdm.testEjercicioA" incomplete="true"/>
+  </testsuite>
+</testrun>

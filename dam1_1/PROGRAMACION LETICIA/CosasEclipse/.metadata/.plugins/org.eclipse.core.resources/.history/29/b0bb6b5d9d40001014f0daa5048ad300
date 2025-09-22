@@ -1,0 +1,15 @@
+package org.vegamijas;
+
+import static org.junit.Assert.assertEquals; 
+import org.junit.Test;
+
+public class testMetodos {
+
+	@Test
+	public void test1() {
+		int num1 = 654885982;
+		int dig1 = 8;
+		int[] res1 = {3,4,7};
+		assertEquals(res1 , Metodos.findDigit(num1, dig1));
+	}
+}

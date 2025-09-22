@@ -1,0 +1,47 @@
+package ies.vdm;		
+
+public class EjercicioE {
+	public static String Main(int num){
+		String respuesta = "";
+		int cont11=1;
+		int cont12=1;
+		int cont21=1;
+		int cont22=1;
+		if(num < 3) {
+			respuesta = "la piramide tiene que ser mayor que 3";
+		} else {
+			for (int i = 0; i < num; i++) {
+				
+				for (int j = num; j > cont11; j--) {
+					respuesta += " ";
+				}
+				for (int j = 0; j < cont12; j++) {
+					respuesta += "*";
+				}
+				
+				cont11++;
+				cont12++;
+				
+				
+				
+				for (int j = num; j < cont21; j--) {
+					respuesta += "*";
+				}
+				
+				cont21++;
+				
+				respuesta+="\n";
+			}
+		}
+		
+		
+		return respuesta;
+		
+	}
+	
+	public static void main(String[] args) {
+		String respuesta = Main(5);
+		
+		System.out.println(respuesta);
+	}
+}

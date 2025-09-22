@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testEjercicioB" project="ies.vdm" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="ies.vdm.testEjercicioB" time="0.0">
+    <testcase name="testIvaSuperreducidoConMeno5" classname="ies.vdm.testEjercicioB" time="0.0"/>
+    <testcase name="testIvaReducidoConMitad" classname="ies.vdm.testEjercicioB" time="0.0"/>
+    <testcase name="testIvaGeneralCon5porc" classname="ies.vdm.testEjercicioB" time="0.0"/>
+    <testcase name="testIvaInvalido" classname="ies.vdm.testEjercicioB" time="0.0"/>
+    <testcase name="testIvaGeneralSinPromo" classname="ies.vdm.testEjercicioB" time="0.0"/>
+    <testcase name="testPromoInvalido" classname="ies.vdm.testEjercicioB" time="0.0"/>
+  </testsuite>
+</testrun>

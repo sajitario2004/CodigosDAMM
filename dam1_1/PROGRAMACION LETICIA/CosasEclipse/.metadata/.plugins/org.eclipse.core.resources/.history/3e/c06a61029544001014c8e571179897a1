@@ -1,0 +1,53 @@
+package ies.vdm;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class EjercicioC {
+
+    public static String procesarNumeros(List<Integer> numeros) {
+        int contador = 0;
+        int sumaImpares = 0;
+        int contadorImpares = 0;
+        int mayorPar = Integer.MIN_VALUE;
+
+        for (int numero : numeros) {
+            if (numero < 0) {
+                break;
+            }
+
+            contador++;
+
+            if (numero % 2 == 0) {
+                if (numero > mayorPar) {
+                    mayorPar = numero;
+                }
+            } else {
+                sumaImpares += numero;
+                contadorImpares++;
+            }
+        }
+
+        StringBuilder resultado = new StringBuilder();
+        resultado.append("Has introducido ").append(contador).append(" números.\n");
+
+        if (contadorImpares > 0) {
+            double media = (double) sumaImpares / contadorImpares;
+            resultado.append(String.format("La media de los impares es: %.2f\n", media));
+        } else {
+            resultado.append("No se introdujeron números impares.\n");
+        }
+
+        if (mayorPar != Integer.MIN_VALUE) {
+            resultado.append("El mayor de los pares es: ").append(mayorPar);
+        } else {
+            resultado.append("No se introdujeron números pares.");
+        }
+
+        return resultado.toString();
+    }
+    public static void main(String[] args) {
+    	List<Integer> numeros = Arrays.asList(3, 8, 5, 2, 7, -1);
+        String resultado = EjercicioC.procesarNumeros(numeros);
+	}
+}

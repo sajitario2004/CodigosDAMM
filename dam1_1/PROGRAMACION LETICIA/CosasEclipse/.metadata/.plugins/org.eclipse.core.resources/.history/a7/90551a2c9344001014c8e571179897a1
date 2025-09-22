@@ -1,0 +1,83 @@
+package ies.vdm;
+
+public class EjercicioB {
+
+    // Método muy básico para convertir un número con dos decimales a String sin usar formatos avanzados
+    private static String numeroConDosDecimales(double valor) {
+        // Multiplicar por 100 y obtener entero, truncando decimales
+        int entero = (int) valor;
+        int decimales = (int) ((valor - entero) * 100 + 0.5); // +0.5 para redondear correctamente
+
+        // Construir parte decimal en string con dos caracteres (agregar cero si es necesario)
+        String strDecimales = "" + decimales;
+        if (decimales < 10) {
+            strDecimales = "0" + strDecimales;
+        }
+
+        return entero + "." + strDecimales;
+    }
+
+    public static String main(double baseImponible, String tipoIVA, String codPromo) {
+        tipoIVA = tipoIVA.toLowerCase();
+        codPromo = codPromo.toLowerCase();
+
+        double porcentajeIVA = 0;
+        switch (tipoIVA) {
+            case "general":
+                porcentajeIVA = 0.21;
+                break;
+            case "reducido":
+                porcentajeIVA = 0.10;
+                break;
+            case "superreducido":
+                porcentajeIVA = 0.04;
+                break;
+            default:
+                return "Tipo de IVA no válido.";
+        }
+
+        double iva = baseImponible * porcentajeIVA;
+        double precioConIVA = baseImponible + iva;
+
+        double descuento = 0;
+        switch (codPromo) {
+            case "nopro":
+                descuento = 0;
+                break;
+            case "mitad":
+                descuento = precioConIVA / 2;
+                break;
+            case "meno5":
+                descuento = 5;
+                break;
+            case "5porc":
+                descuento = precioConIVA * 0.05;
+                break;
+            default:
+                return "Código promocional no válido.";
+        }
+
+        double total = precioConIVA - descuento;
+
+        String resultado = "";
+        resultado += "Base imponible        " + numeroConDosDecimales(baseImponible) + "\n";
+        resultado += "IVA (" + (int)(porcentajeIVA * 100) + "%)             " + numeroConDosDecimales(iva) + "\n";
+        resultado += "Precio con IVA        " + numeroConDosDecimales(precioConIVA) + "\n";
+        resultado += "Cód. promo. (" + codPromo + "): -" + numeroConDosDecimales(descuento) + "\n";
+        resultado += "TOTAL                 " + numeroConDosDecimales(total) + "\n";
+
+        return resultado;
+    }
+    public static void Main(String[] args) {
+    	double baseImponible = 100;
+    	String tipoIVA = "general";
+    	String codPromo = "meno5";
+		String respuesta = main(baseImponible, tipoIVA, codPromo);
+		System.out.println(respuesta);
+		
+		
+		double num = (2.2);
+		System.out.println(num);
+		
+	}
+}

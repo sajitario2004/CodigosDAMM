@@ -1,0 +1,40 @@
+package ies.vdm;
+
+import org.junit.*;
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+
+public class testEjercicioD {
+
+    @Test
+    public void testDigitoPresenteVariasVeces() {
+        List<Integer> resultado = EjercicioD.buscarPosiciones(1231231, 1);
+        assertEquals(List.of(0, 3, 6), resultado);
+    }
+
+    @Test
+    public void testDigitoPresenteUnaVez() {
+        List<Integer> resultado = EjercicioD.buscarPosiciones(34567, 4);
+        assertEquals(List.of(1), resultado);
+    }
+
+    @Test
+    public void testDigitoNoPresente() {
+        List<Integer> resultado = EjercicioD.buscarPosiciones(987654, 1);
+        assertEquals(List.of(), resultado);
+    }
+
+    @Test
+    public void testNumeroNegativo() {
+        List<Integer> resultado = EjercicioD.buscarPosiciones(-505050, 5);
+        assertEquals(List.of(0, 2, 4), resultado);
+    }
+
+    @Test
+    public void testTodoIgual() {
+        List<Integer> resultado = EjercicioD.buscarPosiciones(7777, 7);
+        assertEquals(List.of(0, 1, 2, 3), resultado);
+    }
+}

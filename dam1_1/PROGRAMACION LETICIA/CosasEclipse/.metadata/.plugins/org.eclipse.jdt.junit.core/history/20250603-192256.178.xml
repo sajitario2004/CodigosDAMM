@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testMetodos" project="org.vegamijas" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="org.vegamijas.testMetodos" time="0.002">
+    <testcase name="test2" classname="org.vegamijas.testMetodos" time="0.002"/>
+    <testcase name="test4" classname="org.vegamijas.testMetodos" time="0.0"/>
+    <testcase name="testFindDigit" classname="org.vegamijas.testMetodos" time="0.0"/>
+  </testsuite>
+</testrun>
