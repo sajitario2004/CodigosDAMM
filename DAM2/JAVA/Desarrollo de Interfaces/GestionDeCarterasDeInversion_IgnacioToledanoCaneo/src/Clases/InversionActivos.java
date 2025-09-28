@@ -63,6 +63,18 @@ public class InversionActivos {
         this.activo = activo;
     }
 
+    @Override
+    public String toString() {
+        return "InversionActivos{" +
+                "ticket=" + ticket +
+                ", descript='" + descript + '\'' +
+                ", dineroInvertido=" + dineroInvertido +
+                ", dineroGenerado=" + dineroGenerado +
+                ", beneficioPorcentaje=" + beneficioPorcentaje +
+                ", activo=" + activo +
+                '}';
+    }
+
     public void calcbeneficio() {
         String fechPrecio1= activo.getHistoricoFechas().getFirst();
         int precio1 = activo.getHistoricoPrecio().get(fechPrecio1);
@@ -72,4 +84,5 @@ public class InversionActivos {
         this.beneficioPorcentaje= precio2 / precio1 + 100;
         this.dineroGenerado= (this.dineroInvertido * (this.beneficioPorcentaje / 100)) - this.dineroInvertido;
     }
+
 }

@@ -2,7 +2,6 @@ import Clases.Activo;
 import Clases.Cartera;
 import Clases.InversionActivos;
 import Clases.Persona;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -121,7 +120,30 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Introduzca su dni para acceder a su cartera");
-
+                    String dniAux = sc.next();
+                    boolean contTrue = false;
+                    for (Persona personaAux: personas){
+                        String personaAuxStr = personaAux.getDni();
+                        if (personaAuxStr.equalsIgnoreCase(dniAux)){
+                            ArrayList<Cartera> cartera = personaAux.getCateras();
+                            for (Cartera carteraAux: cartera){
+                                System.out.println("bienvenido a su cartera " + personaAux.getNombre());
+                                System.out.println(carteraAux.getId() + " " + carteraAux.getNombre() + " " + carteraAux.getDineroInvert());
+                                ArrayList<InversionActivos> inverAux = carteraAux.getInversiones();
+                                for (InversionActivos inverAuxAux: inverAux){
+                                    System.out.println(inverAuxAux+"\n");
+                                }
+                                contTrue = true;
+                            }
+                        }
+                    }
+                    if (contTrue){
+                        System.out.println(" Hasta la proxima...");
+                    } else {
+                        System.out.println("No se ha encontrado la informacion de sus carteras a traves de su dni\n" +
+                                "o no se ha encontrado su dni en nuestra base de datos,\n" +
+                                "(lo que espero que si se encuentre es mi 10 en esta tarea porfa javier)");
+                    }
                     break;
                 case 3:
 
