@@ -1,6 +1,7 @@
 package Clases;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Activo {
@@ -14,7 +15,10 @@ public class Activo {
         this.preciUlti = preciUlti;
         this.nombre = nombre;
         this.fech = fech;
+        this.historicoFechas = new ArrayList<>();
         this.historicoFechas.add(fech);
+        this.historicoPrecio = new HashMap<String, Integer>();
+        this.historicoPrecio.put(fech, preciUlti);
     }
 
     public String getNombre() {
@@ -67,9 +71,9 @@ public class Activo {
     }
 
     public void actuPrecio(String newFecha){
-        this.historicoPrecio.put(this.fech, this.preciUlti);
-        this.historicoFechas.add(newFecha);
         this.preciUlti += (int) (Math.random()*100-25);
+        this.historicoPrecio.put(newFecha, this.preciUlti);
+        this.historicoFechas.add(newFecha);
         this.fech=newFecha;
     }
 

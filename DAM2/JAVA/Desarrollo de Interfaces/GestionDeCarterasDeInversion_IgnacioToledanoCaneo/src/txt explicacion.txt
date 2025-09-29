@@ -52,10 +52,19 @@ de 5000 euros en los siguientes activos "RoboAdvisor Conservador" con un 15%
 invertido de la cantidad de la cartera, y el activo "RoboAdvisor Moderado" con el resto
 invertido.
 
+METODOS
 Realizar un menu principal en modo texto, donde se pueda ver la carteras de
-los diferentes usuarios solicitando primero su dni. Poder quitar activos, actualizar
-activos de cartera, listar todas las carteras, ver detalles de las carteras. Generar todo y
-las clases correspondientes y paquetes java.
+los diferentes usuarios solicitando primero su dni.
+
+Poder quitar activos,
+
+actualizar activos de cartera,
+
+listar todas las carteras,
+
+ver detalles de las carteras.
+
+Generar todo y las clases correspondientes y paquetes java.
 Se pide:
 a) Genera los siguientes paquetes como en la figura
         • model/

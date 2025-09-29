@@ -102,7 +102,8 @@ public class Main {
             System.out.println("¿Que accion desea realizar?\n" +
                     "1 - ver de alguna accion\n" +
                     "2 - consultar carteras\n" +
-                    "3 - actualizar informacion de algun activo (hace falta permisos especiales)\n");
+                    "3 - eliminar activo\n" +
+                    "4 - actualizar informacion de algun activo (hace falta permisos especiales)\n");
             int opcion = sc.nextInt();
             switch (opcion){
                 case 1:
@@ -128,7 +129,7 @@ public class Main {
                             ArrayList<Cartera> cartera = personaAux.getCateras();
                             for (Cartera carteraAux: cartera){
                                 System.out.println("bienvenido a su cartera " + personaAux.getNombre());
-                                System.out.println(carteraAux.getId() + " " + carteraAux.getNombre() + " " + carteraAux.getDineroInvert());
+                                System.out.println(carteraAux.getId() + " " + carteraAux.getNombre() + " su dinero invertido es:" + carteraAux.getDineroInvert() + ". El dinero de su cartera es " + carteraAux.getDineroCartera());
                                 ArrayList<InversionActivos> inverAux = carteraAux.getInversiones();
                                 for (InversionActivos inverAuxAux: inverAux){
                                     System.out.println(inverAuxAux+"\n");
@@ -146,7 +147,50 @@ public class Main {
                     }
                     break;
                 case 3:
-
+                    System.out.println("Introduzca su dni para acceder a su cartera");
+                    String dniAux2 = sc.next();
+                    boolean contTrue2 = false;
+                    int contPersonasAux = 0;
+                    for (Persona personaAux: personas){
+                        String personaAuxStr = personaAux.getDni();
+                        if (personaAuxStr.equalsIgnoreCase(dniAux2)){
+                            ArrayList<Cartera> cartera = personaAux.getCateras();
+                            System.out.println("seleccione una cartera porfavor " + personaAux.getNombre());
+                            for (Cartera carteraAux: cartera){
+                                System.out.println(carteraAux.getId() + " esta es la cartera " + carteraAux.getNombre());
+                            }
+                            int seleccionCartera = sc.nextInt();
+                            for (Cartera carteraAux: cartera){
+                                if (carteraAux.getId() == seleccionCartera){
+                                    System.out.println("Escriba el ticket del activo que desea vender");
+                                    for (InversionActivos inverAuxAux: carteraAux.getInversiones()){
+                                        System.out.println(inverAuxAux.getTicket() + " es el ticket de el activo " + inverAuxAux.getActivo().getNombre() + " en el cual tiene invertido " + inverAuxAux.getDineroInvertido());
+                                    }
+                                    int ticketAux = sc.nextInt();
+                                    for (InversionActivos inverAuxAux: carteraAux.getInversiones()){
+                                        if (inverAuxAux.getTicket() == ticketAux){
+                                            cartera.remove(carteraAux);
+                                            carteraAux.quitarActivos(ticketAux);
+                                            cartera.add(carteraAux);
+                                            personaAux.setCateras(cartera);
+                                            personas.set(contPersonasAux, personaAux);
+                                            System.out.println("transaccion compleatada \n");
+                                        }
+                                    }
+                                }else {
+                                    System.out.println("cartera no encontrada");
+                                }
+                            }
+                        }
+                        contPersonasAux++;
+                    }
+                    if (contTrue2){
+                        System.out.println(" Hasta la proxima...");
+                    } else {
+                        System.out.println("No se ha encontrado la informacion de sus carteras a traves de su dni\n" +
+                                "o no se ha encontrado su dni en nuestra base de datos,\n" +
+                                "(lo que espero que si se encuentre es mi 10 en esta tarea porfa javier)");
+                    }
                     break;
             }
 

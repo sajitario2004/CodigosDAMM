@@ -56,6 +56,14 @@ public class Cartera {
         inversiones = inversiones;
     }
 
+    public int getDineroCartera() {
+        return dineroCartera;
+    }
+
+    public void setDineroCartera(int dineroCartera) {
+        this.dineroCartera = dineroCartera;
+    }
+
     @Override
     public String toString() {
         return "Cartera{" +
@@ -64,5 +72,21 @@ public class Cartera {
                 ", dineroInvert=" + dineroInvert +
                 ", Inversiones=" + inversiones +
                 '}';
+    }
+
+    public void quitarActivos(int ticket ){
+        ArrayList<InversionActivos> inversionesAux = this.inversiones;
+        boolean encontrado = false;
+        int dineroGanado;
+        for (InversionActivos aux : inversionesAux) {
+            if (aux.getTicket() == ticket) {
+                dineroGanado = aux.getDineroInvertido() + aux.getDineroGenerado();
+                this.dineroCartera = dineroGanado;
+                this.dineroInvert -= aux.getDineroInvertido();
+                System.out.println("ha recibido en su cartera la cantidad: " + dineroGanado + " gracias a la accion: " + aux.getActivo().getNombre());
+            }
+        }
+
+
     }
 }

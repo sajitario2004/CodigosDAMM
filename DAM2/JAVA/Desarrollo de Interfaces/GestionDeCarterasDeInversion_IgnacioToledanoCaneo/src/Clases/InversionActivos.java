@@ -8,11 +8,15 @@ public class InversionActivos {
     private int beneficioPorcentaje;
     private Activo activo;
 
+
     public InversionActivos(int ticket, String descript, Activo activo, int dineroInvertido) {
         this.ticket = ticket;
         this.descript = descript;
         this.activo = activo;
         this.dineroInvertido= dineroInvertido;
+        this.dineroGenerado = 0;
+        this.beneficioPorcentaje = 0;
+
     }
 
     public int getTicket() {
