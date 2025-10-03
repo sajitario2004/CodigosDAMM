@@ -1,7 +1,10 @@
-import Clases.Activo;
-import Clases.Cartera;
-import Clases.InversionActivos;
-import Clases.Persona;
+package pruebas1;
+
+import pruebas1.Clases.Activo;
+import pruebas1.Clases.Cartera;
+import pruebas1.Clases.InversionActivos;
+import pruebas1.Clases.Persona;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -35,7 +38,7 @@ public class Main {
 
         //dinero invertido por el tercer usuario 5000
         InversionActivos inversion8 = new InversionActivos(8, "inversion en "+roboAdConservador.getNombre(), roboAdConservador, (int) ( ((float)5000)*0.15));
-        InversionActivos inversion9 = new InversionActivos(8, "inversion en "+roboAdModerado.getNombre(), roboAdModerado, (int) ( ((float)5000)*0.85));
+        InversionActivos inversion9 = new InversionActivos(9, "inversion en "+roboAdModerado.getNombre(), roboAdModerado, (int) ( ((float)5000)*0.85));
 
         //lista de inversion de usuario 1
         ArrayList<InversionActivos> inversionFriki = new ArrayList<InversionActivos>();
@@ -169,12 +172,20 @@ public class Main {
                                     int ticketAux = sc.nextInt();
                                     for (InversionActivos inverAuxAux: carteraAux.getInversiones()){
                                         if (inverAuxAux.getTicket() == ticketAux){
-                                            cartera.remove(carteraAux);
+                                            /*cartera.remove(carteraAux);
                                             carteraAux.quitarActivos(ticketAux);
+                                            ArrayList<InversionActivos> temp1 = carteraAux.getInversiones();
+                                            temp1.remove(inverAuxAux);
+                                            carteraAux.setInversiones(temp1);
                                             cartera.add(carteraAux);
                                             personaAux.setCateras(cartera);
                                             personas.set(contPersonasAux, personaAux);
-                                            System.out.println("transaccion compleatada \n");
+                                            System.out.println("transaccion compleatada \n");*/
+                                            try {
+                                                carteraAux.getInversiones().remove(inverAuxAux);
+                                            }catch (Exception e){
+                                                System.out.println(e.getMessage());
+                                            }
                                         }
                                     }
                                 }else {

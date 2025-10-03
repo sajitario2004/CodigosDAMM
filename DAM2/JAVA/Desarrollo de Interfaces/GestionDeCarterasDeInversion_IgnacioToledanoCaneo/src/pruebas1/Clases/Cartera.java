@@ -1,4 +1,4 @@
-package Clases;
+package pruebas1.Clases;
 
 import java.util.ArrayList;
 
@@ -78,6 +78,7 @@ public class Cartera {
         ArrayList<InversionActivos> inversionesAux = this.inversiones;
         boolean encontrado = false;
         int dineroGanado;
+        int cont = 0;
         for (InversionActivos aux : inversionesAux) {
             if (aux.getTicket() == ticket) {
                 dineroGanado = aux.getDineroInvertido() + aux.getDineroGenerado();
@@ -85,6 +86,7 @@ public class Cartera {
                 this.dineroInvert -= aux.getDineroInvertido();
                 System.out.println("ha recibido en su cartera la cantidad: " + dineroGanado + " gracias a la accion: " + aux.getActivo().getNombre());
             }
+            cont++;
         }
 
 

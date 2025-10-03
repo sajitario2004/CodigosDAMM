@@ -1,4 +1,4 @@
-package Clases;
+package pruebas1.Clases;
 
 import java.util.ArrayList;
 

@@ -1,0 +1,102 @@
+Crea un programa en java con clases, herencia, polimorfirmos, uso de interfaces para la
+gestión de carteras de inversión. Crea todas las clases de este modelo y un ejemplo de
+uso para probar dicho funcionamiento en conjunto de la simulación de gestión de
+carteras de inversión.
+
+Una cartera está compuesta de varios activos de inversión. La
+cartera tiene un nombre y una cantidad de dinero invertida en activos.
+
+Cada persona se identifica por su dni. De la persona deseamos saber su dni, nombre, edad y email.
+Una persona puede tener varias carteras de inversión, cada una con un identificador y
+nombre asociado
+
+Los activos de inversión vienen definidos por su ticker, descripción,
+precio de compra,fecha de adquisición, precio ultimo y fecha de precio ultimo y
+beneficio como un porcentaje.
+
+Cada activo en cartera tiene además un precio último y la fecha donde de ese precio último.
+
+La suma de las cantidades invertidas de los diferentes activos es el total de la cartera.
+
+Cada activo de cartera tiene un porcentaje total sobre la suma de la
+cartera, es decir, un porcentaje sobre el total del dinero invertido en esa cartera.
+Genérame los distintos archivos java para dar dicha solución. Utiliza comentarios
+sencillos en el código para explicar lo realizado.
+
+Haz la simulación pero con tres personas que crean carteras de activos, la primera
+persona tiene la cartera de nombre "Cartera Friky" con 10000 euros invertidos en los
+activos APPLE, Microsoft, NVidia.
+
+La segunda persona tiene la cartera de nombre
+"Cartera Fondos Indexados" con 30000 euros invertidos en los siguientes activos
+"MSCI World", "MSCI Technology", "Vanguard Emerging Markets", "Picket Total
+Value" y cada uno de estos tiene invertidos un 25% de la cantidad total invertida.
+
+
+La tercera persona tiene una cartera de nombre "RoboCartera" donde invierte una cantidad
+de 5000 euros en los siguientes activos "RoboAdvisor Conservador" con un 15%
+invertido de la cantidad de la cartera, y el activo "RoboAdvisor Moderado" con el resto
+invertido.
+
+METODOS
+Realizar un menu principal en modo texto, donde se pueda ver la carteras de
+los diferentes usuarios solicitando primero su dni.
+
+Poder quitar activos,
+
+actualizar activos de cartera,
+
+listar todas las carteras,
+
+ver detalles de las carteras.
+
+Generar todo y las clases correspondientes y paquetes java.
+Se pide:
+a) Genera los siguientes paquetes como en la figura
+        • model/
+        • services/
+        • main/
+Hecho.
+
+
+b) Genera las clases e Interfaces que representan la solución al problema.
+Determina el nombre de cada una (justifica su función y nombre).
+Hecho.
+
+
+c) Genera los setters y getters para cada clase.
+Hecho.
+
+
+d) Genera varios constructores para cada clase
+Hecho. cada calse tiene sus constructores
+
+
+e) Realiza la carga de datos inicial para simular el problema (cargar los datos primeros de 3 personas).
+Hecho en el main
+
+
+f) Realiza la simulación pedida tal como describe el problema. Crea un menú principal que permita las distintas opciones referentes a las carteras de personas.
+
+
+
+g) Comenta el código que realices.
+
+--FUNCIONAMIENTO DEL PROGRAMA--
+1. Se habre un menu el cual funciona con switch case.
+2. Ahora tu eliges que accion deseas realizar
+    - 1 Listar carteras (Enseña todas las carteras y a quien pertenecen)
+        ·Te enseña una por unu primero la persona luegos las carteras que tiene cada persona
+        y el nombre de cada cartera con sus datos
+    - 2 Ver Carteras por personas (Ver mas cosas de la cartera por persona)
+        ·Ves datos mucho mas especificos de las carteras, esto funciona piediendo el dni primero
+        y luego te pide que cartera quieres ver mas datos en profundidad
+    - 3 Quitar Activo (quitarle un activo a la cartera de una persona)
+        ·quita un activo primero preguntandote el dni y luego te deja seleccionar el activo que
+        quieres quitar
+    - 4 Actualizar Activo (actualiza el precio de un activo)
+        ·Actualiza el precio de un activo, ojo esto no es actualizar cuanto esta invirtiendo una persona
+        en un activo, sino que actualiza cuanto vale un activo de una empresa
+    - 5 Ver Activos (ve todos los activos con sus precios/activo)
+        ·Ves todos los activos de todas las empresas, ves sus nombres, precio, y fecha de ese precio
+    - 0 Salir de la aplicacion (Se sale de la aplicacion este no es muy tryhard de entender)

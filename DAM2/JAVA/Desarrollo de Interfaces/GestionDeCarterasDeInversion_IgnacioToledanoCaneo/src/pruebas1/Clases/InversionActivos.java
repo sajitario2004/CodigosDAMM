@@ -1,4 +1,4 @@
-package Clases;
+package pruebas1.Clases;
 
 public class InversionActivos {
     private int ticket;
