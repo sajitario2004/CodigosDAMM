@@ -1,6 +1,8 @@
 
 import java.io.File;
 import java.nio.file.FileSystemException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 /*
@@ -25,8 +27,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-        mostrarMenu();
         
+        try {
+        mostrarMenu();
+        } catch (Exception e){
+            System.out.println("El erro es: " + e);
+        }
     }
 
     public static void mostrarMenu(){
@@ -35,6 +41,7 @@ public class Main {
         System.out.println("2. Crear carpeta");
         System.out.println("3. Eliminar archivo");
         System.out.println("4. Listar contenido");
+        System.out.println("5. Cambiar nombre");
         System.out.println("0. Salir");
         cantimplora = sc.nextInt();
         
@@ -44,6 +51,7 @@ public class Main {
             case 2 -> crearCarpeta();
             case 3 -> eliminarArchivo();
             case 4 -> listarContenido();
+            case 5 -> cambiarNombre();
             case 0 -> System.out.println("Saliendo...");
             default -> System.out.println("Opción no válida");
         }
@@ -69,12 +77,16 @@ public class Main {
     }
 
     public static void crearCarpeta() {
-        try {
-            File carpeta = new File(".");
-            String[] archivos = carpeta.list();
-        } catch(Exception e){
-            System.out.println("El error es: "+e);
-        }
+        
+            
+            File dir = new File(sc.next());
+            if (dir.mkdir()) {
+                System.out.println("Carpeta creada: " + dir.getName());
+            } else {
+                System.out.println("No se pudo crear la carpeta.");
+            }
+
+        
 
     }
     
@@ -93,4 +105,14 @@ public class Main {
        
     }
     
+
+    public static void cambiarNombre(){
+        try {
+            Path origen = Paths.get(sc.next());
+            Path destino = Paths.get(sc.next());   
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }
 }
