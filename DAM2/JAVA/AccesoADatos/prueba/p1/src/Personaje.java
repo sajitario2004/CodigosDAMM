@@ -13,7 +13,7 @@ public class Personaje{
     }
     public static void main(String[] args) {
         Gson hola = new Gson();
-        System.out.println("cantimplora");
+        
     }
 
     
