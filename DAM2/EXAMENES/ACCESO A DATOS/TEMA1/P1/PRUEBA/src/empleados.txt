@@ -1,0 +1,4 @@
+nombre;edad;departamento
+Ana;32;Contabilidad
+Luis;27;Marketing
+Carlos;40;Sistemas

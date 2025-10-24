@@ -25,8 +25,7 @@ if (n1<n2):
     hilo.join()
     print(suma)
 
-# threading.current_thread().name nos dice el nombre de el hilo lectura/escritura
-threading.current_thread().
+threading.current_thread().name #nos dice el nombre de el hilo lectura/escritura
 
 
 

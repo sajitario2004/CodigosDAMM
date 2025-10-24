@@ -1,0 +1,72 @@
+import java.io.*;
+import java.util.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+public class Main2{
+    public static void main(String[] args) {
+        String archivoEntrada = "empleados.txt";
+        String archivoSalida = "empleados.json";
+        String archivoErrores = "errores.log";
+
+        // Crear archivo empleados.txt si no existe
+        crearArchivoInicial(archivoEntrada);
+
+        List<Empleado> empleados = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoEntrada))) {
+            String linea;
+            boolean primeraLinea = true;
+
+            while ((linea = br.readLine()) != null) {
+                if (primeraLinea) {
+                    primeraLinea = false; // Saltar encabezado
+                    continue;
+                }
+
+                String[] partes = linea.split(";");
+                if (partes.length == 3) {
+                    String nombre = partes[0];
+                    int edad = Integer.parseInt(partes[1]);
+                    String departamento = partes[2];
+
+                    empleados.add(new Empleado(nombre, edad, departamento));
+                }
+            }
+
+            // Mostrar en consola
+            for (Empleado e : empleados) {
+                System.out.println(e.nombre + " - " + e.edad + " - " + e.departamento);
+            }
+
+            // Convertir a JSON y guardar
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            try (FileWriter writer = new FileWriter(archivoSalida)) {
+                gson.toJson(empleados, writer);
+            }
+
+        } catch (Exception e) {
+            String mensaje = "Error: " + e.getMessage();
+            System.err.println(mensaje);
+
+            try (FileWriter log = new FileWriter(archivoErrores, true)) {
+                log.write(mensaje + "\n");
+            } catch (IOException logError) {
+                System.err.println("No se pudo escribir en errores.log");
+            }
+        }
+    }
+
+    private static void crearArchivoInicial(String archivo) {
+        File f = new File(archivo);
+        if (!f.exists()) {
+            try (PrintWriter pw = new PrintWriter(new FileWriter(f))) {
+                pw.println("nombre;edad;departamento");
+                pw.println("Ana;32;Contabilidad");
+                pw.println("Luis;27;Marketing");
+                pw.println("Carlos;40;Sistemas");
+            } catch (IOException e) {
+                System.err.println("No se pudo crear el archivo inicial.");
+            }
+        }
+    }
+}
