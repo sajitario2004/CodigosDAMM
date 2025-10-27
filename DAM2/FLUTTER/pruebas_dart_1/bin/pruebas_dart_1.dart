@@ -21,14 +21,10 @@ edad sea un número válido, pero si te ves con ánimo investiga cómo hacerlo
  */
 
 
+import '1_2_2_6.dart' as ejer2;
 void main() {
-  print("¿Cómo te llamas? "); 
-  String? nombre = stdin.readLineSync();
-
-  print("¿Cuántos años tienes? "); 
-  String? entradaEdad = stdin.readLineSync();
-  int edad = int.parse(entradaEdad!);
-
-  stdout.write("Hola $nombre, tienes $edad años\n");
+  ejer2.main();
+  
 
 }
+

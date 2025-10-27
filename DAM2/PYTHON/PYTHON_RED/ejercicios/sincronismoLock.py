@@ -1,6 +1,7 @@
 import threading # sin usar lock
 import time
 
+
 def suma_uno():
     global g
     lock.acquire() # es lo mismo que with lock que aparece mas abajo
