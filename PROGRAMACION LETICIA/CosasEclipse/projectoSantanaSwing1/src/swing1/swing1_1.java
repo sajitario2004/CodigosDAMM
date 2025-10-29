@@ -25,7 +25,8 @@ public class swing1_1 extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField cajaTexto1;
-
+	private String texto ="";
+	private JTextArea areaDeTexto = new JTextArea();
 	/**
 	 * Launch the application.
 	 */
@@ -55,6 +56,9 @@ public class swing1_1 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
+		
+		contentPane.add(areaDeTexto, BorderLayout.WEST);
+		
 		JPanel panelArriba = new JPanel();
 		panelArriba.setBorder(new EmptyBorder(10, 10, 10, 10));
 		contentPane.add(panelArriba, BorderLayout.NORTH);
@@ -76,8 +80,9 @@ public class swing1_1 extends JFrame {
 		contentPane.add(panel, BorderLayout.SOUTH);
 		panel.setLayout(new FlowLayout(FlowLayout.TRAILING, 5, 5));
 		
-		JButton btnNewButton_2 = new JButton("Clear");
-		panel.add(btnNewButton_2);
+		JButton botonClear = new JButton("Clear");
+		
+		panel.add(botonClear);
 		
 		JButton btnNewButton_1 = new JButton("count");
 		panel.add(btnNewButton_1);
@@ -87,14 +92,20 @@ public class swing1_1 extends JFrame {
 		contentPane.add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new BoxLayout(panel_1, BoxLayout.X_AXIS));
 		
-		JTextArea areaDeTexto = new JTextArea();
-		panel_1.add(areaDeTexto);
+		JScrollPane scrollPane = new JScrollPane(areaDeTexto);
+
+		panel_1.add(scrollPane);
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String texto = cajaTexto1.getText();
-				JLabel aux = new JLabel(texto);
-				areaDeTexto.add(aux);
+				texto =  cajaTexto1.getText() + "\n ";
+				areaDeTexto.append(texto);
+			}
+		});
+		
+		botonClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				areaDeTexto.setText("");
 			}
 		});
 

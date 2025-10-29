@@ -8,12 +8,15 @@ import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
 
 public class gridLayoutDemo2 extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-
+	private GridLayout gridPanel;
 	/**
 	 * Launch the application.
 	 */
@@ -39,7 +42,7 @@ public class gridLayoutDemo2 extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(new GridLayout(0, 2, 0, 0));
+		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
 		contentPane.add(panel);
@@ -57,6 +60,11 @@ public class gridLayoutDemo2 extends JFrame {
 		panel.add(btnNewButton_3);
 		
 		JButton btnNewButton_4 = new JButton("New button");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		panel.add(btnNewButton_4);
 		
 		JPanel panel_1 = new JPanel();
