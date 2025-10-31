@@ -2,9 +2,9 @@ import threading
 import time
 
 class Contador:
-    def __init__(self):
+    def __init__(self, lock):
         self.g = 0
-        self.lock = threading.Lock()
+        self.lock = lock
 
     def suma_uno(self):
         with self.lock:
@@ -26,8 +26,8 @@ class HiloOperacion(threading.Thread):
     def run(self):
         self.funcion()
 
-
-contador = Contador()
+lock = threading.Lock()
+contador = Contador(lock)
 
 
 hilos = [

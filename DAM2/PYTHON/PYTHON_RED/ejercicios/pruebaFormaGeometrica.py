@@ -17,14 +17,16 @@ class medidor (threading.Thread):
     Mi programa principal espera a que todos lo0s hilos terminen y suma las superficies de cada hilo y pone ese suma.
     """
     def __init__ (self, tipo, ancho, alto):
-        super(medidor,self).__init__()
-        self.numero = num
-        
+        super().__init__()
+        self.tipo = tipo
+        self.ancho = ancho
+        self.alto = alto
+        self.superficie = 0
 
+    def run(self):
+        if self.tipo == "cuadrado":
+            self.superficie=self.ancho*self.alto
+        if self.tipo == "triangulo":
+            self.superficie=(self.ancho*self.alto)/2
 
-    def calcTriangulo (ancho, alto):
-        return (ancho * alto) / 2
-    
-    def calcCuadrado (ancho, alto):
-        return (ancho * alto)
-    
+f1 = medidor("cuadrado")

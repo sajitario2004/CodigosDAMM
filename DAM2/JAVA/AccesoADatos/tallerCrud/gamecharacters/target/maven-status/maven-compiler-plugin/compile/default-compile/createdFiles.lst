@@ -1,0 +1,4 @@
+edu/dam/gamecharacters/model/Character.class
+edu/dam/gamecharacters/dao/CharacterDAO.class
+edu/dam/gamecharacters/app/App.class
+edu/dam/gamecharacters/util/ConexionSQLite.class
