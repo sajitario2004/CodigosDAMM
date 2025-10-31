@@ -10,6 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.BoxLayout;
@@ -27,6 +29,7 @@ public class swing1_1 extends JFrame {
 	private JTextField cajaTexto1;
 	private String texto ="";
 	private JTextArea areaDeTexto = new JTextArea();
+	private int count = 0;
 	/**
 	 * Launch the application.
 	 */
@@ -84,8 +87,9 @@ public class swing1_1 extends JFrame {
 		
 		panel.add(botonClear);
 		
-		JButton btnNewButton_1 = new JButton("count");
-		panel.add(btnNewButton_1);
+		JButton bottonContar = new JButton("count");
+		
+		panel.add(bottonContar);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(255, 255, 255));
@@ -100,12 +104,31 @@ public class swing1_1 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				texto =  cajaTexto1.getText() + "\n ";
 				areaDeTexto.append(texto);
+				count++;
+				
 			}
 		});
 		
 		botonClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				areaDeTexto.setText("");
+				 int opcion = JOptionPane.showConfirmDialog(
+						 swing1_1.this,
+						 "¿Estás seguro de que quieres borrar el contenido?",
+						 "Peligro",
+						 JOptionPane.YES_NO_CANCEL_OPTION,
+						 JOptionPane.QUESTION_MESSAGE
+				 );
+
+				 if (opcion == JOptionPane.YES_OPTION) {
+					 areaDeTexto.setText("");
+					 count = 0;
+				 }
+			}
+		});
+		
+		bottonContar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(swing1_1.this, "El contador tiene "+count, "Informacion ", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 
