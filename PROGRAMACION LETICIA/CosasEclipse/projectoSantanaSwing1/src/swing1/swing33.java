@@ -146,7 +146,8 @@ public class swing33 extends JFrame {
 				
 				int suma = var1 / var2;
 				
-				String respuesta = ("La respuesta es: " + var1 + " + " + var2 + " = " + suma + "\n" );
+				String respuesta = ("La respuesta es: " + var1 + " + " + var2 + " = " + suma + "\n"+
+				"Y de resto " + (var1%var2) + "\n");
 				
 				textArea.append(respuesta);
 				
