@@ -1,0 +1,1 @@
+"""Un hilo trabaja continuamente hasta que llega otro proceso y lo detiene. hay que usar is_set()"""
