@@ -27,4 +27,12 @@ public class Password {
 		this.textoAsterisc = "";
 		this.cadena = "";
 	}
+	
+	public String getPassword() {
+		return this.cadena;
+	}
+	
+	public String getAsterisc() {
+		return this.textoAsterisc;
+	}
 }
