@@ -13,7 +13,8 @@ class ControlDeCruce:  # Clase que modela un cruce con coches y peatones control
         while True:  # Ciclo infinito alternando estados
             print("[Controlador] Peatones pueden pasar (10 minutos)...")  # Anuncia fase de peatones
             self.pueden_pasar_peatones.set()   # Activa permiso para peatones
-            self.pueden_pasar_coches.clear()   # Desactiva permiso para coches
+            self.pueden_pasar_coches.clear()   # Desactiva permiso para coches++
+
             time.sleep(10)                     # Mantiene la fase de peatones durante 10 segundos
 
             print("[Controlador] Coches pueden pasar (5 minutos)...")     # Anuncia fase de coches
@@ -28,6 +29,7 @@ class ControlDeCruce:  # Clase que modela un cruce con coches y peatones control
             time.sleep(1)                        # Simula tiempo de cruce
 
     def coche(self, id):  # Hilo que representa a un coche con identificador
+        
         while True:  # Ciclo continuo: los coches llegan indefinidamente
             self.pueden_pasar_coches.wait()  # Espera hasta que el evento de coches esté activo
             print(f"[Coche {id}] Cruzando...")  # Cruza cuando está permitido
