@@ -1,0 +1,7 @@
+"""
+El servidor genera un numero secreto aleatorio por ejemplo entre 1 y 100. 
+Un cliente se conecta y envia inetntos. El servidor responde si el numero es:
+muy alto
+muy bajo
+el correcto
+"""
