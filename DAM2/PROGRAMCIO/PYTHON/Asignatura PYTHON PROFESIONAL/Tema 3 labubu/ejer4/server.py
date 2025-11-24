@@ -4,13 +4,14 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
-    s.bind(("127.0.0.1", 8083))
+    s.bind(("127.0.0.1", 8084))
     s.listen(5)
     conn, addr = s.accept()
     
+    
+    
     #creamos numero
     numero = random.randint(1,100)
-
     
     mensaje = "Que pasa compi, dame un numero\n"
     conn.sendall(mensaje.encode())

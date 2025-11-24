@@ -3,7 +3,7 @@ import socket
 c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
-    c.connect(("127.0.0.1", 8084))
+    c.connect(("127.0.0.1", 8083))
     
     # Primer mensaje del servidor
     data = c.recv(1024)
