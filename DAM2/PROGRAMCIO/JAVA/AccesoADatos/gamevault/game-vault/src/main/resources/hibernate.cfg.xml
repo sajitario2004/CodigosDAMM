@@ -21,7 +21,8 @@
         -->
 
         <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
-        <property name="hibernate.connection.url">jdbc:sqlite:/home/administrador/CodigosDAMM/DAM2/PROGRAMCIO/JAVA/AccesoADatos/gamevault/game-vault/src/main/resources/videojuegos.db</property>
+        <!-- <property name="hibernate.connection.url">jdbc:sqlite:/home/administrador/CodigosDAMM/DAM2/PROGRAMCIO/JAVA/AccesoADatos/gamevault/game-vault/src/main/resources/videojuegos.db</property>-->
+        <property name="hibernate.connection.url">jdbc:sqlite:D:/GITHUB/CodigosDAMM/DAM2/PROGRAMCIO/JAVA/AccesoADatos/gamevault/game-vault/src/main/resources/videojuegos.db</property>
         <property name="hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
 
         
@@ -34,9 +35,9 @@
         <property name="hibernate.format_sql">true</property>
         
         <!-- Mapeo de entidades -->
-        <mapping class="edu.dam.model.Usuario"/>
-        <mapping class="edu.dam.model.Videojuego"/>
-        <mapping class="edu.dam.model.Prestamo"/>
+        <mapping class="es.dam.models.Usuario"/>
+        <mapping class="es.dam.models.Videojuego"/>
+        <mapping class="es.dam.models.Prestamo"/>
 
     </session-factory>
 </hibernate-configuration>
