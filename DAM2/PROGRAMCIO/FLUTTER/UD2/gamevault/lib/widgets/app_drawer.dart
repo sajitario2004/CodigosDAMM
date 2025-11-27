@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/settings_screen.dart';
+import '../screens/categories_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -53,6 +54,18 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(Icons.info),
             title: const Text('Acerca de la app'),
             onTap: () => Navigator.pop(context),
+          ),
+          // widgets/app_drawer.dart (añadir ListTile)
+          ListTile(
+            leading: const Icon(Icons.list),
+            title: const Text('Categorías dinámicas'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const CategoriesScreen()),
+              );
+            },
           ),
         ],
       ),

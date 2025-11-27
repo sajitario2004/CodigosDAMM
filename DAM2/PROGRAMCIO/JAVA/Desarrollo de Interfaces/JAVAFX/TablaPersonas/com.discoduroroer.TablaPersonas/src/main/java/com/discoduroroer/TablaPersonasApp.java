@@ -21,7 +21,7 @@ public class TablaPersonasApp extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/TablaPersonas.fxml"));
         scene = new Scene(fxmlLoader.load(), 640, 480);
         stage.setScene(scene);
-        stage.show();
+        stage.show();   
     }
 
     
