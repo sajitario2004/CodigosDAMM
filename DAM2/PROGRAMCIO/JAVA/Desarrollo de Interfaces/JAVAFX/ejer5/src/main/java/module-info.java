@@ -1,7 +1,7 @@
-module com.discoduroroer.ejer2 {
+module com.discoduroroer.ejer5 {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens com.discoduroroer.ejer2 to javafx.fxml;
-    exports com.discoduroroer.ejer2;
+    opens com.discoduroroer.ejer5 to javafx.fxml;
+    exports com.discoduroroer.ejer5;
 }

@@ -25,8 +25,7 @@ public class SumaVistaController implements Initializable {
     
     
     //variables
-    @FXML
-    private Button sumar;
+    
     
     @FXML
     private TextField txtOp2;
@@ -34,7 +33,9 @@ public class SumaVistaController implements Initializable {
     private TextField txtOp1;
     @FXML
     private TextField txtResultado;
-
+    @FXML
+    private Button sumar;
+    
     /**
      * Initializes the controller class.
      */
@@ -50,6 +51,7 @@ public class SumaVistaController implements Initializable {
             int resultado = s.sumar();
         
             txtResultado.setText(resultado+"");
+            
         } catch(NumberFormatException e){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
@@ -58,5 +60,4 @@ public class SumaVistaController implements Initializable {
             alert.showAndWait();
         }
     }
-    
 }
