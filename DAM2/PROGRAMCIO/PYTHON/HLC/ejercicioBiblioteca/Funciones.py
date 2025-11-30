@@ -32,7 +32,8 @@ def biblioteca_detallada(biblioteca):
                             "genero":i.get("genero"),
                             "prestamo": {
                                 "disponible": True, 
-                                "dias_restantes": 0}
+                                "dias_restantes": 0
+                                }
                             }})
     return biblio_aux
 
