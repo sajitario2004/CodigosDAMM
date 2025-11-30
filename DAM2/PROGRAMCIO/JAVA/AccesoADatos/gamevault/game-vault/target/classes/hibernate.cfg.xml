@@ -6,7 +6,7 @@
 <hibernate-configuration>
     <session-factory>
         <!-- Configuración de conexión a la base de datos -->
-         <!--sqlite
+        <!--sqlite
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/biblioteca_videojuegos?serverTimezone=UTC</property>
         <property name="hibernate.connection.username">root</property>
