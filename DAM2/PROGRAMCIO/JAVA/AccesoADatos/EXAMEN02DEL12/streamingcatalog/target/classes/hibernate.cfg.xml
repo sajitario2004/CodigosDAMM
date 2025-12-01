@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Conexión a MariaDB (usa el contenedor que indicaste en el enunciado) -->
+        <property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mariadb://localhost:3307/streamingcatalog</property>
+        <property name="hibernate.connection.username">demo</property>
+        <property name="hibernate.connection.password">demo123</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</property>
+
+        <!-- Generación automática del esquema para pruebas -->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <!-- Mostrar SQL en consola -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapeo de entidades -->
+        <mapping class="es.dam.model.Estudio"/>
+        <mapping class="es.dam.model.Pelicula"/>
+        <mapping class="es.dam.model.Critica"/>
+    </session-factory>
+</hibernate-configuration>
