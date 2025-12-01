@@ -6,6 +6,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import ch.makery.address.MainApp;
 import ch.makery.address.model.Person;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -34,13 +36,17 @@ public class PersonOverviewController {
     private Label birthdayLabel;
 
     private MainApp mainApp;
+    @FXML
+    private Button btnNew;
 
     public PersonOverviewController() {
     }
 
+    @FXML
     private void initialize() {
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+
     }
 
     
@@ -48,5 +54,11 @@ public class PersonOverviewController {
         this.mainApp = mainApp;
 
         personTable.setItems(mainApp.getPersonData());
+    }
+
+
+    @FXML
+    private void showPersonOverview(ActionEvent event) {
+        
     }
 }
