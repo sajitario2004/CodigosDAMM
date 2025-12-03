@@ -42,7 +42,6 @@ public class PersonOverviewController {
     public PersonOverviewController() {
     }
 
-    @FXML
     private void initialize() {
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());

@@ -55,7 +55,7 @@ public class MainApp extends Application {
      */
     private void initRootLayout() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ch/makery/address/RootLayout.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RootLayout.fxml"));
             rootLayout = loader.load();
 
             Scene scene = new Scene(rootLayout);
@@ -72,7 +72,7 @@ public class MainApp extends Application {
      */
     private void showPersonOverview() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ch/makery/address/PersonOverview.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/PersonOverview.fxml"));
             AnchorPane personOverview = loader.load();
 
             rootLayout.setCenter(personOverview);
