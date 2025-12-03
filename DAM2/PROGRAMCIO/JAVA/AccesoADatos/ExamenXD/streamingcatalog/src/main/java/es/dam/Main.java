@@ -16,7 +16,7 @@ public class Main {
         System.out.println("╔═══════════════════════════════════════════════╗");
         System.out.println("║      CATALOGO STREAMING - TEST CRUD/HIBERNATE ║");
         System.out.println("╚═══════════════════════════════════════════════╝\n");
-
+        
         SessionFactory factory = null;
         try {
             factory = new Configuration()
@@ -28,10 +28,10 @@ public class Main {
 
             StreamingDAO dao = new StreamingDAO(factory);
 
-            // ==================== Crear Estudio =================
-            System.out.println("\n" + "=".repeat(60));
+            // crear Estudio 
+            System.out.println("\n" + "=================================");
             System.out.println("CREAR: Estudio + Peliculas");
-            System.out.println("=".repeat(60) + "\n");
+            System.out.println("=================================" + "\n");
 
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
             Date fundacion = sdf.parse("1995-06-15");
@@ -56,31 +56,31 @@ public class Main {
 
             Thread.sleep(2000);
 
-            // ================= Actualizar año de una película ================
-            System.out.println("\n" + "=".repeat(60));
+            // actualizar año lanzamienot
+            System.out.println("\n" + "=================================");
             System.out.println("UPDATE:Actualizar año de 'Viaje a Andromeda' a 2021");
-            System.out.println("=".repeat(60) + "\n");
+            System.out.println("=================================" + "\n");
 
             dao.actualizarAnioPelicula(peli1Id, 2021);
 
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
-            // ============ Consulta avanzada ============
-            System.out.println("\n" + "=".repeat(60));
+            // Consulta avanzada
+            System.out.println("\n" + "=================================");
             System.out.println("CONSULTA: Peliculas posteriores a 2019");
-            System.out.println("=".repeat(60) + "\n");
+            System.out.println("=================================" + "\n");
 
             List<Pelicula> recientes = dao.findByAnioMayorQue(2019);
             for (Pelicula p : recientes) {
                 System.out.println(" - " + p);
             }
 
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             // =================== Eliminar Estudio y observar cascada ====================
-            System.out.println("\n" + "=".repeat(60));
+            System.out.println("\n" + "=================================");
             System.out.println("DELETE: Eliminar Estudio y comprobar efecto en Películas/Criticas");
-            System.out.println("=".repeat(60) + "\n");
+            System.out.println("=================================" + "\n");
 
             // Añadimos una crítica a la peli2 para ver el efecto cascade
             dao.crearCritica("Ana", 8, "Emotiva y bien rodada", peli2Id);
@@ -92,19 +92,19 @@ public class Main {
             System.out.println("\nEliminando estudio...");
             dao.eliminarEstudio(estudioId);
 
-            System.out.println("\nIntentando buscar las películas que pertenecían al estudio:");
+            System.out.println("\nIntentando buscar las peliculas que pertenecían al estudio:");
             dao.findPelicula(peli1Id);
             dao.findPelicula(peli2Id);
 
             // ==================== Resumen =================
-            System.out.println("\n" + "=".repeat(60));
-            System.out.println("RESUMEN DE ACCIONES REALIZADAS");
-            System.out.println("=".repeat(60));
-            System.out.println("✅ Estudio creado y dos películas asociadas");
-            System.out.println("✅ Actualizado año de una película");
+            System.out.println("\n" + "=================================");
+            System.out.println("RESUMEN");
+            System.out.println("=================================");
+            System.out.println("✅ Estudio creado y dos peliculas asociadas");
+            System.out.println("✅ Actualizado año de una pelicula");
             System.out.println("✅ Consulta JPQL realizada");
             System.out.println("✅ Eliminación con Cascade comprobada");
-            System.out.println("=".repeat(60));
+            System.out.println("=================================");
 
         } catch (Exception e) {
             System.err.println("\n❌ ERROR CRÍTICO: " + e.getMessage());
