@@ -1,0 +1,6 @@
+ch/makery/address/view/RootLayoutController.class
+ch/makery/address/view/PersonOverviewController.class
+ch/makery/address/model/Person.class
+ch/makery/address/MainApp.class
+ch/makery/address/view/PersonEditDialogController.class
+ch/makery/address/util/DateUtil.class
