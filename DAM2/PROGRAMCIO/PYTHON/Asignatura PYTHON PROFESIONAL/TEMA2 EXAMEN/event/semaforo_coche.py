@@ -35,13 +35,13 @@ class Semaforo(threading.Thread):
             if self.event.is_set():
                 if len(self.personas) > 0:
                     cruzando = self.personas.pop(0)
-                    print(f"🚶 {cruzando} está cruzando...")
+                    print(f"🚶 {cruzando} esta cruzando...")
                     time.sleep(1)
             # Rojo -> pasan coches
             else:
                 if len(self.coches) > 0:
                     cruzando = self.coches.pop(0)
-                    print(f"🚗 {cruzando} está pasando...")
+                    print(f"🚗 {cruzando} esta pasando...")
                     time.sleep(1)
 
 
