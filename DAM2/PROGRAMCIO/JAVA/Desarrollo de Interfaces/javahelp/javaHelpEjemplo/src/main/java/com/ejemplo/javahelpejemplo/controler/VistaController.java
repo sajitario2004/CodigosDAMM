@@ -20,6 +20,7 @@ import javax.help.HelpSet;
  */
 public class VistaController implements Initializable {
 
+
     @FXML
     private Button btnAyuda;
 
@@ -31,6 +32,10 @@ public class VistaController implements Initializable {
         // TODO
     }    
 
+    /**
+     * 
+     * @param event le llega el evento del boton de ayuda
+     */
     @FXML
     private void showAyuda(ActionEvent event) {
         try {

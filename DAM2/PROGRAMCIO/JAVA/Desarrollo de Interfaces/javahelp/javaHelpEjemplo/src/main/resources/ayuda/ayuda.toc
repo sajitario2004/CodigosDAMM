@@ -3,6 +3,7 @@
 <toc version="2.0">
 <tocitem text="Inicio" target="inicio">
 <tocitem text="Uso" target="uso" />
-<tocitem text="Acerca de" target="acerca" />
+<tocitem text="Cipote" target="cipoton" />
+<tocitem text="Cipote gordo" target="cipoteg" />
 </tocitem>
 </toc>

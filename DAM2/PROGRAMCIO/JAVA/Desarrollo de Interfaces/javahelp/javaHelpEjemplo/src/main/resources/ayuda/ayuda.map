@@ -3,5 +3,6 @@
 <map version="2.0">
 <mapID target="inicio" url="html/inicio.html" />
 <mapID target="uso" url="html/uso.html" />
-<mapID target="acerca" url="html/acerca.html" />
+<mapID target="cipoton" url="html/acerca.html" />
+<mapID target="cipoteg" url="html/cipoteg.html" />
 </map>
