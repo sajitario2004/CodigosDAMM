@@ -56,10 +56,9 @@ public class App extends Application {
     }
 
     /**
-     * es el main
+     * este es el main
      * 
-     * 
-     * @param args 
+     * @param args Argumentos que se le pasan a el main
      */
     public static void main(String[] args) {
         launch();

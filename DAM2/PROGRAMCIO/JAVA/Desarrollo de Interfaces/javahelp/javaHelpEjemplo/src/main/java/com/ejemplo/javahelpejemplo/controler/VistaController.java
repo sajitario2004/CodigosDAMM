@@ -49,4 +49,15 @@ public class VistaController implements Initializable {
         }
     }
     
+    /**
+     * Suma
+     * funcion que suma 2 numeros los cuales se le pasan
+     * 
+     * @param num1 Primer parametro que se le pasa
+     * @param num2 Segundo parametro que se le pasa
+     * @return suma de num1 y num2
+     */
+    private int suma(int num1, int num2){
+        return num1+num2;
+    }   
 }
