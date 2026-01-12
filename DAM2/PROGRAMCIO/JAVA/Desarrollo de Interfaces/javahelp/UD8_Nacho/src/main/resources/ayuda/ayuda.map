@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="2.0">
+<mapID target="inicio" url="html/inicio.html" />
+<mapID target="parte1" url="html/parte1.html" />
+<mapID target="parte2" url="html/parte2.html" />
+<mapID target="parte3" url="html/parte3.html" />
+</map>
