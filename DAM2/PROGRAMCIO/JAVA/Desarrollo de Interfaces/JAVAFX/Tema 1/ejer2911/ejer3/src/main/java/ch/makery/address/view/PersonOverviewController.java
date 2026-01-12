@@ -47,7 +47,6 @@ public class PersonOverviewController {
      * after the fxml file has been loaded.
      */
     
-    @FXML
     private void initialize() {
         // Initialize the person table with the two columns.
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
