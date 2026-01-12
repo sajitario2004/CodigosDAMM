@@ -1,4 +1,4 @@
-package es.dam.gamehub.apivideojuegos.model;
+package es.dam.gamehub.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

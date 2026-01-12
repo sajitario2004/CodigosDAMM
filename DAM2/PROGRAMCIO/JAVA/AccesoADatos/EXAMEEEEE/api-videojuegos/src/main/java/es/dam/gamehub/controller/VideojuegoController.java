@@ -1,7 +1,7 @@
-package es.dam.gamehub.apivideojuegos.controller;
+package es.dam.gamehub.controller;
 
-import es.dam.gamehub.apivideojuegos.model.Videojuego;
-import es.dam.gamehub.apivideojuegos.service.VideojuegoService;
+import es.dam.gamehub.model.Videojuego;
+import es.dam.gamehub.service.VideojuegoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

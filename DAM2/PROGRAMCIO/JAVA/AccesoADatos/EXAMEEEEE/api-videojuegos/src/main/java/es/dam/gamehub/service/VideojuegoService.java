@@ -1,7 +1,7 @@
-package es.dam.gamehub.apivideojuegos.service;
+package es.dam.gamehub.service;
 
-import es.dam.gamehub.apivideojuegos.model.Videojuego;
-import es.dam.gamehub.apivideojuegos.repository.VideojuegoRepository;
+import es.dam.gamehub.model.Videojuego;
+import es.dam.gamehub.repository.VideojuegoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
