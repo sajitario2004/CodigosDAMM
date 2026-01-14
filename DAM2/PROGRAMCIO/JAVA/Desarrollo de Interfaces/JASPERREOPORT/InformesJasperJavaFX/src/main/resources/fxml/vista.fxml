@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejemplos.informes.controlador.CocheController">
+    <!-- FORMULARIO -->
+    <top>
+        
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+            <RowConstraints />
+                
+            </rowConstraints>
+            <children>
+                <Label text="Marca:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    
+                <TextField fx:id="txtMarca" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Matrícula:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="txtMatricula" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Color:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="txtColor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                
+                <Label text="Kilómetros:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="txtKilometros" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button onAction="#anadirCoche" text="Añadir coche" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+    </top>
+
+    <!-- TABLA -->
+    <center>
+        <TableView fx:id="tablaCoches">
+            <columns>
+                <TableColumn fx:id="colMarca" text="Marca" />
+                <TableColumn fx:id="colMatricula" text="Matrícula" />
+                <TableColumn fx:id="colColor" text="Color" />
+                <TableColumn fx:id="colKilometros" text="Kilómetros" />
+            </columns>
+        </TableView>
+    </center>
+   <bottom>
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#generarInforme" text="Generar informe PDF" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></Button>
+   </bottom>
+   
+      
+   
+    <!-- BOTÓN INFORME 
+    <bottom>
+        <Button  BorderPane.alignment="CENTER" padding="10"/>
+    </bottom>
+        -->
+    
+</BorderPane>
