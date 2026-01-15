@@ -48,7 +48,8 @@ public class CocheController {
         tablaCoches.setItems(listaCoches);
     }
 
-    private void ansadirCoche() {
+    @FXML
+    private void anadirCoche() {
         String marca = txtMarca.getText();
         String matricula = txtMatricula.getText();
         String color = txtColor.getText();
@@ -76,13 +77,14 @@ public class CocheController {
             File pdf = new File("coches.pdf");
             JasperExportManager.exportReportToPdfFile(
                     jasperPrint, pdf.getAbsolutePath());
-            Desktop.getDesktop().open(pdf);
+            
+            // No permite abrir el documeto una vez hecho por que ubuntu no lo permite
+            // Desktop.getDesktop().open(pdf);
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @FXML
-    private void anadirCoche(ActionEvent event) {
-    }
+   
 }

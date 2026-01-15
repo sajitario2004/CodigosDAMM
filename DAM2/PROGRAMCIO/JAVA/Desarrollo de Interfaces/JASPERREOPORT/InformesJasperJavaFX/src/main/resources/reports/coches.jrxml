@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================== -->
+<!-- INFORME JASPERREPORTS - LISTADO DE COCHES -->
+<!-- ===================================================== -->
+<jasperReport
+    xmlns="http://jasperreports.sourceforge.net/jasperreports"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+    name="coches"
+    pageWidth="595"
+    pageHeight="842"
+    columnWidth="515"
+    leftMargin="40"
+    rightMargin="40"
+    topMargin="40"
+    bottomMargin="40">
+    <!-- ================================================= -->
+    <!-- FIELDS (datos que vienen desde Java) -->
+    <!-- ================================================= -->
+    <field name="marca" class="java.lang.String"/>
+    <field name="matricula" class="java.lang.String"/>
+    <field name="color" class="java.lang.String"/>
+    <field name="kilometros" class="java.lang.Integer"/>
+    <!-- ================================================= -->
+    <!-- TITULO DEL INFORME -->
+    <!-- ================================================= -->
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="10" width="515" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[INFORME DE COCHES]]></text>
+            </staticText>
+        </band>
+
+    </title>
+    <!-- ================================================= -->
+    <!-- CABECERA DE COLUMNAS -->
+    <!-- ================================================= -->
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="130" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Marca]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="130" y="0" width="130" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Matrícula]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="0" width="125" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Color]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="385" y="0" width="130" height="30"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Kilómetros]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <!-- ================================================= -->
+    <!-- DETALLE (una fila por cada coche) -->
+    <!-- ================================================= -->
+    <detail>
+
+        <band height="25">
+            <textField>
+                <reportElement x="0" y="0" width="130" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{marca}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="130" y="0" width="130" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="260" y="0" width="125" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{color}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="385" y="0" width="130" height="25"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                </box>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{kilometros}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <!-- ================================================= -->
+    <!-- PIE DE PAGINA -->
+    <!-- ================================================= -->
+    <pageFooter>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="515" height="20"/>
+                <textElement textAlignment="Right">
+                    <font size="9"/>
+                </textElement>
+                <text><![CDATA[Informe generado con
+JasperReports]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+
+</jasperReport>
